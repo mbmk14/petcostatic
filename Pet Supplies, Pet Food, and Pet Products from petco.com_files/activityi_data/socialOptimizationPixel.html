@@ -1,0 +1,27 @@
+<html>
+<head><title>Store Cookieless RTB Data</title></head>
+<body>
+<script type="text/javascript">
+  var BI_LS_KEY = 'OX_BI';
+  try {
+    var browserId = localStorage.getItem(BI_LS_KEY),
+        BI_QS = 'bi',
+        urlPrefix = 'https://us-u.openx.net',
+        path = '/w/1.0/sd',
+        qa = 'id=537073062&val=691935877535196234&r=https%3A%2F%2Fsimage2.pubmatic.com%2FAdServer%2FPug%3Fvcode%3Dbz0yJnR5cGU9MSZjb2RlPTI3MzkmdGw9MTU3NjgwMA%3D%3D%26piggybackCookie%3D691935877535196234%26r%3Dhttps%253A%252F%252Fdsum-sec.casalemedia.com%252Frum%253Fcm_dsp_id%253D57%2526external_user_id%253D691935877535196234%2526forward%253Dhttps%25253A%25252F%25252Ftapestry.tapad.com%25252Ftapestry%25252F1%25253Fta_partner_id%25253D937%252526ta_partner_did%25253D691935877535196234%252526ta_format%25253Dgif',
+        urlList = [ urlPrefix, path ];
+
+    if ( qa ) {
+      urlList = urlList.concat([ '?', qa ]);
+      if ( browserId ){
+        urlList =  urlList.concat([ '&', BI_QS, '=', browserId ]);
+      }
+      var url = urlList.join('');
+      (new Image()).src = url;
+    }
+  } catch(err) {
+    // fail to trigger cookieless sd request
+  }
+</script>
+</body>
+</html>

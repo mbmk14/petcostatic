@@ -1,0 +1,5 @@
+/*AQAAAFNIQS0yNTYAAQAAAAAAAQAAAAAAJeN_MZPyJ2M8eWz8dzopl79bmFAIYIWwsPyEd65j47g*//* Script imported from https://www.petco.com/wcsstore/Widgets/com.ibm.commerce.store.widgets.ContentRecommendation/javascript/video.js */
+aFeoOverrideAttrRead("script","src");
+// Licensed Materials - Property of IBM
+// (C) Copyright IBM Corp. 2013 All Rights Reserved.
+window.onload=function(){var video=document.getElementById("videoScreen");if(video){if(video.canPlayType&&(video.canPlayType("video/mp4")||video.canPlayType("video/ogg"))){function startVideo(){this.removeEventListener("play",startVideo,false);document.getElementById("promotionTitle").style.display="none";}function endVideo(){this.removeEventListener("ended",endVideo,false);document.getElementById("videoScreen").style.display="none";document.getElementById("videoFinished").style.display="block";}if(!video.addEventListener){video.attachEvent("play",startVideo,false);video.attachEvent("ended",endVideo,false);}else{video.addEventListener("play",startVideo,false);video.addEventListener("ended",endVideo,false);}}else{document.getElementById("promotionTitle").style.display="none";}}};
