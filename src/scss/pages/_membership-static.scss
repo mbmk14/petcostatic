@@ -2,13 +2,13 @@
 $membership-box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.2);
 
 .membership-body {
-  background:$lightBackground url('../../../../PetcoHTML/WebContent/membership/img/background-pattern.png') repeat;
+  // background:$lightBackground url('../../../../PetcoHTML/WebContent/membership/img/background-pattern.png') repeat;
 }
 
 //Overwrites consistent styles to closer resemble mockups.
 .account-dashboard {
   @include breakpoint(medium small) {
-    background:$lightBackground url('../../../../PetcoHTML/WebContent/membership/img/background-pattern.png') repeat;
+    // background:$lightBackground url('../../../../PetcoHTML/WebContent/membership/img/background-pattern.png') repeat;
   }
   
   #my-account-header {
@@ -144,7 +144,7 @@ $membership-box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.2);
         top: 100%;
         transform: translateX(-50%);
         
-        background: url("../../../../PetcoHTML/WebContent/membership/img/small-caret.svg") no-repeat;
+        // background: url("../../../../PetcoHTML/WebContent/membership/img/small-caret.svg") no-repeat;
       }
     }
   }
@@ -333,7 +333,7 @@ $membership-box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.2);
   font-weight: bold;
   color: $darkerGray;
   
-  background: #fff url('../../../../PetcoHTML/WebContent/membership/img/icon-arrow.svg') no-repeat 96% 50%;
+  // background: #fff url('../../../../PetcoHTML/WebContent/membership/img/icon-arrow.svg') no-repeat 96% 50%;
   border-radius: 5px;
   box-shadow: $membership-box-shadow;
   
@@ -951,7 +951,7 @@ input[type="text"], input[type="tel"], input[type="email"], input[type="password
 
 //javascript related styles
 .js-pet-img {
-  background: url('../../../../PetcoHTML/WebContent/membership/img/no-photo.png') center/cover no-repeat;
+  // background: url('../../../../PetcoHTML/WebContent/membership/img/no-photo.png') center/cover no-repeat;
 }
 // .js-section-intro {display: none !important;}
 .js-pet-img-container {display: none;}
