@@ -1,0 +1,156 @@
+/* stylelint-disable */
+// To be based off of wireframes/mocks and existing content class names
+
+// grid
+
+$width: 96%;
+$fullwidth: 100%;
+$gutter: 4%;
+
+.container {
+  width: 100%;
+  max-width: 1095px;
+  margin-left: auto;
+  margin-right: auto;
+  clear: both;
+
+  &.full-width {
+    max-width: none;
+
+    .row [class*="col-"]{
+      margin: 0;
+    }
+
+    .row .col-center {
+      margin: 0 auto;
+    }
+  }
+}
+
+.row {
+  position: relative;
+  width: 100%;
+}
+
+.row [class*="col-"] {
+  float: left;
+  margin: 0.5rem 2%;
+  min-height: 0.125rem;
+  box-sizing: border-box;
+
+  &:empty {
+    margin: 0;
+    min-height: 0;
+  }
+
+  &img.block {
+    width: 100%;
+  }
+
+  .no-margin & {
+    margin: 0.5rem 0;
+  }
+}
+
+.row .col-center {
+  float: none;
+  margin: 0.5rem auto;
+  clear: both;
+}
+
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12 {
+  width: $width;
+}
+
+.col-1-sm { width:($width / 12) - ($gutter * 11 / 12); }
+.col-2-sm { width: ($width / 6) - ($gutter * 10 / 12); }
+.col-3-sm { width: ($width / 4) - ($gutter * 9 / 12); }
+.col-4-sm { width: ($width / 3) - ($gutter * 8 / 12); }
+.col-5-sm { width: ($width / (12 / 5)) - ($gutter * 7 / 12); }
+.col-6-sm { width: ($width / 2) - ($gutter * 6 / 12); }
+.col-7-sm { width: ($width / (12 / 7)) - ($gutter * 5 / 12); }
+.col-8-sm { width: ($width / (12 / 8)) - ($gutter * 4 / 12); }
+.col-9-sm { width: ($width / (12 / 9)) - ($gutter * 3 / 12); }
+.col-10-sm { width: ($width / (12 / 10)) - ($gutter * 2 / 12); }
+.col-11-sm { width: ($width / (12 / 11)) - ($gutter * 1 / 12); }
+.col-12-sm { width: $width; }
+
+.container.no-margin {
+  & > .col-1-sm { width:($fullwidth / 12) }
+  & > .col-2-sm { width: ($fullwidth / 6) }
+  & > .col-3-sm { width: ($fullwidth / 4) }
+  & > .col-4-sm { width: ($fullwidth / 3) }
+  & > .col-5-sm { width: ($fullwidth / (12 / 5)) }
+  & > .col-6-sm { width: ($fullwidth / 2) }
+  & > .col-7-sm { width: ($fullwidth / (12 / 7)) }
+  & > .col-8-sm { width: ($fullwidth / (12 / 8)) }
+  & > .col-9-sm { width: ($fullwidth / (12 / 9)) }
+  & > .col-10-sm { width: ($fullwidth / (12 / 10)) }
+  & > .col-11-sm { width: ($fullwidth / (12 / 11)) }
+  & > .col-12-sm { width: $fullwidth; }
+}
+
+@include breakpoint(large x-large){
+  .container, .container.margin {
+    .col-1 { width:($width / 12) - ($gutter * 11 / 12); }
+    .col-2 { width: ($width / 6) - ($gutter * 10 / 12); }
+    .col-3 { width: ($width / 4) - ($gutter * 9 / 12); }
+    .col-4 { width: ($width / 3) - ($gutter * 8 / 12); }
+    .col-5 { width: ($width / (12 / 5)) - ($gutter * 7 / 12); }
+    .col-6 { width: ($width / 2) - ($gutter * 6 / 12); }
+    .col-7 { width: ($width / (12 / 7)) - ($gutter * 5 / 12); }
+    .col-8 { width: ($width / (12 / 8)) - ($gutter * 4 / 12); }
+    .col-9 { width: ($width / (12 / 9)) - ($gutter * 3 / 12); }
+    .col-10 { width: ($width / (12 / 10)) - ($gutter * 2 / 12); }
+    .col-11 { width: ($width / (12 / 11)) - ($gutter * 1 / 12); }
+    .col-12 { width: $width; }
+  }
+
+  .container.no-margin, .container.no-margin .row {
+    & > .col-1 { width:($fullwidth / 12) }
+    & > .col-2 { width: ($fullwidth / 6) }
+    & > .col-3 { width: ($fullwidth / 4) }
+    & > .col-4 { width: ($fullwidth / 3) }
+    & > .col-5 { width: ($fullwidth / (12 / 5)) }
+    & > .col-6 { width: ($fullwidth / 2) }
+    & > .col-7 { width: ($fullwidth / (12 / 7)) }
+    & > .col-8 { width: ($fullwidth / (12 / 8)) }
+    & > .col-9 { width: ($fullwidth / (12 / 9)) }
+    & > .col-10 { width: ($fullwidth / (12 / 10)) }
+    & > .col-11 { width: ($fullwidth / (12 / 11)) }
+    & > .col-12 { width: $fullwidth; }
+  }
+
+  .hidden-sm {
+    display: block;
+  }
+}
+
+.col-seperator {
+  border-top: $lighterBorder;
+  padding-top: 20px;
+
+  @include breakpoint(large x-large){
+    border-top: 0;
+    border-left: $lighterBorder;
+    padding-top: 0;
+    padding-left: 20px;;
+  }
+}

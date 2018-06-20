@@ -1,0 +1,33 @@
+/* stylelint-disable */
+#pals-header-link, #rd-header-link {
+	padding-left:10px;
+	padding-right:10px;
+//	height:44px;
+}
+
+#pals-header-link img {
+	width:80px;
+}
+
+#rd-header-link img {
+	width:120px;
+}
+
+
+.utility-links {
+	color:$gray-darker;
+	padding-top:5px;
+}
+
+.utility-links a {
+  color:$black;
+  font-weight:bold;
+}
+
+.utility-links ul {
+	margin-bottom:0;
+}
+
+.brand-logo {
+	margin-top:-4px;
+}

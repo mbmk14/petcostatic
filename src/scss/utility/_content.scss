@@ -1,0 +1,6277 @@
+/* stylelint-disable */
+ul {
+  font-size: em(15);
+
+  > li { list-style: disc; }
+
+  &.list-unstyled > li { list-style: none; }
+
+  &.list-styled { padding-left: 20px; }
+  
+  &.list-inline > li {
+    display: inline-block;
+  }
+}
+
+ol {
+  font-size: em(15);
+
+  li { list-style: decimal; }
+
+  &.list-unstyled li { list-style: none; }
+}
+
+hr {
+  border: 0;
+  border-top: $lighterBorder;
+}
+
+.clearfix:after {
+  content:"";
+  display:block;
+  clear:both;
+}
+
+.main-body {
+  //padding: 0 20px;
+  box-sizing: border-box;
+
+  @include breakpoint("min-height: 1095px"){
+    padding: 0;
+  }
+}
+
+// Utilities
+.no-scroll { overflow: hidden; }
+.block { display: block!important; }
+.inline { display: inline-block!important; }
+.no-show, .hide { display: none!important; }
+.hide-visible { visibility: hidden!important; }
+.pos-static { position: static; }
+
+.flipped {
+  -webkit-transform: rotate(180deg);
+  -moz-transform:  rotate(180deg);
+  -o-transform:  rotate(180deg);
+  -ms-transform:  rotate(180deg);
+  transform: rotate(180deg);
+}
+
+// Desktop/Mobile hide
+.mobile-only {
+  @include breakpoint(x-large large){
+    display: none!important;
+  }
+}
+
+.desktop-only {
+  @include breakpoint(medium small){
+    display: none!important;
+  }
+}
+
+// Widths/Heights
+.full-width { width: 100%; }
+.full-height { height: 100%; }
+
+// Flex
+.row-flex { display: flex; flex-wrap: wrap; }
+.col-flex {
+  flex: 1;
+
+  &-1 { order: 1; }
+  &-2 { order: 2; }
+  &-3 { order: 3; }
+}
+
+// Background Colors
+.bg-blue { background-color: $petcoBlue; }
+.bg-lightblue { background-color: $lightBlue; }
+.bg-lightergray { background-color: $lighterGray; }
+.bg-lightergray2 { background-color: $lighterGray2; }
+.bg-lightergray3 { background-color: $lighterGray3; }
+.bg-lightergray4 { background-color: $lighterGray4; }
+.bg-lightestgray { background-color: $lightestGray; }
+.bg-lightteal { background-color: $lightTeal; }
+.bg-yellow { background-color: $yellow; }
+
+// Borders
+.border-top {
+  border-top: $lighterBorder;
+  padding-top: 20px;
+}
+
+// Margins
+.margin-sm { margin: 10px; }
+// .spacer-none-left { margin-left: 0!important; }
+// .spacer-none-right { margin-right: 0!important; }
+
+// Margins
+.margin-full-xsm { margin: 5px; }
+.margin-full-sm { margin: 10px; }
+.margin-full-md { margin: 15px; }
+.margin-full-lg { margin: 20px; }
+
+.margin-top-xsm { margin-top: 5px; }
+.margin-right-xsm { margin-right: 5px; }
+.margin-bottom-xsm { margin-bottom: 5px; }
+.margin-left-xsm { margin-left: 5px; }
+
+.margin-top-sm { margin-top: 10px; }
+.margin-right-sm { margin-right: 10px; }
+.margin-bottom-sm { margin-bottom: 10px; }
+.margin-left-sm { margin-left: 10px; }
+
+.margin-top-md { margin-top: 15px; }
+.margin-right-md { margin-right: 15px; }
+.margin-bottom-md { margin-bottom: 15px; }
+.margin-left-md { margin-left: 15px; }
+
+.margin-lg { margin: 20px; }
+.margin-top-lg { margin-top: 20px; }
+.margin-right-lg { margin-right: 20px; }
+.margin-bottom-lg { margin-bottom: 20px; }
+.margin-left-lg { margin-left: 20px; }
+
+.margin-xlg { margin: 40px; }
+.margin-bottom-xlg { margin-bottom: 40px; }
+.margin-right-xlg { margin-right: 40px; }
+.margin-top-xlg { margin-top: 40px; }
+
+// Padding
+.padding-sm { padding: 10px; }
+.padding-lg { padding: 20px; }
+.padding-xlg { padding: 40px; }
+
+.padding-bottom-xlg { padding-bottom: 40px; }
+.padding-top-xlg { padding-top: 40px; }
+
+.padding-full {
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+[class*=padding-]{ box-sizing: border-box;}
+.padding-full-xs { padding: 5px; }
+.padding-full-sm { padding: 10px; }
+.padding-full-md { padding: 15px; }
+.padding-full-lg { padding: 20px; }
+
+.padding-top-xs { padding-top: 5px; }
+.padding-top-sm { padding-top: 10px; }
+.padding-right-sm { padding-right: 10px; }
+.padding-bottom-sm { padding-bottom: 10px; }
+.padding-left-sm { padding-left: 10px; }
+
+.padding-top-md { padding-top: 15px; }
+.padding-right-md { padding-right: 15px; }
+.padding-bottom-md { padding-bottom: 15px; }
+.padding-left-md { padding-left: 15px; }
+
+.padding-top-lg { padding-top: 20px; }
+.padding-right-lg { padding-right: 20px; }
+.padding-bottom-lg { padding-bottom: 20px; }
+.padding-left-lg { padding-left: 20px; }
+
+// Alignments
+.valign-top { vertical-align: top; }
+.valign-mid { vertical-align: middle; }
+.valign-bot { vertical-align: bottom; }
+
+// Floats
+.pull-left { float: left !important; }
+.pull-right { float: right !important; }
+
+// Font colors
+.primary { color: $primary; }
+.sale { color: $secondary; }
+.error,.form-required,.text-danger { color: $secondary; }
+.text-success { color: #468847; }
+.text-success:hover { color: #356635; }
+.text-warning { color: #c09853; }
+.text-warning:hover { color: #a47e3c; }
+.remaining { color: $green; }
+.approved { color: $approved; }
+.text-notice { color: $notice; }
+
+// Cursors
+.link-pointer { cursor: pointer; }
+.img-responsive {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+  }
+// Images
+.textarea {
+  .img-responsive {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+// Spacers from content
+.spacer-lg-top { padding-top: 50px; }
+.spacer-lg-right { padding-right: 50px; }
+.spacer-lg-bottom { padding-bottom: 50px; }
+.spacer-lg-left { padding-left: 50px; }
+
+.spacer-md-top { padding-top: 40px; }
+.spacer-md-right { padding-right: 40px; }
+.spacer-md-bottom { padding-bottom: 40px; }
+.spacer-md-left { padding-left: 40px; }
+
+.spacer-sm-top { padding-top: 20px; }
+.spacer-sm-right { padding-right: 20px; }
+.spacer-sm-bottom { padding-bottom: 20px; }
+.spacer-sm-left { padding-left: 20px; }
+
+.spacer-xsm-top { padding-top: 10px; }
+.spacer-xsm-right { padding-right: 10px; }
+.spacer-xsm-bottom { padding-bottom: 10px; }
+.spacer-xsm-left { padding-left: 10px; }
+.sr-only { position: absolute; left: -9999px; }
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Tables
+
+.table-condensed {
+  th {
+    text-align: left;
+    font-weight: bold;
+    font-size: em(13);
+    padding: 9px 11px;
+  }
+
+  tr {
+    list-style: none;
+    border-bottom: $lighterBorder;
+
+    &:first-child { border-top: $lighterBorder; }
+    &:nth-child(2n+1) { background-color: rgba(233, 236, 237, 0.5); }
+  }
+
+    td {
+      box-sizing: border-box;
+      padding: 9px 11px;
+      font-size: 1em;
+      color: #666666;
+
+      @include breakpoint(medium small){
+        display: block;
+        color: $bodyText;
+        padding: 0 11px 8px;
+
+        &:first-child {
+          color: $bodyText;
+          font-weight: bold;
+          padding: 8px 11px 0;
+        }
+      }
+
+      &:first-child {
+        color: $bodyText;
+        font-weight: bold;
+      }
+    }
+ }
+
+ .table-full {
+   th {
+     text-align: left;
+     font-weight: bold;
+     font-size: 0.9375em;
+     padding: 9px 11px;
+   }
+
+   @include breakpoint(x-large large){
+     thead + tbody tr {
+       &:nth-child(2n+1) { background-color: transparent; }
+       &:nth-child(2n) { background-color: rgba(233, 236, 237, 0.5); }
+
+       td:first-child {
+         font-weight: normal;
+         color: $darkGray;
+       }
+     }
+   }
+
+   tr {
+     list-style: none;
+     border-bottom: $lighterBorder;
+
+     &:first-child { border-top: $lighterBorder; }
+     &:nth-child(2n+1) { background-color: rgba(233, 236, 237, 0.5); }
+   }
+
+     td {
+       box-sizing: border-box;
+       padding: 9px 11px;
+       font-size: 0.9375em;
+       color: $darkGray;
+	   vertical-align: middle;
+	   
+       &:first-child {
+         color: $bodyText;
+         font-weight: bold;
+       }
+
+       @include breakpoint(medium small){
+         display: block;
+         color: $bodyText;
+
+         &:first-child {
+           font-weight: normal;
+         }
+
+         span { display: block; }
+       }
+      }
+ }
+
+//article pages
+.articles .col-4:first-child { margin-left: 0; }
+
+.snippet-box {
+  padding: 20px;
+  background-color: $white;
+  border: 1px solid $lighterGray;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+.snippet-title {
+  min-height: 90px;
+}
+
+.snippet-description {
+  min-height: 85px;
+  position: relative;
+
+  p {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+section .snippet-box {
+  height: 200px;
+  box-sizing: border-box;
+
+  .snippet-title {
+    min-height: 60px;
+    margin-bottom: 15px;
+  }
+
+  a {
+    color: $bodyText;
+    font-weight: normal;
+  }
+}
+
+// Share box
+.share-box {
+  .social {
+    display: inline-block;
+    border: $lighterBorder;
+    border-radius: 5px;
+    padding: 8px 5px;
+    box-sizing: border-box;
+    margin: 0;
+
+    li {
+      list-style: none;
+      display: inline-block;
+      font-weight: bold;
+      color: $bodyText;
+      margin: 0 5px;
+      line-height: 33px;
+
+      &[class*="icon-"]{
+        display: inline-block;
+        height: 33px;
+        width: 33px;
+
+        a {
+          display: block;
+          height: 100%;
+          width: 100%;
+          text-indent: -9000px;
+        }
+      }
+    }
+  }
+}
+
+.accordion-content {
+  transition: max-height 0.4s ease-in;
+  overflow: hidden;
+  max-height: 0;
+
+  & > div {
+    opacity: 0;
+    transition: 0.4s opacity ease-in;
+  }
+
+  &.open {
+    max-height: 1000px;
+
+    & > div { opacity: 1; }
+  }
+}
+
+.indented-container {
+  display: flex;
+
+  & > div { flex: 1; }
+
+  @include breakpoint(medium small) {
+    flex-direction: column;
+  }
+
+  .arrow-out {
+    background-color: $white;
+    position: relative;
+
+    &:after {
+      content: "";
+      width: 0;
+      height: 0;
+      position: absolute;
+
+      @include breakpoint(x-large large) {
+        border-top: 40px solid transparent;
+        border-bottom: 40px solid transparent;
+        border-left: 40px solid $white;
+        right: -40px;
+        top: 36%;
+      }
+
+      @include breakpoint(medium small) {
+        border-top: 25px solid $white;
+        border-left: 25px solid transparent;
+        border-right: 25px solid transparent;
+        bottom: -25px;
+        right: 43%;
+      }
+    }
+
+    p { line-height: 1.45em};
+  }
+
+  .arrow-indent {
+    background-color: $orange;
+  }
+}
+
+@include breakpoint(medium small) {
+  .mobile-btn-line {
+    width: 100%;
+    margin: 5px 0;
+    box-sizing: border-box;
+  }
+}
+.mini-site-product-tile {
+	border-radius: 5px;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+.center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* 06/29/2017 */
+.center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* 07/05/2017 */
+.border-left-thin {
+  border-left: 1px solid $lighterGray4;
+}
+.border-right-thin {
+  border-right: 1px solid $lighterGray4;
+}
+.border-top-thin {
+  border-top: 1px solid $lighterGray4;
+}
+.border-bottom-thin {
+  border-bottom: 1px solid $lighterGray4;
+}
+.gray-light-border {
+  border: 1px solid #b3b3b3;
+}
+.text-lowercase {
+  text-transform: lowercase;
+}
+.text-uppercase {
+  text-transform: uppercase;
+}
+.text-capitalize {
+  text-transform: capitalize;
+}
+.text-hide {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.display-inline {
+  display: inline;
+}
+.clear-space {
+  padding: 0;
+  margin: 0;
+}
+.show {
+  display: block !important;
+}
+.position-relative {
+  position: relative;
+}
+.position-absolute {
+  position: absolute;
+}
+
+sup {
+  top: -0.5em;
+}
+
+.margin-left-none {
+  margin-left: 0px;
+}
+.margin-right-none {
+  margin-right: 0px;
+}
+.margin-top-none {
+  margin-top: 0px;
+}
+.margin-bottom-none {
+  margin-bottom: 0px;
+}
+.margin-none {
+  margin: 0;
+}
+.padding-left-none {
+  padding-left: 0px;
+}
+.padding-right-none {
+  padding-right: 0px;
+}
+.padding-top-none {
+  padding-top: 0px;
+}
+.padding-bottom-none {
+  padding-bottom: 0px;
+}
+.padding-none {
+  padding: 0;
+}
+
+.border-right-thin {
+  border-right: 1px solid $lighterGray4;
+}
+
+.table-full-width {
+  width: 100%;
+}
+
+.mini-site-product-tile {
+  border-radius: 5px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+.seo-block {
+  margin-bottom: 50px;
+
+  .seo-title {
+    color: $gray;
+    font-size: em(15);
+    font-weight: bold;
+    line-height: em(18, 15);
+    letter-spacing: 0.1px;
+  }
+  .seo-text {
+    color: $gray;
+    font-size: em(13);
+    line-height: em(18);
+    letter-spacing: 0.1px;
+    margin: 1em 0;
+  }
+}
+
+.services-tile-lg {
+	box-sizing: border-box;
+	border-radius: 5px;
+	border: 1px solid $lighterGray4;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+	margin: 0;
+	transition: 0.2s;
+	background-color: $white;
+	height: 100%;
+	padding: 0 3%;
+}
+.circle-border {
+	border-radius: 100%;
+	border: 7px solid $lighterGray4;
+}
+div.counter-container {
+	counter-reset: number 0;
+}
+p.counter:before {
+	counter-increment: number;
+	content: counter(number) ". ";
+	font-weight: bold;
+}
+.border-thick {
+	border: 20px solid $white;
+}
+
+.clear {
+	clear: both;
+}
+.bg-white {
+	background-color: $white;
+}
+@include breakpoint(x-large) {
+	.background-img-hero-container {
+		background-image: url('//s7d1.scene7.com/is/image/PETCO/petservices-072417-image-1440w-418h-d');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		position: relative;
+		width: 100%;
+		padding-bottom: 35%;
+	}
+	.background-img-hero-content {
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-direction: column;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		-webkit-justify-content: center;
+		justify-content: center;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+	.services-hero-img-tile-sm {
+		box-sizing: border-box;
+		border-radius: 5px;
+		box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+		margin: 0 20px;
+		transition: 0.2s;
+		width: 100px;
+		background-color: $white;
+		height: 250px;
+	}
+	.guidelines-background-img-hero-container {
+		background-image: url('//s7d1.scene7.com/is/image/PETCO/petguidelines-background-072817-image-1054w-329h-d');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		position: relative;
+		width: auto;
+		padding-bottom: 30%; /* 2:1 */
+	}
+	.guidelines-background-img-hero-content {
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-direction : column;
+		-ms-flex-direction : column;
+		flex-direction : column;
+		-webkit-justify-content : center;
+		justify-content : center;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+}
+@include breakpoint(large) {
+	.background-img-hero-container {
+		background-image: url('//s7d1.scene7.com/is/image/PETCO/petservices-072417-image-1440w-418h-d');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center top;
+		position: relative;
+		width: 100%;
+		padding-bottom: 0;
+	}
+	.background-img-hero-content {
+		position: relative;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		padding: 0;
+		text-align: center;
+	}
+	.services-hero-img-tile-sm {
+		box-sizing: border-box;
+		border-radius: 5px;
+		box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+		margin: 0 20px;
+		transition: 0.2s;
+		width: 150px;
+		background-color: $white;
+		height: 190px;
+	}
+	.counter-tile {
+		height: 161px;
+		max-width: 30%;
+		padding: 10px 0;
+		/* height: auto; */
+	}
+	.guidelines-background-img-hero-container {
+		background-image: url('//s7d1.scene7.com/is/image/PETCO/petguidelines-background-072817-image-1054w-329h-d');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		position: relative;
+		width: auto;
+		padding-bottom: 30%; /* 2:1 */
+	}
+	.guidelines-background-img-hero-content {
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-direction : column;
+		-ms-flex-direction : column;
+		flex-direction : column;
+		-webkit-justify-content : center;
+		justify-content : center;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+}
+@include breakpoint(medium) {
+	.background-img-hero-container {
+		background-image: url('//s7d1.scene7.com/is/image/PETCO/petservices-072417-image-1440w-418h-d');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center top;
+		position: relative;
+		width: 100%;
+		padding-bottom: 0;
+	}
+	.background-img-hero-content {
+		position: relative;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		padding: 0;
+		text-align: center;
+	}
+	.services-hero-img-tile-sm {
+		box-sizing: border-box;
+		border-radius: 5px;
+		box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+		margin: 0 20px;
+		transition: 0.2s;
+		width: 150px;
+		background-color: $white;
+		height: 200px;
+	}
+	.counter-tile {
+		height: 161px;
+		max-width: 30%;
+		padding: 10px 0;
+		/* height: auto; */
+	}
+	.guidelines-background-img-hero-container {
+		background-image: url('//s7d1.scene7.com/is/image/PETCO/petguidelines-background-072817-image-1054w-329h-d');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center top;
+		position: relative;
+		/*width: auto;*/
+		padding-bottom: 0;
+	}
+	.guidelines-background-img-hero-content {
+		position: relative;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		padding: 0;
+		text-align: center;
+	}
+}
+
+@include breakpoint(small) {
+	.background-img-hero-container {
+		background-image: url('//s7d1.scene7.com/is/image/PETCO/petservices-072417-image-1440w-418h-d');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center top;
+		position: relative;
+		width: 100%;
+		padding-bottom: 0;
+	}
+	.background-img-hero-content {
+		position: relative;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		padding: 0;
+		text-align: center;
+	}
+	.services-hero-img-tile-sm {
+		box-sizing: border-box;
+		border-radius: 5px;
+		box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+		margin: 0 20px;
+		transition: 0.2s;
+		width: 155px;
+		background-color: $white;
+		height: 200px;
+	}
+	.counter-tile {
+		height: 161px;
+		max-width: 45%;
+		padding: 10px 0;/*height:auto;*/
+	}
+	h2.white, h3.white {
+		color: $white;
+		font-weight: bold;
+		line-height: 1.1em;
+		margin: 20px 0 10px;
+		margin: 0;
+	}
+	p.white {
+		font-weight: normal;
+		color: $white;
+	}
+	ul.no-margin {
+		margin: 0;
+		text-align: left;
+	}
+	.icon-blue-arrow {
+		background-position: -620px -674px;
+	}
+	.guidelines-background-img-hero-container {
+		background-image: url('//s7d1.scene7.com/is/image/PETCO/petguidelines-background-072817-image-1054w-329h-d');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center top;
+		position: relative;
+		width: auto;
+		padding-bottom: 0;
+	}
+	.guidelines-background-img-hero-content {
+		position: relative;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		padding: 0;
+	}
+}
+
+
+.promo-block  {
+	 background-color: $white;
+	   border-radius: 5px;
+	   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+	   margin-bottom: 20px;
+	h2{
+	  line-height: 1.1em;
+	  margin: 5px 0 0;
+	}
+	
+	p{
+	  margin: 0;
+      padding: 0;
+	}
+   
+}
+.promo-box-green {
+   background-color: $green;
+   padding: 10px;
+   width: inherit;
+}
+.promo-box-offer {
+   border: 3px solid $white;
+   margin: 10px;
+   padding: 20px 6px;
+   text-align: center;
+   
+   h3{
+    line-height: 1.1em;
+   	color: $white;
+    margin: 0;
+   }
+}
+.fade {
+  opacity: 0;
+  -webkit-transition: opacity 0.15s linear;
+  transition: opacity 0.15s linear;
+}
+.width-successmsg{
+	max-width:540px !important;
+}
+
+[id*="modal-ListSuccessMsg"]{
+h3 {
+	font-size: 1.3em;
+    line-height: 1.75em;
+    font-weight: bold;
+    color: #333333;
+    text-align: center;
+    position: relative;
+    width: 100%;
+	}
+	
+.text-body{
+	float: none;
+	margin: 0.5rem auto;
+    margin-top: 0.5rem;
+    margin-right: auto;
+    margin-bottom: 0.5rem;
+    margin-left: auto;
+    text-align: center;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    color: #666666;
+	font-size: 0.9375em;
+	line-height: 1.6em;
+}
+.cont-button{
+	text-align: center;
+	padding-bottom: 15px;
+}
+}
+.fade.in {
+  opacity: 1;
+}
+.collapse {
+  display: none;
+}
+.collapse.in {
+  display: block;
+}
+.collapsing {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: height 0.35s ease;
+  transition: height 0.35s ease;
+}
+@include breakpoint(large x-large) {
+
+	.width-10{
+		width:10%;
+	}
+	.width-15{
+		width:15%;
+	}
+	.width-20{
+		width:20%;
+	}
+	.width-25{
+		width:25%;
+	}
+	.width-30{
+		width:30%;
+	}
+	.width-35{
+		width:35%;
+	}
+	.width-40{
+		width:40%;
+	}
+	.width-45{
+		width:45%;
+	}
+	.width-50{
+		width:50%;
+	}
+	.width-55{
+		width:55%;
+	}
+	.width-60{
+		width:60%;
+	}
+	.width-65{
+		width:65%;
+	}
+	.width-70{
+		width:70%;
+	}
+	.width-75{
+		width:75%;
+	}
+	.width-80{
+		width:80%;
+	}
+	.width-85{
+		width:85%;
+	}
+	.width-90{
+		width:90%;
+	}
+	.width-95{
+		width:95%;
+	}
+	.width-100-sm{
+		width:100%;
+	}
+}
+@include breakpoint(medium) {
+	.width-10-md{
+		width:10%;
+	}
+	.width-15-md{
+		width:15%;
+	}
+	.width-20-md{
+		width:20%;
+	}
+	.width-25-md{
+		width:25%;
+	}
+	.width-30-md{
+		width:30%;
+	}
+	.width-35-md{
+		width:35%;
+	}
+	.width-40-md{
+		width:40%;
+	}
+	.width-45-md{
+		width:45%;
+	}
+	.width-50-md{
+		width:50%;
+	}
+	.width-55-md{
+		width:55%;
+	}
+	.width-60-md{
+		width:60%;
+	}
+	.width-65-md{
+		width:65%;
+	}
+	.width-70-md{
+		width:70%;
+	}
+	.width-75-md{
+		width:75%;
+	}
+	.width-80-md{
+		width:80%;
+	}
+	.width-85-md{
+		width:85%;
+	}
+	.width-90-md{
+		width:90%;
+	}
+	.width-95-md{
+		width:95%;
+	}
+	.width-100-md{
+		width:100%;
+	}
+}
+@include breakpoint(small) {
+	.width-10-sm{
+		width:10%;
+	}
+	.width-15-sm{
+		width:15%;
+	}
+	.width-20-sm{
+		width:20%;
+	}
+	.width-25-sm{
+		width:25%;
+	}
+	.width-30-sm{
+		width:30%;
+	}
+	.width-35-sm{
+		width:35%;
+	}
+	.width-40-sm{
+		width:40%;
+	}
+	.width-45-sm{
+		width:45%;
+	}
+	.width-50-sm{
+		width:50%;
+	}
+	.width-55-sm{
+		width:55%;
+	}
+	.width-60-sm{
+		width:60%;
+	}
+	.width-65-sm{
+		width:65%;
+	}
+	.width-70-sm{
+		width:70%;
+	}
+	.width-75-sm{
+		width:75%;
+	}
+	.width-80-sm{
+		width:80%;
+	}
+	.width-85-sm{
+		width:85%;
+	}
+	.width-90-sm{
+		width:90%;
+	}
+	.width-95-sm{
+		width:95%;
+	}
+	.width-100-sm{
+		width:100%;
+	}
+}
+.content-tile-white {
+    background-color: $white;
+    width: 207px;
+    height:260px;
+    margin: 23px 12px 0 0;
+    padding: 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    float: left;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+    text-align: center;
+
+    h5 {
+      font-size: 1.125em;
+      line-height: 1.27778em;
+      font-weight: bold;
+      width: 95%;
+      margin: 10px auto;
+    }
+    p {
+      font-size: 0.8125em;
+      line-height: 1.38462em;
+    }
+
+    .btn {
+      padding-bottom: 0;
+      font-size: 0.8125em;
+    }
+}
+.content-tile-img {
+   width: 100px;
+   height: 100px;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+h1.white, h2.white, h3.white, h4.white, h5.white {
+		color: $white;
+	    font-weight: bold;
+	    line-height: 1.1em;
+	    margin: 0;
+}
+
+p.white{
+	 font-weight: normal;
+     color: $white;
+
+}
+
+.search-page {
+	.tab-pane {
+		display: none;
+	}
+	.tab-pane.active {
+		display: block;
+	}
+}
+
+.copyright-v2 {
+	width: 100%;
+	border-top: 1px solid $lightGray;
+	padding: 20px 0;
+	box-sizing: border-box;
+	float: none;
+	clear: both;
+	padding: 20px;
+
+	a {
+    	font-size: 0.8125em;
+    	line-height: 1.25em;
+
+    	&.mobile-only{
+    		display: inline-block;
+      		margin: 0 10px 0 0;
+    	}
+  	}
+
+  	p{
+	  	font-size: 0.8125em;
+	    line-height: 1.75em;
+	    color: $gray;
+	    float: left;
+
+  	}
+
+  	ul {
+	    display: block;
+
+	    @include breakpoint(x-large) {
+	    	margin: 0;
+        	float: left;
+	    }
+
+	    @include breakpoint(large) {
+	    	margin: 0;
+        	float: left;
+	    }
+
+	    &.open{
+	    	margin-top: 10px;
+	    }
+
+	    &.partners{
+
+	    	li{
+	    		&:before{
+	    			content: ". ";
+        			color: $gray;
+	    		}
+	    		&:first-child:before{
+	    			content: '';
+	    		}
+
+	    		&:nth-child(2):before{
+	    			content: '';
+	    		}
+	    		a{
+	    			color: $darkerGray;
+	    		}
+	    	}
+	    }
+	    li{
+	    	display: inline-block;
+
+	    	@include breakpoint(medium) {
+	    		display: inline;
+          		line-height: 2.5em;
+	    	}
+
+	    	@include breakpoint(small) {
+	    		display: inline;
+          		line-height: 2.5em;
+	    	}
+
+	    	&:before{
+	    		content: ". ";
+        		color: $gray;
+	    	}
+
+	    	&:first-child:before{
+	    		content: '';
+	    	}
+
+	    	a{
+	    		color:$darkerGray;
+	    	}
+	    }
+    }
+}
+
+.masonry {
+	margin: 1.5em 0;
+    padding: 0;
+    -moz-column-gap: 1.5em;
+    -webkit-column-gap: 1.5em;
+    column-gap: 1.5em;
+    font-size: .85em;
+
+	@include breakpoint(small) {
+		-moz-column-count: 1;
+        -webkit-column-count: 1;
+        column-count: 1;
+	}
+
+	@include breakpoint(medium) {
+		 -moz-column-count: 2;
+        -webkit-column-count: 2;
+        column-count: 2;
+	}
+
+	@include breakpoint(large) {
+		 -moz-column-count: 3;
+        -webkit-column-count: 3;
+        column-count: 3;
+	}
+
+	.grid-item{
+	    display: inline-block;
+	    background-color: $white;
+	    margin: 0 0 1.5em;
+	    width: 100%;
+	    border-radius: 5px;
+	    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+
+	    img{
+	    	display: block;
+   	 		width: 100%;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+	    }
+
+	    .grid-img-only{
+	    	img{
+	    		display: block;
+    			width: 100%;
+                border-radius: 5px;
+	    	}
+	    }
+	}
+
+	.grid-item-desc {
+	    	padding: 20px;
+
+	    	h4{
+	    		font-size: 1.66667em;
+	    		margin-bottom: 6px;
+	    	}
+	    	p{
+	    		margin-bottom: 10px;
+                font-size: 1em;
+	    	}
+	    }
+
+	 .grid-item-details {
+	 	padding: 10px 20px;
+     	margin-bottom:10px;
+
+     	h5{
+     		font-size: 0.9375em;
+            color: $darkerGray;
+            font-weight: bold;
+            margin:0 0 10px 0;
+     	}
+     	a{
+     		color: $gray;
+            font-size: 0.9375em;
+     	}
+	 }
+}
+
+.srcset {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  min-height: 100%;
+
+  &.anchor-top { top: 0; } // default style
+  &.anchor-bottom { top: auto; bottom: 0; }
+  &.anchor-center { top: 50%; transform: translateX(-50%) translateY(-50%); }
+
+  @include breakpoint(medium small){
+    &.anchor-top-mobile { top: 0; bottom: auto; }
+    &.anchor-bottom-mobile { top: auto; bottom: 0; }
+  }
+}
+
+.homepage-hero-banner {
+  width: 100%;
+  overflow: hidden;
+  
+  .container {
+	  max-width: 1095px; /* Constrains the container to the main width of the site */
+	  margin: auto;
+	  overflow: hidden;
+	  height: 335px;
+	  
+	 @include breakpoint(small){
+	 	height: 260px;
+	 }   
+	  &.full-width{
+	  	max-width: none; /* Makes the container stretch out to 100% window width, not site width */
+	  }
+	}
+}
+
+/*----------------------------------------------------------*/
+/* NEW PET - GUIDES GLOBAL TAB NAVIGATION (2, 3, 4  styles) */
+/*----------------------------------------------------------*/
+
+.triangle {
+	position: relative;
+	margin: 3em;
+	box-sizing: border-box;
+	background-color: $white;
+	border-radius: 5px;
+	box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.1);
+}
+.triangle::after {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	margin-left: -0.5em;
+	bottom: -1.5em;
+	left: 50%;
+	box-sizing: border-box;
+	border: .75em solid black;
+	border-color: transparent transparent $white $white;
+	transform-origin: 0 0;
+	transform: rotate(-45deg);
+	box-shadow: -6px 6px 15px 0 rgba(0, 0, 0, 0.07);
+}
+p.animal_type_label {
+	display: block;
+	float: left;
+	width: 20%;
+	text-align: center;
+	padding-top: 10px;
+}
+.age_nav > li a:hover:not(.active) {
+	background-color: $petcoBlue;
+	color: $white;
+}
+a.active {
+	background-color: $petcoBlue;
+	color: white;
+}
+.pagination .active a.active.selected {
+	background: none;
+}
+.pagination a.not_allowed {
+	background: lightgray;
+    border-color: darkgray;
+}
+.rounded-top-left {
+	border-top-left-radius: 5px;
+}
+.rounded-top-right {
+	border-top-right-radius: 5px;
+}
+.rounded-bottom-left {
+	border-bottom-left-radius: 5px;
+}
+.rounded-bottom-right {
+	border-bottom-right-radius: 5px;
+}
+.services-tile-md {
+	box-sizing: border-box;
+	border: 1px solid #e6e6e6;
+	border-radius: 5px;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+	transition: 0.2s;
+	background-color: $white;/* height: 100%; */
+}
+.rounded-tab {
+	box-sizing: border-box;
+	border-radius: 5px 5px 0 0;
+	transition: 0.2s;
+	border-right: solid #e6e6e6 1px;
+	border-top: solid #e6e6e6 1px;
+	border-left: solid #e6e6e6 1px;
+	background: red; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(white, #ddd); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(white, #ddd); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(white, #ddd); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(white, #ddd); /* Standard syntax */
+	width: 150px;
+	padding: 10px 0;
+}
+
+/*-------------------------*/
+/* NEW PET - GUIDES GLOBAL */
+/*-------------------------*/
+
+.row .col-center { 
+	float: none;
+	margin: 0.5rem auto;
+	clear: both;
+	display: block;
+}
+/* NEW PET PAGE - article -  what new pet parents are reading */
+.service-title {
+	height: 65px;
+}
+.border-medium {
+	border: 10px solid $white;
+}
+.all-rounded-corners-dropshadow {
+	background-color: $white;
+	border-radius: 5px;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+}
+.text-tile-lg {
+	background-color: $white;
+	border-radius: 5px;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+}
+.height-adjust {
+	display: flex;
+}
+.rounded-border {
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+.text-wrap {
+	white-space:normal;
+}
+
+.background-addselfie-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/addselfie-091917-image-200w-200h-d');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	width: 100%;
+}
+.background-addselfie-content {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-justify-content: center;
+	justify-content: center;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+/*---------------------------------------------------------*/
+/* NEW PET - PAGE LANDING & ALL GUIDES - BACKGROUND IMAGES */	
+/*---------------------------------------------------------*/
+
+/* NEW PET - BACKGROUND IMAGES */
+.family-background-img-hero-container {
+	 background-image: url('//s7d1.scene7.com/is/image/PETCO/family-081017-hero-1440w-418h-d');}
+.selfies-background-img-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/petselfies--081017-hero-1440w-418h-d');}
+	
+/* NEW DOG GUIDE - BACKGROUND IMAGES */
+.background-img-newpuppy-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/newpuppy-081117-hero-1440w-418h-d');}
+.background-img-newadultdog-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/dognewhomeadult-090617-hero-1440w-418h-d');}
+.background-img-newseniordog-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/dognewhomesenior-090617-hero-1440w-418h-d');}
+.background-img-puppyneeds-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/puppyneeds-082817-hero-1440w-418h-d');}
+.background-img-petneedsadult-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/petneedsadult-090617-hero-1440w-418h-d');}
+.background-img-petneedssenior-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/petneedssenior-090617-hero-1440w-418h-d');}
+.background-img-newpuppyquestions-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/newpuppyquestions-083117-hero-1440w-418h-d');}
+.background-img-newadultquestions-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/newadultdogquestions-090117-hero-1440w-418h-d');}
+.background-img-newseniorquestions-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/newseniordogquestions-090117-hero-1440w-418h-d');}
+.background-img-whattobuy-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/whattobuy-082317-image-520w-285h-d');}
+.background-img-whattoknow-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/whattoknow-082317-image-520w-285h-d');}
+.background-img-vetco-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/vetco-081117-hero-1440w-418h-d');}
+.background-img-nutrition-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/nutrition-082817-hero-1440w-418h-d');}
+.background-img-puppyhome-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/puppyhome-092117-hero-1440w-418h-d');}
+.background-img-doghome-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/doghome-082817-hero-1440w-418h-d');}
+.background-img-onthego-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/onthego-082817-hero-1440w-418h-d');}
+.background-img-play-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/play-082817-hero-1440w-418h-d');}
+.background-img-health-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/health-082817-hero-1440w-418h-d');}
+	
+/* NEW CAT GUIDE - BACKGROUND IMAGES */
+.background-img-newkitten-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/newkitten-090717-hero-1440w-418h-d');}
+.background-img-newadultcat-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/newadultcat-090717-hero-1440w-418h-d');}
+.background-img-newseniorcat-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/newseniorcat-090717-hero-1440w-418h-d');}
+.background-img-kittenneeds-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/kittenneeds-090717-hero-1440w-418h-d');}
+.background-img-adultcatneeds-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/everythingpetneedsadultcat-090717-hero-1440w-418h-d');}	
+.background-img-seniorcatneeds-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/petneedsseniorcat-090717-hero-1440w-418h-d');}
+.background-img-newkittenquestions-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/newkittenquestions-090717-hero-1440w-418h-d');}
+.background-img-newadultcatquestions-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/newadultcatquestions-090717-hero-1440w-418h-d');}
+.background-img-newseniorcatquestions-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/newseniorcatquestions-090717-hero-1440w-418h-d');}
+.background-img-whattobuycat-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/whattobuycat-090717-image-520w-285h-d');}
+.background-img-whattoknowcat-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/whattoknowcat-090717-image-520w-285h-d');}
+.background-img-cat-nutrition-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/nutritioncat-090717-hero-1440w-418h-d');}
+.background-img-cat-waste-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/litterwastedisposalcat-090717-hero-1440w-418h-d');}
+.background-img-cat-homeonthego-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/onthego-cat-090717-hero-1440w-418h-d');}
+.background-img-cat-play-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/play-cat-090717-hero-1440w-418h-d');}
+.background-img-cat-health-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/health-cat-090717-hero-1440w-418h-d');}
+
+/* NEW FISH GUIDE - BACKGROUND IMAGES */
+.background-img-newsaltwaterfish-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/newsaltwaterfish-090717-hero-1440w-418h-d');}
+.background-img-newfreshwaterfish-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/newfreshwaterfish-090717-hero-1440w-418h-d');}
+.background-img-fishneedssaltwater-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/petneedssaltwaterfish-090717-hero-1440w-418h-d');}
+.background-img-fishneedsfreshwater-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/petneedsfreshwaterfish-090717-hero-1440w-418h-d');}
+.background-img-newsaltfishquestions-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/freshwaterfishquestions-090717-hero-1440w-418h-d');}
+.background-img-newfreshfishquestions-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/newfreshwaterfishquestions-090717-hero-1440w-418h-d');}
+.background-img-whattobuyfish-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/whattobuyfish-091317-image-520w-285h-d-v2');}
+.background-img-whattoknowfish-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/whattobuyfish-090717-image-520w-285h-d');}
+.background-img-foodcarefish-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/foodcarefish-090717-hero-1440w-418h-d');}
+.background-img-aquariumsfish-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/aquariumsfish-090717-hero-1440w-418h-d');}
+.background-img-equipmentfish-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/equipmentfish-090717-hero-1440w-418h-d');}
+
+
+/* SMALL PET GUIDE - BACKGROUND IMAGES */
+.background-img-newrabbit-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/newrabbit-090717-hero-1440w-418h-d');}
+.background-img-newguineapig-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/newguineapig-090717-hero-1440w-418h-d');}
+.background-img-newhamster-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/newhamster-090717-hero-1440w-418h-d');}
+.background-img-newothersmallanimal-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/newothersmall-090717-hero-1440w-418h-d');}
+.background-img-smallpetneedsrabbit-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/petneedsrabbit-090717-hero-1440w-418h-d');}
+.background-img-smallpetneedsguinea-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/everythingpetneedsguinea-090717-hero-1440w-418h-d');}
+.background-img-smallpetneedshamster-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/everythingpetneedshamster-090717-hero-1440w-418h-d');}
+.background-img-smallpetneedsother-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/everythingpetneedsother-091217-hero-1440w-418h-d');}
+.background-img-newrabbitquestions-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/newrabbitquestions-090717-hero-1440w-418h-d');}
+.background-img-newguineaquestions-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/newguineaquestions-090717-hero-1440w-418h-d');}
+.background-img-newhamsterquestions-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/newhamsterquestions-091217-hero-1440w-418h-d');}
+.background-img-newsmpetotherquestions-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/newsmpetotherquestions-091217-hero-1440w-418h-d');}
+.background-img-whattobuyrabbit-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/whattobuyrabbit-090717-image-520w-285h-d');}
+.background-img-whattoknowrabbit-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/whattoknowrabbit-090717-image-520w-285h-d');}
+.background-img-whattobuyguineapig-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/whattobuyguineapig-090717-image-520w-285h-d');}
+.background-img-whattoknowguineapig-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/whattoknowguineapig-090717-image-520w-285h-d');}
+.background-img-whattobuyhamster-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/whattobuyhamster-090717-image-520w-285h-d');}
+.background-img-whattoknowhamster-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/whattoknowhamster-090717-image-520w-285h-d');}
+.background-img-whattobuyothersmallanimal-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/whattobuyothersmall-090717-image-520w-285h-d');}
+.background-img-whattoknowothersmallanimal-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/whattoknowothersmall-090717-image-520w-285h-d');}
+.background-img-foodrabbit-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/foodrabbit-090717-image-540w-305h-d');}
+.background-img-homerabbit-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/nutritionrabbit-090717-image-540w-305h-d');}
+.background-img-carehealthrabbit-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/carehealthrabbit-090717-image-540w-305h-d');}
+.background-img-foodguinea-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/foodguinea-090717-hero-1440w-418h-d');}
+.background-img-homeguinea-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/guineahome-090717-hero-1440w-418h-d');}
+.background-img-carehealthguinea-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/carehealthguinea-090717-hero-1440w-418h-d');}
+.background-img-foodhamster-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/foodhamster-090717-hero-1440w-418h-d');}
+.background-img-homehamster-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/petneedshamster-090717-hero-1440w-418h-d');}
+.background-img-carehealthhamster-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/carehealthhamster-090717-hero-1440w-418h-d');}
+.background-img-chinchilla-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/wtbchinchilla-091217-hero-1440w-418h-d');}
+.background-img-ferret-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/wtbferret-091217-hero-1440w-418h-d');}
+.background-img-gerbil-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/wtbgerbil-091217-hero-1440w-418h-d');}
+
+/* REPTILE GUIDE - BACKGROUND IMAGES */
+.background-img-newreptile-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/newreptile-091217-hero-1440w-418h-d');}
+.background-img-newreptileneeds-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/everythingpetneedsreptile-091217-hero-1440w-418h-d');}
+.background-img-newreptilequestions-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/newreptilequestions-091217-hero-1440w-418h-d');}
+.background-img-whattobuyreptile-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/wtbreptile-091217-image-520w-285h-d');}
+.background-img-whattoknowreptile-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/wtkreptile-091217-image-520w-285h-d');}
+	.background-img-homereptile-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/nutritionreptile-091217-hero-1440w-418h-d');}
+.background-img-foodreptile-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/habitatreptile-091217-hero-1440w-418h-d');}
+.background-img-carehealthreptile-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/cleaningreptile-091217-hero-1440w-418h-d');}
+
+/* BIRD GUIDE - BACKGROUND IMAGES */
+.background-img-newbird-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/newbird-091217-hero-1440w-418h-d');}
+.background-img-newbirdneeds-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/everythingpetneedsbird-091217-hero-1440w-418h-d');}
+.background-img-newbirdquestions-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/newbirdquestions-091217-hero-1440w-418h-d');}
+.background-img-whattobuybird-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/wtbtbird-091217-image-520w-285h-d');}
+.background-img-whattoknowbird-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/wtkbird-091217-image-520w-285h-d');}
+.background-img-foodbird-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/foodtreatsbird-091817-hero-1440w-418h-d-v2');}
+.background-img-homebird-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/foodbird-091217-hero-1440w-418h-d');}
+.background-img-carehealthbird-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/carebird-091217-hero-1440w-418h-d');}
+
+
+/*********************************************************/
+/*           PET SERVICES - BACKGROUND IMAGES            */	
+/*********************************************************/
+.background-img-local-services-hero-container { 
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/localpetservices-082217-hero-1440w-265h-d'); }
+.background-img-training-hero-container { 
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/dogtrainingservices-082217-hero-1440w-265h-d'); }
+.background-img-grooming-hero-container { 
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/grooming-081117-hero-1440w-218h-d'); }
+.background-img-adoption-hero-container { 
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/adoptionservices-082217-hero-1440w-265h-d'); }
+.background-img-sitting-hero-container { 
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/sitting-082117-img-1440w-265h-hero-bkgd-d'); }
+.background-img-vetservices-hero-container { 
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/vetservices-082217-hero-1440w-265h-d-v2'); }
+	
+@include breakpoint(x-large) {
+	/*---------------------------------------------------------------------*/
+/* NEW PET - PAGE LANDING & ALL GUIDES - BACKGROUND IMAGES POSITIONING */	
+/*---------------------------------------------------------------------*/
+
+.family-background-img-hero-container,
+.selfies-background-img-hero-container,
+.background-img-newpuppy-hero-container,
+.background-img-newadultdog-hero-container,
+.background-img-newseniordog-hero-container,
+.background-img-puppyneeds-hero-container,
+.background-img-petneedsadult-hero-container,
+.background-img-petneedssenior-hero-container,
+.background-img-newpuppyquestions-hero-container,
+.background-img-newadultquestions-hero-container, 
+.background-img-newseniorquestions-hero-container,
+.background-img-newkitten-hero-container,
+.background-img-newadultcat-hero-container,
+.background-img-newseniorcat-hero-container,
+.background-img-kittenneeds-hero-container,
+.background-img-adultcatneeds-hero-container,
+.background-img-seniorcatneeds-hero-container,
+.background-img-newkittenquestions-hero-container,
+.background-img-newadultcatquestions-hero-container,
+.background-img-newseniorcatquestions-hero-container,
+.background-img-newsaltwaterfish-hero-container,	
+.background-img-newfreshwaterfish-hero-container,
+.background-img-fishneedssaltwater-hero-container, 
+.background-img-fishneedsfreshwater-hero-container,
+.background-img-newsaltfishquestions-hero-container,
+.background-img-newfreshfishquestions-hero-container,
+.background-img-newrabbit-hero-container,	
+.background-img-newguineapig-hero-container,
+.background-img-newhamster-hero-container,
+.background-img-newothersmallanimal-hero-container,
+.background-img-smallpetneedsrabbit-hero-container,
+.background-img-smallpetneedsguinea-hero-container,
+.background-img-smallpetneedshamster-hero-container,
+.background-img-smallpetneedsother-hero-container,
+.background-img-newrabbitquestions-hero-container,
+.background-img-newguineaquestions-hero-container,
+.background-img-newhamsterquestions-hero-container,
+.background-img-newsmpetotherquestions-hero-container,
+.background-img-newreptile-hero-container,
+.background-img-newreptileneeds-hero-container,
+.background-img-newreptilequestions-container, 
+.background-img-newbird-hero-container,
+.background-img-newbirdneeds-hero-container,
+.background-img-newbirdquestions-hero-container,
+{ 
+	 background-repeat: no-repeat;
+	 background-size: cover;
+	 background-position: center;
+	 position: relative;
+	 width: 100%;
+	 padding-bottom: 15%;
+}
+.family-background-img-hero-content {
+	 display: -webkit-box;
+	 display: -moz-box;
+	 display: -ms-flexbox;
+	 display: -moz-flex;
+	 display: -webkit-flex;
+	 display: flex;
+	 -webkit-flex-direction: column;
+	 -ms-flex-direction: column;
+	 flex-direction: column;
+	 -webkit-justify-content: center;
+	 justify-content: center;
+	 position: absolute;
+	 top: 15%;
+	 bottom: 0;
+	 left: 0;
+	 right: 0;
+}
+.petneeds-background-img-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/petneeds-081017-hero-1440w-418h-d');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	width: 100%;
+	padding-bottom: 400px;
+}
+.selfies-background-img-hero-content,
+.petneeds-background-img-hero-content,
+.background-img-newpuppy-hero-content,
+.background-img-newadultdog-hero-content,
+.background-img-newseniordog-hero-content,
+.background-img-puppyneeds-hero-content,
+.background-img-petneedsadult-hero-content,
+.background-img-petneedssenior-hero-content,
+.background-img-newpuppyquestions-hero-content,
+.background-img-newadultquestions-hero-content,
+.background-img-newseniorquestions-hero-content
+.background-img-whattobuy-hero-content,
+.background-img-whattoknow-hero-content,
+.background-img-vetco-hero-content,
+.background-img-nutrition-hero-content,
+.background-img-puppyhome-hero-content,
+.background-img-doghome-hero-content,
+.background-img-onthego-hero-content,
+.background-img-play-hero-content,
+.background-img-health-hero-content,
+.background-img-newkitten-hero-content,
+.background-img-newadultcat-hero-content,
+.background-img-newseniorcat-hero-content,
+.background-img-kittenneeds-hero-content,
+.background-img-adultcatneeds-hero-content,
+.background-img-seniorcatneeds-hero-content, 
+.background-img-newkittenquestions-hero-content,
+.background-img-newadultcatquestions-hero-content,
+.background-img-newseniorcatquestions-hero-content,
+.background-img-whattobuycat-hero-content,
+.background-img-whattoknowcat-hero-content,
+.background-img-cat-nutrition-hero-content,
+.background-img-cat-waste-hero-content,
+.background-img-cat-homeonthego-hero-content, 
+.background-img-cat-play-hero-content,
+.background-img-cat-health-hero-content,
+.background-img-newsaltwaterfish-hero-content,
+.background-img-newfreshwaterfish-hero-content, 
+.background-img-fishneedssaltwater-hero-content, 
+.background-img-fishneedsfreshwater-hero-content,
+.background-img-newsaltfishquestions-hero-content, 
+.background-img-newfreshfishquestions-hero-content,
+.background-img-whattobuyfish-hero-content,
+.background-img-whattoknowfish-hero-content,
+.background-img-foodcarefish-hero-content,
+.background-img-aquariumsfish-hero-content,
+.background-img-equipmentfish-hero-content, 
+.background-img-newrabbit-hero-content,	
+.background-img-newguineapig-hero-content,
+.background-img-newhamster-hero-content,
+.background-img-newothersmallanimal-hero-content,
+.background-img-smallpetneedsrabbit-hero-content,
+.background-img-smallpetneedsguinea-hero-content,
+.background-img-smallpetneedshamster-hero-content,
+.background-img-smallpetneedsother-hero-content,
+.background-img-newrabbitquestions-hero-content,
+.background-img-newguineaquestions-hero-content,
+.background-img-newhamsterquestions-hero-content,
+.background-img-newsmpetotherquestions-hero-content,
+.background-img-whattobuyrabbit-hero-content,
+.background-img-whattoknowrabbit-hero-content,
+.background-img-whattobuyguineapig-hero-content, 
+.background-img-whattoknowguineapig-hero-content, 
+.background-img-whattobuyhamster-hero-content, 
+.background-img-whattoknowhamster-hero-content, 
+.background-img-whattobuyothersmallanimal-hero-content, 
+.background-img-whattoknowothersmallanimal-hero-content, 
+.background-img-foodrabbit-hero-content,
+.background-img-homerabbit-hero-content,
+.background-img-carehealthrabbit-hero-content,
+.background-img-foodguinea-hero-content,
+.background-img-homeguinea-hero-content,
+.background-img-carehealthguinea-hero-content,
+.background-img-foodhamster-hero-content,
+.background-img-homehamster-hero-content,
+.background-img-carehealthhamster-hero-content,
+.background-img-chinchilla-hero-content,
+.background-img-ferret-hero-content,
+.background-img-gerbil-hero-content,
+.background-img-newreptile-hero-content,
+.background-img-newreptileneeds-hero-content,
+.background-img-newreptilequestions-content,
+.background-img-whattobuyreptile-hero-content,
+.background-img-whattoknowreptile-hero-content,
+.background-img-homereptile-hero-content,
+.background-img-foodreptile-hero-content, 
+.background-img-carehealthreptile-hero-content, 
+.background-img-newbird-hero-content,
+.background-img-newbirdneeds-hero-content,
+.background-img-newbirdquestions-hero-content,
+.background-img-whattobuybird-hero-content,
+.background-img-whattoknowbird-hero-content,
+.background-img-foodbird-hero-content, 
+.background-img-homebird-hero-content, 
+.background-img-carehealthbird-hero-content
+{
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-justify-content: center;
+	justify-content: center;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+.background-img-vetco-hero-container
+{
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	width: 100%;
+	padding-bottom: 35%;
+}
+.background-img-nutrition-hero-container,
+.background-img-puppyhome-hero-container,
+.background-img-doghome-hero-container,
+.background-img-onthego-hero-container,
+.background-img-play-hero-container,
+.background-img-health-hero-container,
+.background-img-cat-nutrition-hero-container,
+.background-img-cat-waste-hero-container,
+.background-img-cat-homeonthego-hero-container, 
+.background-img-cat-play-hero-container,
+.background-img-cat-health-hero-container,
+.background-img-foodcarefish-hero-container, 
+.background-img-aquariumsfish-hero-container,
+.background-img-equipmentfish-hero-container,
+.background-img-foodrabbit-hero-container,
+.background-img-homerabbit-hero-container,
+.background-img-carehealthrabbit-hero-container,
+.background-img-foodguinea-hero-container,
+.background-img-homeguinea-hero-container,
+.background-img-carehealthguinea-hero-container,
+.background-img-foodhamster-hero-container,
+.background-img-homehamster-hero-container,
+.background-img-carehealthhamster-hero-container,
+.background-img-chinchilla-hero-container,
+.background-img-ferret-hero-container,
+.background-img-gerbil-hero-container,
+.background-img-homereptile-hero-container, 
+.background-img-foodreptile-hero-container, 
+.background-img-carehealthreptile-hero-container, 
+.background-img-foodbird-hero-container, 
+.background-img-homebird-hero-container, 
+.background-img-carehealthbird-hero-container 
+{
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	width: 100%;
+	padding-bottom: 20%;
+}	
+.background-img-newpetguidebook-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/newpetguidebook-081117-hero-1440w-418h-d');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	width: 100%;
+	padding-bottom: 30%;
+}
+.background-img-newpetguidebook-hero-content
+{
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-justify-content: center;
+	justify-content: center;
+	position: absolute;
+	top: 12%;
+	bottom: 12%;
+	left: 0;
+	right: 0;
+}
+
+.background-img-whattobuy-hero-container,
+.background-img-whattoknow-hero-container,
+.background-img-whattobuycat-hero-container,
+.background-img-whattoknowcat-hero-container,
+.background-img-whattobuyfish-hero-container,
+.background-img-whattoknowfish-hero-container, 
+.background-img-whattobuyrabbit-hero-container,
+.background-img-whattoknowrabbit-hero-container,
+.background-img-whattobuyguineapig-hero-container, 
+.background-img-whattoknowguineapig-hero-container, 
+.background-img-whattobuyhamster-hero-container, 
+.background-img-whattoknowhamster-hero-container, 
+.background-img-whattobuyothersmallanimal-hero-container, 
+.background-img-whattoknowothersmallanimal-hero-container, 
+.background-img-whattobuyreptile-hero-container,
+.background-img-whattoknowreptile-hero-container, 
+.background-img-whattobuybird-hero-container,
+.background-img-whattoknowbird-hero-container
+{
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	width: 100%;
+	padding-bottom: 25%;
+	opacity: 0.7;
+}
+
+/* NEW PET GUIDES - GLOBAL TAB - STYLING (2, 3, 4 styles) */
+.age_tabs_wrapper {
+	display: block;
+	margin: 0 auto;
+	width: 45%;
+	padding: 23px 0 20px 0;
+}
+.age_tabs_wrapper-tab-4 { /* copy to master  */
+	display: block;
+	margin: 0 auto;
+	width: 65%;
+	padding: 23px 0 20px 0;
+}
+.age_content_container {
+	width: 100%;
+	display: block;
+	margin: 0 auto;
+	overflow: auto;
+}
+.age-label-navigation {
+	display: block;
+	float: left;
+	width: 25%;
+	cursor: pointer;
+	text-decoration: none;
+	text-align: center;
+	color: $petcoBlue;
+	background: $white;
+	border: solid 1px $gray;
+	clear: none;
+}
+.age-label-navigation-tab-2 { 
+	display: block;
+	float: left;
+	width: 38%; /* tab 2 difference from tab 3 */
+	cursor: pointer;
+	text-decoration: none;
+	text-align: center;
+	color: $petcoBlue;
+	background: $white;
+	border: solid 1px $gray;
+	clear: none;
+}
+.age-label-navigation-tab-4 { /* copy to master  */
+	display: block;
+	float: left;
+	width: 18.7%; /* tab 3 difference */
+	cursor: pointer;
+	text-decoration: none;
+	text-align: center;
+	color: $petcoBlue;
+	background: $white;
+	border: solid 1px $gray;
+	clear: none;
+}
+.age_nav_container > ul li a {
+	display: block;
+	text-align: center;
+	padding: 14px 12px;
+	text-decoration: none;
+}
+
+/* WHAT TO BUY/KNOW GUIDE */	
+.vertical-align-container {
+	position: relative;
+}
+div.vertical-align-text {
+	position: absolute;
+	top: 40px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+.img-rounded {
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+.services-row-full-md [class*="col-"] {
+	float: left;
+	margin: 0px;
+	min-height: 0.125rem;
+	box-sizing: border-box;
+	width: 50%;
+}
+
+/*******************************************************************/
+/*            PET SEVICES - BACKGROUND IMAGES POSITIONING          */
+/*******************************************************************/
+
+.background-img-training-hero-container,
+.background-img-local-services-hero-container,
+.background-img-grooming-hero-container,
+.background-img-adoption-hero-container,
+.background-img-sitting-hero-container,
+.background-img-vetservices-hero-container {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	width: 100%;
+	padding-bottom: 15px;
+	min-height: 285px;
+
+}
+.background-img-local-services-hero-content,
+.background-img-training-hero-content,
+.background-img-grooming-hero-content,
+.background-img-adoption-hero-content,
+.background-img-sitting-hero-content,
+.background-img-vetservices-hero-content {
+	/* display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;*/
+	flex-direction: column;
+	-webkit-justify-content: center;
+	justify-content: center;
+	position: absolute;
+	top: 20px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+}
+
+@include breakpoint(large) {
+	/*---------------------------------------------------------------------*/
+/* NEW PET - PAGE LANDING & ALL GUIDES - BACKGROUND IMAGES POSITIONING */	
+/*---------------------------------------------------------------------*/
+	
+.family-background-img-hero-container, 
+.selfies-background-img-hero-container,
+.petneeds-background-img-hero-container,
+.background-img-newpuppy-hero-container,
+.background-img-newadultdog-hero-container,
+.background-img-newseniordog-hero-container,
+.background-img-puppyneeds-hero-container,
+.background-img-petneedsadult-hero-container,
+.background-img-petneedssenior-hero-container,
+.background-img-newpuppyquestions-hero-container,
+.background-img-newadultquestions-hero-container,
+.background-img-newseniorquestions-hero-container
+.background-img-vetco-hero-container,
+.background-img-nutrition-hero-container,
+.background-img-puppyhome-hero-container,
+.background-img-doghome-hero-container,
+.background-img-onthego-hero-container,
+.background-img-play-hero-container,
+.background-img-health-hero-container,
+.background-img-newkitten-hero-container,
+.background-img-newadultcat-hero-container,
+.background-img-newseniorcat-hero-container,
+.background-img-kittenneeds-hero-container, 
+.background-img-adultcatneeds-hero-container,
+.background-img-seniorcatneeds-hero-container, 
+.background-img-newkittenquestions-hero-container,
+.background-img-newadultcatquestions-hero-container,
+.background-img-newseniorcatquestions-hero-container,
+.background-img-cat-nutrition-hero-container,
+.background-img-cat-waste-hero-container,
+.background-img-cat-homeonthego-hero-container, 
+.background-img-cat-play-hero-container,
+.background-img-cat-health-hero-container,
+.background-img-newsaltwaterfish-hero-container,	
+.background-img-newfreshwaterfish-hero-container,
+.background-img-fishneedssaltwater-hero-container, 
+.background-img-fishneedsfreshwater-hero-container,
+.background-img-newsaltfishquestions-hero-container,
+.background-img-newfreshfishquestions-hero-container,
+.background-img-foodcarefish-hero-container, 
+.background-img-aquariumsfish-hero-container,
+.background-img-equipmentfish-hero-container,
+.background-img-newrabbit-hero-container,	
+.background-img-newguineapig-hero-container,
+.background-img-newhamster-hero-container,
+.background-img-newothersmallanimal-hero-container,
+.background-img-smallpetneedsrabbit-hero-container,
+.background-img-smallpetneedsguinea-hero-container,
+.background-img-smallpetneedshamster-hero-container,
+.background-img-smallpetneedsother-hero-container,
+.background-img-newrabbitquestions-hero-container,
+.background-img-newguineaquestions-hero-container,
+.background-img-newhamsterquestions-hero-container,
+.background-img-newsmpetotherquestions-hero-container,
+.background-img-foodrabbit-hero-container,
+.background-img-homerabbit-hero-container,
+.background-img-carehealthrabbit-hero-container,
+.background-img-foodguinea-hero-container,
+.background-img-homeguinea-hero-container,
+.background-img-carehealthguinea-hero-container,
+.background-img-foodhamster-hero-container,
+.background-img-homehamster-hero-container,
+.background-img-carehealthhamster-hero-container,
+.background-img-chinchilla-hero-container,
+.background-img-ferret-hero-container,
+.background-img-gerbil-hero-container,
+.background-img-newreptile-hero-container,
+.background-img-newreptileneeds-hero-container,
+.background-img-newreptilequestions-container, 
+.background-img-homereptile-hero-container, 
+.background-img-foodreptile-hero-container, 
+.background-img-carehealthreptile-hero-container, 
+.background-img-newbird-hero-container,
+.background-img-newbirdneeds-hero-container,
+.background-img-newbirdquestions-hero-container,
+.background-img-foodbird-hero-container, 
+.background-img-homebird-hero-container, 
+.background-img-carehealthbird-hero-container 
+{
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center top;
+	position: relative;
+	width: 100%;
+	padding-bottom: 0;
+}
+
+.family-background-img-hero-content, 
+.selfies-background-img-hero-content,
+.petneeds-background-img-hero-content,
+.background-img-newpuppy-hero-content,
+.background-img-newadultdog-hero-content,
+.background-img-newseniordog-hero-content,
+.background-img-puppyneeds-hero-content,
+.background-img-petneedsadult-hero-content,
+.background-img-petneedssenior-hero-content,
+.background-img-newpuppyquestions-hero-content,
+.background-img-newadultquestions-hero-content,
+.background-img-newseniorquestions-hero-content,
+.background-img-whattobuy-hero-content,
+.background-img-whattoknow-hero-content,
+.background-img-vetco-hero-content,
+.background-img-nutrition-hero-content,
+.background-img-puppyhome-hero-content,
+.background-img-doghome-hero-content,
+.background-img-onthego-hero-content,
+.background-img-play-hero-content,
+.background-img-health-hero-content,
+.background-img-newkitten-hero-content,
+.background-img-newadultcat-hero-content,
+.background-img-newseniorcat-hero-content,
+.background-img-kittenneeds-hero-content,
+.background-img-adultcatneeds-hero-content,
+.background-img-seniorcatneeds-hero-content, 
+.background-img-newkittenquestions-hero-content,
+.background-img-newadultcatquestions-hero-content,
+.background-img-newseniorcatquestions-hero-content,
+.background-img-whattobuycat-hero-content,
+.background-img-whattoknowcat-hero-content,
+.background-img-cat-nutrition-hero-content,
+.background-img-cat-waste-hero-content,
+.background-img-cat-homeonthego-hero-content, 
+.background-img-cat-play-hero-content,
+.background-img-cat-health-hero-content,
+.background-img-newsaltwaterfish-hero-content,
+.background-img-newfreshwaterfish-hero-content, 
+.background-img-fishneedssaltwater-hero-content, 
+.background-img-fishneedsfreshwater-hero-content,
+.background-img-newsaltfishquestions-hero-content, 
+.background-img-newfreshfishquestions-hero-content,
+.background-img-whattobuyfish-hero-content,
+.background-img-whattoknowfish-hero-content,
+.background-img-foodcarefish-hero-content,
+.background-img-aquariumsfish-hero-content,
+.background-img-equipmentfish-hero-content, 
+.background-img-newrabbit-hero-content,	
+.background-img-newguineapig-hero-content,
+.background-img-newhamster-hero-content,
+.background-img-newothersmallanimal-hero-content,
+.background-img-smallpetneedsrabbit-hero-content,
+.background-img-smallpetneedsguinea-hero-content,
+.background-img-smallpetneedshamster-hero-content,
+.background-img-smallpetneedsother-hero-content,
+.background-img-newrabbitquestions-hero-content,
+.background-img-newguineaquestions-hero-content,
+.background-img-newhamsterquestions-hero-content,
+.background-img-newsmpetotherquestions-hero-content,
+.background-img-whattobuyrabbit-hero-content,
+.background-img-whattoknowrabbit-hero-content,
+.background-img-whattobuyguineapig-hero-content, 
+.background-img-whattoknowguineapig-hero-content, 
+.background-img-whattobuyhamster-hero-content, 
+.background-img-whattoknowhamster-hero-content, 
+.background-img-whattobuyothersmallanimal-hero-content, 
+.background-img-whattoknowothersmallanimal-hero-content, 
+.background-img-foodrabbit-hero-content,
+.background-img-homerabbit-hero-content,
+.background-img-carehealthrabbit-hero-content,
+.background-img-foodguinea-hero-content,
+.background-img-homeguinea-hero-content,
+.background-img-carehealthguinea-hero-content,
+.background-img-foodhamster-hero-content,
+.background-img-homehamster-hero-content,
+.background-img-carehealthhamster-hero-content,
+.background-img-chinchilla-hero-content,
+.background-img-ferret-hero-content,
+.background-img-gerbil-hero-content,
+.background-img-newreptile-hero-content,
+.background-img-newreptileneeds-hero-content,
+.background-img-newreptilequestions-content,
+.background-img-whattobuyreptile-hero-content,
+.background-img-whattoknowreptile-hero-content,
+.background-img-homereptile-hero-content,
+.background-img-foodreptile-hero-content, 
+.background-img-carehealthreptile-hero-content, 
+.background-img-newbird-hero-content,
+.background-img-newbirdneeds-hero-content,
+.background-img-newbirdquestions-hero-content,
+.background-img-whattobuybird-hero-content,
+.background-img-whattoknowbird-hero-content,
+.background-img-foodbird-hero-content, 
+.background-img-homebird-hero-content, 
+.background-img-carehealthbird-hero-content
+{
+	position: relative;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 0;
+	text-align: center;
+}
+
+.background-img-newpetguidebook-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/newpetguidebook-081117-hero-1440w-418h-d');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	width: 100%;
+	padding-bottom: 40%;
+}
+.background-img-newpetguidebook-hero-content
+{
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-justify-content: center;
+	justify-content: center;
+	position: absolute;
+	top: 12%;
+	bottom: 12%;
+	left: 0;
+	right: 0;
+}
+.background-img-whattobuy-hero-container,
+.background-img-whattoknow-hero-container,
+.background-img-whattobuycat-hero-container,
+.background-img-whattoknowcat-hero-container,
+.background-img-whattobuyfish-hero-container,
+.background-img-whattoknowfish-hero-container, 
+.background-img-whattobuyrabbit-hero-container,
+.background-img-whattoknowrabbit-hero-container,
+.background-img-whattobuyguineapig-hero-container, 
+.background-img-whattoknowguineapig-hero-container, 
+.background-img-whattobuyhamster-hero-container, 
+.background-img-whattoknowhamster-hero-container, 
+.background-img-whattobuyothersmallanimal-hero-container, 
+.background-img-whattoknowothersmallanimal-hero-container, 
+.background-img-whattobuyreptile-hero-container,
+.background-img-whattoknowreptile-hero-container, 
+.background-img-whattobuybird-hero-container,
+.background-img-whattoknowbird-hero-container
+{
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	width: 100%;
+	opacity: 0.7;
+}
+
+/* NEW PET GUIDES - GLOBAL TAB - STYLING (2, 3, 4 styles) */
+.age_tabs_wrapper {
+	display: block;
+	margin: 0 auto;
+	width: 60%;
+	padding: 23px 0 20px 0;
+}
+.age_tabs_wrapper-tab-4 { /* copy to master */
+	display: block;
+	margin: 0 auto;
+	width: 60%;
+	padding: 23px 0 20px 0;
+}
+.age_content_container {
+	width: 100%;
+	display: block;
+	margin: 0 auto;
+	overflow: auto;
+}
+.age-label-navigation {
+	display: block;
+	float: left;
+	width: 25%;
+	cursor: pointer;
+	text-decoration: none;
+	text-align: center;
+	color: $petcoBlue;
+	background: $white;
+	border: solid 1px $gray;
+	clear: none;
+}
+.age-label-navigation-tab-2 {
+	display: block;
+	float: left;
+	width: 38%; /* tab 2 difference from tab 3 */
+	cursor: pointer;
+	text-decoration: none;
+	text-align: center;
+	color: $petcoBlue;
+	background: $white;
+	border: solid 1px $gray;
+	clear: none;
+}
+.age-label-navigation-tab-4 { /* copy to master */
+	display: block;
+	float: left;
+	width: 18.7%; /* tab 3 difference */
+	cursor: pointer;
+	text-decoration: none;
+	text-align: center;
+	color: $petcoBlue;
+	background: $white;
+	border: solid 1px $gray;
+	clear: none;
+}
+.age_nav_container > ul li a {
+	display: block;
+	text-align: center;
+	padding: 14px 1px;
+	text-decoration: none;
+}
+
+/* NEW PET LANDING PAGE - GUIDE TABS */
+.white-border-md {
+	border-top: solid $white 1px;
+	border-right: solid $white 3px;
+	border-bottom: solid $white 1px;
+	border-left: solid $white 3px;
+}
+.petguides-tile-sm {
+	box-sizing: border-box;
+	box-sizing: border-box;
+	transition: 0.2s;
+	width: 16.66%;
+	height: 240px;
+}
+
+/* WHAT TO BUY/KNOW GUIDE */	
+.vertical-align-container {
+	position: relative;
+}
+div.vertical-align-text {
+	position: absolute;
+	top: 25px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+.img-rounded {
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+.services-row-full-md [class*="col-"] {
+	float: left;
+	margin: 0px;
+	min-height: 0.125rem;
+	box-sizing: border-box;
+	width: 50%;
+}
+
+/*******************************************************************/
+/*            PET SEVICES - BACKGROUND IMAGES POSITIONING          */
+/*******************************************************************/
+.background-img-local-services-hero-container,
+.background-img-training-hero-container,
+.background-img-grooming-hero-container,
+.background-img-adoption-hero-container,
+.background-img-sitting-hero-container,
+.background-img-vetservices-hero-container {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center top;
+	position: relative;
+	width: 100%;
+	padding-bottom: 15px;
+	min-height: 245px;
+}
+.background-img-local-services-hero-content,
+.background-img-training-hero-content,
+.background-img-grooming-hero-content,
+.background-img-adoption-hero-content,
+.background-img-sitting-hero-content,
+.background-img-vetservices-hero-content {
+	position: relative;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 0;
+	text-align: center;
+}
+}
+@include breakpoint(medium){
+	/*---------------------------------------------------------------------*/
+/* NEW PET - PAGE LANDING & ALL GUIDES - BACKGROUND IMAGES POSITIONING */	
+/*---------------------------------------------------------------------*/
+
+.selfies-background-img-hero-container,
+.petneeds-background-img-hero-container,
+.petneeds-background-img-hero-container,
+.background-img-newpuppy-hero-container,
+.background-img-newadultdog-hero-container,
+.background-img-newseniordog-hero-container,
+.background-img-puppyneeds-hero-container,
+.background-img-petneedsadult-hero-container,
+.background-img-petneedssenior-hero-container,
+.background-img-newpuppyquestions-hero-container,
+.background-img-newadultquestions-hero-container,
+.background-img-newseniorquestions-hero-container
+.background-img-vetco-hero-container,
+.background-img-nutrition-hero-container,
+.background-img-puppyhome-hero-container,
+.background-img-doghome-hero-container,
+.background-img-onthego-hero-container,
+.background-img-play-hero-container,
+.background-img-health-hero-container,
+.background-img-newkitten-hero-container,
+.background-img-newadultcat-hero-container,
+.background-img-newseniorcat-hero-container,
+.background-img-kittenneeds-hero-container,
+.background-img-adultcatneeds-hero-container,
+.background-img-seniorcatneeds-hero-container, 
+.background-img-newkittenquestions-hero-container,
+.background-img-newadultcatquestions-hero-container,
+.background-img-newseniorcatquestions-hero-container,
+.background-img-cat-nutrition-hero-container,
+.background-img-cat-waste-hero-container,
+.background-img-cat-homeonthego-hero-container, 
+.background-img-cat-play-hero-container,
+.background-img-cat-health-hero-container,
+.background-img-newsaltwaterfish-hero-container,	
+.background-img-newfreshwaterfish-hero-container, 
+.background-img-fishneedssaltwater-hero-container, 
+.background-img-fishneedsfreshwater-hero-container,
+.background-img-newsaltfishquestions-hero-container,
+.background-img-newfreshfishquestions-hero-container,
+.background-img-foodcarefish-hero-container, 
+.background-img-aquariumsfish-hero-container,
+.background-img-equipmentfish-hero-container,
+.background-img-newrabbit-hero-container,	
+.background-img-newguineapig-hero-container,
+.background-img-newhamster-hero-container,
+.background-img-newothersmallanimal-hero-container,
+.background-img-smallpetneedsrabbit-hero-container,
+.background-img-smallpetneedsguinea-hero-container,
+.background-img-smallpetneedshamster-hero-container,
+.background-img-smallpetneedsother-hero-container,
+.background-img-newrabbitquestions-hero-container,
+.background-img-newguineaquestions-hero-container,
+.background-img-newhamsterquestions-hero-container,
+.background-img-newsmpetotherquestions-hero-container,
+.background-img-foodrabbit-hero-container,
+.background-img-homerabbit-hero-container,
+.background-img-carehealthrabbit-hero-container,
+.background-img-foodguinea-hero-container,
+.background-img-homeguinea-hero-container,
+.background-img-carehealthguinea-hero-container,
+.background-img-foodhamster-hero-container,
+.background-img-homehamster-hero-container,
+.background-img-carehealthhamster-hero-container,
+.background-img-chinchilla-hero-container,
+.background-img-ferret-hero-container,
+.background-img-gerbil-hero-container,
+.background-img-newreptile-hero-container,
+.background-img-newreptileneeds-hero-container,
+.background-img-newreptilequestions-container, 
+.background-img-homereptile-hero-container, 
+.background-img-foodreptile-hero-container, 
+.background-img-carehealthreptile-hero-container, 
+.background-img-newbird-hero-container,
+.background-img-newbirdneeds-hero-container,
+.background-img-newbirdquestions-hero-container,
+.background-img-foodbird-hero-container, 
+.background-img-homebird-hero-container, 
+.background-img-carehealthbird-hero-container 
+{
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center top;
+	position: relative;
+	width: 100%;
+	padding-bottom: 0;
+}
+
+.family-background-img-hero-content, 
+.selfies-background-img-hero-content,
+.petneeds-background-img-hero-content,
+.background-img-newpuppy-hero-content,
+.background-img-newadultdog-hero-content,
+.background-img-newseniordog-hero-content,
+.background-img-petneedsadult-hero-content,
+.background-img-puppyneeds-hero-content,
+.background-img-petneedssenior-hero-content,
+.background-img-newpuppyquestions-hero-content,
+.background-img-newadultquestions-hero-content,
+.background-img-newseniorquestions-hero-content,
+.background-img-whattobuy-hero-content,
+.background-img-whattoknow-hero-content,
+.background-img-vetco-hero-content,
+.background-img-nutrition-hero-content,
+.background-img-puppyhome-hero-content,
+.background-img-doghome-hero-content,
+.background-img-onthego-hero-content,
+.background-img-play-hero-content,
+.background-img-health-hero-content,
+.background-img-newkitten-hero-content,
+.background-img-newadultcat-hero-content,
+.background-img-newseniorcat-hero-content,
+.background-img-kittenneeds-hero-content,
+.background-img-adultcatneeds-hero-content,
+.background-img-seniorcatneeds-hero-content, 
+.background-img-newkittenquestions-hero-content,
+.background-img-newadultcatquestions-hero-content,
+.background-img-newseniorcatquestions-hero-content,
+.background-img-whattobuycat-hero-content,
+.background-img-whattoknowcat-hero-content,
+.background-img-cat-nutrition-hero-content,
+.background-img-cat-waste-hero-content,
+.background-img-cat-homeonthego-hero-content, 
+.background-img-cat-play-hero-content,
+.background-img-cat-health-hero-content,
+.background-img-newsaltwaterfish-hero-content,
+.background-img-newfreshwaterfish-hero-content,
+.background-img-fishneedssaltwater-hero-content, 
+.background-img-fishneedsfreshwater-hero-content,
+.background-img-newsaltfishquestions-hero-content, 
+.background-img-newfreshfishquestions-hero-content,
+.background-img-whattobuyfish-hero-content,
+.background-img-whattoknowfish-hero-content,
+.background-img-foodcarefish-hero-content,
+.background-img-aquariumsfish-hero-content,
+.background-img-equipmentfish-hero-content, 
+.background-img-newrabbit-hero-content,	
+.background-img-newguineapig-hero-content,
+.background-img-newhamster-hero-content,
+.background-img-newothersmallanimal-hero-content,
+.background-img-smallpetneedsrabbit-hero-content,
+.background-img-smallpetneedsguinea-hero-content,
+.background-img-smallpetneedshamster-hero-content,
+.background-img-smallpetneedsother-hero-content,
+.background-img-newrabbitquestions-hero-content,
+.background-img-newguineaquestions-hero-content,
+.background-img-newhamsterquestions-hero-content,
+.background-img-newsmpetotherquestions-hero-content,
+.background-img-whattobuyrabbit-hero-content,
+.background-img-whattoknowrabbit-hero-content,
+.background-img-whattobuyguineapig-hero-content, 
+.background-img-whattoknowguineapig-hero-content, 
+.background-img-whattobuyhamster-hero-content, 
+.background-img-whattoknowhamster-hero-content, 
+.background-img-whattobuyothersmallanimal-hero-content, 
+.background-img-whattoknowothersmallanimal-hero-content, 
+.background-img-foodrabbit-hero-content,
+.background-img-homerabbit-hero-content,
+.background-img-carehealthrabbit-hero-content,
+.background-img-foodguinea-hero-content,
+.background-img-homeguinea-hero-content,
+.background-img-carehealthguinea-hero-content,
+.background-img-foodhamster-hero-content,
+.background-img-homehamster-hero-content,
+.background-img-carehealthhamster-hero-content,
+.background-img-chinchilla-hero-content,
+.background-img-ferret-hero-content,
+.background-img-gerbil-hero-content,
+.background-img-newreptile-hero-content,
+.background-img-newreptileneeds-hero-content,
+.background-img-newreptilequestions-content,
+.background-img-whattobuyreptile-hero-content,
+.background-img-whattoknowreptile-hero-content,
+.background-img-homereptile-hero-content,
+.background-img-foodreptile-hero-content, 
+.background-img-carehealthreptile-hero-content, 
+.background-img-newbird-hero-content,
+.background-img-newbirdneeds-hero-content,
+.background-img-newbirdquestions-hero-content,
+.background-img-whattobuybird-hero-content,
+.background-img-whattoknowbird-hero-content,
+.background-img-foodbird-hero-content, 
+.background-img-homebird-hero-content, 
+.background-img-carehealthbird-hero-content
+{
+	position: relative; 
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 0;
+	text-align: center;
+}
+
+.background-img-newpetguidebook-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/newpetguidebook-081117-hero-1440w-418h-d');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center top;
+	position: relative;
+	width: 100%;
+	padding-bottom: 60%;
+}
+.background-img-newpetguidebook-hero-content {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-justify-content: center;
+	justify-content: center;
+	position: absolute;
+	top: 8%;
+	bottom: 5%;
+	left: 0;
+	right: 0;
+}
+.background-img-whattobuy-hero-container,
+.background-img-whattoknow-hero-container,
+.background-img-whattobuycat-hero-container,
+.background-img-whattoknowcat-hero-container,
+.background-img-whattobuyfish-hero-container,
+.background-img-whattoknowfish-hero-container, 
+.background-img-whattobuyrabbit-hero-container,
+.background-img-whattoknowrabbit-hero-container,
+.background-img-whattobuyguineapig-hero-container, 
+.background-img-whattoknowguineapig-hero-container, 
+.background-img-whattobuyhamster-hero-container, 
+.background-img-whattoknowhamster-hero-container, 
+.background-img-whattobuyothersmallanimal-hero-container, 
+.background-img-whattoknowothersmallanimal-hero-container, 
+.background-img-whattobuyreptile-hero-container,
+.background-img-whattoknowreptile-hero-container, 
+.background-img-whattobuybird-hero-container,
+.background-img-whattoknowbird-hero-container
+{
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center top;
+	position: relative;
+	padding-bottom: 0;
+	opacity: 0.7;
+}
+
+/* NEW PET GUIDES - GLOBAL TAB - STYLING (2, 3, 4 styles) */
+.age_tabs_wrapper {
+	display: block;
+	margin: 0 auto;
+	width: 75%;
+	padding: 23px 0 20px 0;
+}
+.age_tabs_wrapper-tab-4 {  /* copy to master */
+	display: block;
+	margin: 0 auto;
+	width: 95%;
+	padding: 23px 0 20px 0;
+}
+.age_content_container {
+	width: 100%;
+	display: block;
+	margin: 0 auto;
+	overflow: auto;
+}
+.age-label-navigation {
+	display: block;
+	float: left;
+	width: 25%;
+	cursor: pointer;
+	text-decoration: none;
+	text-align: center;
+	color: $petcoBlue;
+	background: $white;
+	border: solid 1px $gray;
+	clear: none;
+}
+.age-label-navigation-tab-2 {  /* copy to master style sheet */
+	display: block;
+	float: left;
+	width: 38%; /* tab 2 difference from tab 3 */
+	cursor: pointer;
+	text-decoration: none;
+	text-align: center;
+	color: $petcoBlue;
+	background: $white;
+	border: solid 1px $gray;
+	clear: none;
+}
+.age-label-navigation-tab-4 { /* copy to master */
+	display: block;
+	float: left;
+	width: 19%; /* tab 3 difference */
+	cursor: pointer;
+	text-decoration: none;
+	text-align: center;
+	color: $petcoBlue;
+	background: $white;
+	border: solid 1px $gray;
+	clear: none;
+}
+.age_nav_container > ul li a {
+	display: block;
+	text-align: center;
+	padding: 14px 1px;
+	text-decoration: none;
+}
+/* NEW PET LANDING PAGE - GUIDE TABS */
+.white-border-md {
+	border-top: solid $white 3px;
+	border-right: solid $white 2px;
+	border-bottom: solid $white 3px;
+	border-left: solid $white 4px;
+}
+.petguides-tile-sm {
+	box-sizing: border-box;
+	box-sizing: border-box;
+	transition: 0.2s;
+	width: 49.89%;
+	height: 60%;
+}
+/* WHAT TO BUY/KNOW GUIDE */	
+.vertical-align-container {
+	position: relative;
+}
+div.vertical-align-text {
+	position: absolute;
+	top: 35px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+.img-rounded {
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+.services-row-full-md [class*="col-"] {
+	float: left;
+	margin: 0px;
+	min-height: 0.125rem;
+	box-sizing: border-box;
+	width: 50%;
+}
+
+/*******************************************************************/
+/*            PET SEVICES - BACKGROUND IMAGES POSITIONING          */
+/*******************************************************************/
+.background-img-local-services-hero-container,
+.background-img-training-hero-container,
+.background-img-grooming-hero-container,
+.background-img-adoption-hero-container,
+.background-img-sitting-hero-container,
+.background-img-vetservices-hero-container {	
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center top;
+	position: relative;
+	width: 100%;
+	padding-bottom: 15px;
+	min-height: 245px;
+}
+.background-img-local-services-hero-content,
+.background-img-training-hero-content,
+.background-img-grooming-hero-content,
+.background-img-adoption-hero-content,
+.background-img-sitting-hero-content,
+.background-img-vetservices-hero-content {
+	position: relative;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 0;
+	text-align: center;
+}
+}
+
+@include breakpoint(small) {
+.selfies-background-img-hero-container,
+.petneeds-background-img-hero-container,
+.petneeds-background-img-hero-container,
+.background-img-newpuppy-hero-container,
+.background-img-newadultdog-hero-container,
+.background-img-newseniordog-hero-container,
+.background-img-puppyneeds-hero-container,
+.background-img-petneedsadult-hero-container,
+.background-img-petneedssenior-hero-container,
+.background-img-newpuppyquestions-hero-container,
+.background-img-newadultquestions-hero-container,
+.background-img-newseniorquestions-hero-container
+.background-img-vetco-hero-container,
+.background-img-nutrition-hero-container,
+.background-img-puppyhome-hero-container,
+.background-img-doghome-hero-container,
+.background-img-onthego-hero-container,
+.background-img-play-hero-container,
+.background-img-health-hero-container,
+.background-img-newkitten-hero-container,
+.background-img-newadultcat-hero-container,
+.background-img-newseniorcat-hero-container,
+.background-img-kittenneeds-hero-container, 
+.background-img-adultcatneeds-hero-container,
+.background-img-seniorcatneeds-hero-container, 
+.background-img-newkittenquestions-hero-container,
+.background-img-newadultcatquestions-hero-container,
+.background-img-newseniorcatquestions-hero-container, 
+.background-img-cat-nutrition-hero-container,
+.background-img-cat-waste-hero-container,
+.background-img-cat-homeonthego-hero-container, 
+.background-img-cat-play-hero-container,
+.background-img-cat-health-hero-container,
+.background-img-newsaltwaterfish-hero-container,	
+.background-img-newfreshwaterfish-hero-container,
+.background-img-fishneedssaltwater-hero-container, 
+.background-img-fishneedsfreshwater-hero-container,
+.background-img-newsaltfishquestions-hero-container,
+.background-img-newfreshfishquestions-hero-container,
+.background-img-foodcarefish-hero-container, 
+.background-img-aquariumsfish-hero-container,
+.background-img-equipmentfish-hero-container,
+.background-img-newrabbit-hero-container,	
+.background-img-newguineapig-hero-container,
+.background-img-newhamster-hero-container,
+.background-img-newothersmallanimal-hero-container,
+.background-img-smallpetneedsrabbit-hero-container,
+.background-img-smallpetneedsguinea-hero-container,
+.background-img-smallpetneedshamster-hero-container,
+.background-img-smallpetneedsother-hero-container,
+.background-img-newrabbitquestions-hero-container,
+.background-img-newguineaquestions-hero-container,
+.background-img-newhamsterquestions-hero-container,
+.background-img-newsmpetotherquestions-hero-container,
+.background-img-foodrabbit-hero-container,
+.background-img-homerabbit-hero-container,
+.background-img-carehealthrabbit-hero-container,
+.background-img-foodguinea-hero-container,
+.background-img-homeguinea-hero-container,
+.background-img-carehealthguinea-hero-container,
+.background-img-foodhamster-hero-container,
+.background-img-homehamster-hero-container,
+.background-img-carehealthhamster-hero-container,
+.background-img-chinchilla-hero-container,
+.background-img-ferret-hero-container,
+.background-img-gerbil-hero-container,
+.background-img-newreptile-hero-container,
+.background-img-newreptileneeds-hero-container,
+.background-img-newreptilequestions-container, 
+.background-img-homereptile-hero-container, 
+.background-img-foodreptile-hero-container, 
+.background-img-carehealthreptile-hero-container, 
+.background-img-newbird-hero-container,
+.background-img-newbirdneeds-hero-container,
+.background-img-newbirdquestions-hero-container,
+.background-img-foodbird-hero-container, 
+.background-img-homebird-hero-container, 
+.background-img-carehealthbird-hero-container 
+{
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center top;
+	position: relative;
+	width: 100%;
+	padding-bottom: 0;
+}
+
+.family-background-img-hero-content, 
+.selfies-background-img-hero-content,
+.petneeds-background-img-hero-content,
+.background-img-newpuppy-hero-content,
+.background-img-newadultdog-hero-content,
+.background-img-newseniordog-hero-content,
+.background-img-petneedsadult-hero-content,
+.background-img-puppyneeds-hero-content,
+.background-img-petneedssenior-hero-content,
+.background-img-newpuppyquestions-hero-content,
+.background-img-newadultquestions-hero-content,
+.background-img-newseniorquestions-hero-content,
+.background-img-whattobuy-hero-content,
+.background-img-whattoknow-hero-content,
+.background-img-vetco-hero-content,
+.background-img-nutrition-hero-content,
+.background-img-puppyhome-hero-content,
+.background-img-doghome-hero-content,
+.background-img-onthego-hero-content,
+.background-img-play-hero-content,
+.background-img-health-hero-content,
+.background-img-newkitten-hero-content,
+.background-img-newadultcat-hero-content,
+.background-img-newseniorcat-hero-content,
+.background-img-kittenneeds-hero-content,
+.background-img-adultcatneeds-hero-content,
+.background-img-seniorcatneeds-hero-content, 
+.background-img-newkittenquestions-hero-content,
+.background-img-newadultcatquestions-hero-content,
+.background-img-newseniorcatquestions-hero-content,
+.background-img-whattobuycat-hero-content,
+.background-img-whattoknowcat-hero-content,
+.background-img-cat-nutrition-hero-content,
+.background-img-cat-waste-hero-content,
+.background-img-cat-homeonthego-hero-content, 
+.background-img-cat-play-hero-content,
+.background-img-cat-health-hero-content,
+.background-img-newsaltwaterfish-hero-content,
+.background-img-newfreshwaterfish-hero-content,
+.background-img-whattobuyfish-hero-content,
+.background-img-whattoknowfish-hero-content,
+.background-img-fishneedssaltwater-hero-content, 
+.background-img-fishneedsfreshwater-hero-content,
+.background-img-newsaltfishquestions-hero-content, 
+.background-img-newfreshfishquestions-hero-content,
+.background-img-foodcarefish-hero-content,
+.background-img-aquariumsfish-hero-content,
+.background-img-equipmentfish-hero-content, 
+.background-img-newrabbit-hero-content,	
+.background-img-newguineapig-hero-content,
+.background-img-newhamster-hero-content,
+.background-img-newothersmallanimal-hero-content,
+.background-img-smallpetneedsrabbit-hero-content,
+.background-img-smallpetneedsguinea-hero-content,
+.background-img-smallpetneedshamster-hero-content,
+.background-img-smallpetneedsother-hero-content,
+.background-img-newrabbitquestions-hero-content,
+.background-img-newguineaquestions-hero-content,
+.background-img-newhamsterquestions-hero-content,
+.background-img-newsmpetotherquestions-hero-content,
+.background-img-whattobuyrabbit-hero-content,
+.background-img-whattoknowrabbit-hero-content,
+.background-img-whattobuyguineapig-hero-content, 
+.background-img-whattoknowguineapig-hero-content, 
+.background-img-whattobuyhamster-hero-content, 
+.background-img-whattoknowhamster-hero-content, 
+.background-img-whattobuyothersmallanimal-hero-content, 
+.background-img-whattoknowothersmallanimal-hero-content, 
+.background-img-foodrabbit-hero-content,
+.background-img-homerabbit-hero-content,
+.background-img-carehealthrabbit-hero-content,
+.background-img-foodguinea-hero-content,
+.background-img-homeguinea-hero-content,
+.background-img-carehealthguinea-hero-content,
+.background-img-foodhamster-hero-content,
+.background-img-homehamster-hero-content,
+.background-img-carehealthhamster-hero-content,
+.background-img-chinchilla-hero-content,
+.background-img-ferret-hero-content,
+.background-img-gerbil-hero-content,
+.background-img-newreptile-hero-content,
+.background-img-newreptileneeds-hero-content,
+.background-img-newreptilequestions-content,
+.background-img-whattobuyreptile-hero-content,
+.background-img-whattoknowreptile-hero-content,
+.background-img-homereptile-hero-content,
+.background-img-foodreptile-hero-content, 
+.background-img-carehealthreptile-hero-content, 
+.background-img-newbird-hero-content,
+.background-img-newbirdneeds-hero-content,
+.background-img-newbirdquestions-hero-content,
+.background-img-whattobuybird-hero-content,
+.background-img-whattoknowbird-hero-content,
+.background-img-foodbird-hero-content, 
+.background-img-homebird-hero-content, 
+.background-img-carehealthbird-hero-content
+{
+	position: relative;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 0;
+	text-align: center;
+}
+.background-img-newpetguidebook-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/newpetguidebook-081117-hero-1440w-418h-d');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center top;
+	position: relative;
+	width: 100%;
+	padding-bottom: 110%;
+}
+.background-img-newpetguidebook-hero-content {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-justify-content: center;
+	justify-content: center;
+	position: absolute;
+	top: 8%;
+	bottom: 8%;
+	left: 0;
+	right: 0;
+}
+
+.background-img-whattobuy-hero-container,
+.background-img-whattoknow-hero-container,
+.background-img-whattobuycat-hero-container,
+.background-img-whattoknowcat-hero-container,
+.background-img-whattobuyfish-hero-container,
+.background-img-whattoknowfish-hero-container,
+.background-img-whattobuyrabbit-hero-container,
+.background-img-whattoknowrabbit-hero-container,
+.background-img-whattobuyguineapig-hero-container, 
+.background-img-whattoknowguineapig-hero-container, 
+.background-img-whattobuyhamster-hero-container, 
+.background-img-whattoknowhamster-hero-container, 
+.background-img-whattobuyothersmallanimal-hero-container, 
+.background-img-whattoknowothersmallanimal-hero-container, 
+.background-img-whattobuyreptile-hero-container,
+.background-img-whattoknowreptile-hero-container, 
+.background-img-whattobuybird-hero-container,
+.background-img-whattoknowbird-hero-container
+{
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center top;
+	position: relative;
+	padding-bottom: 0;
+	opacity: 0.7;
+}
+p.animal_type_label {
+	display: block;
+	float: left;
+	width: 100%;
+	text-align: center;
+	padding-bottom: 15px;
+}
+
+/* NEW PET GUIDES - GLOBAL TAB - STYLING (2, 3, 4 styles) */
+.age_tabs_wrapper {
+	display: block;
+	margin: 0 auto;
+	width: 96%;
+	padding: 3px 0 20px 0;
+}
+.age_tabs_wrapper-tab-4 {
+	display: block;
+	margin: 0 auto;
+	width: 96%;
+	padding: 3px 0 20px 0;
+}
+.age_content_container {
+	width: 98%;
+	display: block;
+	margin: 0 auto;
+	overflow: auto;
+}
+.age-label-navigation {
+	display: block;
+	float: left;
+	width: 32.5%;
+	cursor: pointer;
+	text-decoration: none;
+	text-align: center;
+	color: $petcoBlue;
+	background: $white;
+	border: solid 1px $gray;
+	clear: none;
+}
+.age-label-navigation-tab-2 {
+	display: block;
+	float: left;
+	width: 49%; /* tab 2 difference from tab 3 */
+	cursor: pointer;
+	text-decoration: none;
+	text-align: center;
+	color: $petcoBlue;
+	background: $white;
+	border: solid 1px $gray;
+	clear: none;
+}
+.age-label-navigation-tab-4 { /* copy to master */
+	display: block;
+	float: left;
+	width: 49%; /* tab 3 difference */
+	cursor: pointer;
+	text-decoration: none;
+	text-align: center;
+	color: $petcoBlue;
+	background: $white;
+	clear: none;
+    border: solid 1px #7E9DA2;
+}
+.age_nav_container {
+	width: 98%;
+	clear: both;
+	margin: 0 auto;
+	display: block;
+}
+.age_nav {
+	width: 90%;
+	margin: 0 auto;
+	display: block;
+}
+.age-label-navigation > a {
+	display: block;
+	text-align: center;
+	padding: 10px 5px;
+	text-decoration: none;
+}
+/* NEW PET LANDING PAGE - GUIDE TABS */
+.white-border-md {
+	border-top: solid $white 3px;
+	border-right: solid $white 1px;
+	border-bottom: solid $white 3px;
+	border-left: solid $white 5px;
+}
+.petguides-tile-sm {
+	box-sizing: border-box;
+	box-sizing: border-box;
+	transition: 0.2s;
+	width: 49%;
+	height: 245px;
+}
+.width-auto {
+	width: auto;
+}
+/* WHAT TO BUY/KNOW GUIDE */
+.vertical-align-container {
+	position: relative;
+}
+div.vertical-align-text {
+	position: relative;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+.img-rounded {
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+.services-row-full-md [class*="col-"] {
+	float: left;
+	margin: 0px;
+	min-height: 0.125rem;
+	box-sizing: border-box;
+	width: auto;
+}
+
+/*******************************************************************/
+/*            PET SEVICES - BACKGROUND IMAGES POSITIONING          */
+/*******************************************************************/
+.background-img-local-services-hero-container,
+.background-img-training-hero-container,
+.background-img-grooming-hero-container,
+.background-img-adoption-hero-container,
+.background-img-sitting-hero-container,
+.background-img-vetservices-hero-container {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center top;
+	position: relative;
+	width: 100%;
+	padding-bottom: 15px;
+	min-height: 315px;
+}
+.background-img-local-services-hero-content,
+.background-img-training-hero-content,
+.background-img-grooming-hero-content,
+.background-img-adoption-hero-content,
+.background-img-sitting-hero-content,
+.background-img-vetservices-hero-content {
+	position: relative;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 0;
+	text-align: center;
+}
+}
+
+.gradient-petco-blue-1 {
+      background: $petcoBlue; /* For browsers that do not support gradients */
+      background: -webkit-linear-gradient(left, $lightBlue, $petcoBlue); /* For Safari 5.1 to 6.0 */
+      background: -o-linear-gradient(right, $lightBlue, $petcoBlue); /* For Opera 11.1 to 12.0 */
+      background: -moz-linear-gradient(right, $lightBlue, $petcoBlue); /* For Firefox 3.6 to 15 */
+      background: linear-gradient(to right, $lightBlue, $petcoBlue); /* Standard syntax (must be last) */
+}
+ 
+.gradient-petco-blue-2 {
+      background: $petcoBlue; /* For browsers that do not support gradients */
+      background: -webkit-linear-gradient(left, $petcoBlue, $lightBlue); /* For Safari 5.1 to 6.0 */
+      background: -o-linear-gradient(right, $petcoBlue, $lightBlue); /* For Opera 11.1 to 12.0 */
+      background: -moz-linear-gradient(right, $petcoBlue, $lightBlue); /* For Firefox 3.6 to 15 */
+      background: linear-gradient(to right, $petcoBlue, $lightBlue); /* Standard syntax (must be last) */
+}
+ 
+.brand-shop-header {
+      background-size: cover;
+      min-height: 150px;
+}
+ 
+.pals-contact-title {
+    position: relative;
+    top: -15px;
+}
+ 
+.deals-shop-clearance {
+    background: url(//s7d1.scene7.com/is/image/PETCO/deals-shop-clearance-091917-tile-548w-280h-d) no-repeat center;
+    background-size: cover;
+    margin: 0 !important;
+    min-height: 280px !important;
+}
+ 
+.deals-local-ad {
+    background: url(//s7d1.scene7.com/is/image/PETCO/deals-local-ad-091917-tile-548w-280h-d) no-repeat center;
+    background-size: cover;
+    margin: 0 !important;
+    min-height: 280px !important;
+}
+.gradient-petco-blue-3 {
+  background: $petcoBlue;
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient($lightBlue, $petcoBlue);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient($lightBlue, $petcoBlue);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient($lightBlue, $petcoBlue);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient($lightBlue, $petcoBlue);
+  /* Standard syntax (must be last) */ }
+
+.gradient-petco-blue-4 {
+  background: $petcoBlue;
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient($petcoBlue, $lightBlue);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient($petcoBlue, $lightBlue);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient($petcoBlue, $lightBlue);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient($petcoBlue, $lightBlue);
+  /* Standard syntax (must be last) */ }
+  
+.gradient-petco-blue-5 {
+  background: $petcoBlue;
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, $lightBlue, $petcoBlue);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, $lightBlue, $petcoBlue);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, $lightBlue, $petcoBlue);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, $lightBlue, $petcoBlue);
+  /* Standard syntax (must be last) */ }
+
+.gradient-petco-blue-6 {
+  background: $petcoBlue;
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, $petcoBlue, $lightBlue);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, $petcoBlue, $lightBlue);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, $petcoBlue, $lightBlue);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, $petcoBlue, $lightBlue);
+  /* Standard syntax (must be last) */ }
+  
+  
+/* NEW FOOTER ADDITION - PARTNER LINKS */
+
+.petco-partners {
+	width: 100%;
+	padding-bottom: 20px;
+	box-sizing: border-box;
+	float: none;
+	clear: both;
+	@include breakpoint(small){
+		border-top: 1px solid $lightGray;
+		padding-top: 15px;
+	}
+}
+.petco-partners ul {
+	display: block;
+	margin-left:0;
+}
+.petco-partners ul li {
+	display: inline-block;
+}
+@include breakpoint(x-large){
+	.background-img-canidae-hero-container {
+	background-color: #8e847a;
+	/* background-image: url(''); */
+}
+.background-img-blue-buffalo-hero-container {
+	background-color: #003a69;
+	/* background-image: url(''); */
+}
+.background-img-merrick-hero-container {
+	background-color: #fff4d5;
+	/* background-image: url(''); */
+}
+.background-img-canidae-hero-container,
+.background-img-blue-buffalo-hero-container,
+.background-img-merrick-hero-container {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	width: 100%;
+	padding-bottom: 20%;
+}
+.background-img-canidae-hero-content,
+.background-img-blue-buffalo-hero-content,
+.background-img-merrick-hero-content {
+	/* display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;*/
+	flex-direction: column;
+	-webkit-justify-content: center;
+	justify-content: center;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+}
+@include breakpoint(large){
+	.background-img-canidae-hero-container {
+	background-color: #8e847a;
+	/* background-image: url(''); */
+}
+.background-img-blue-buffalo-hero-container {
+	background-color: #003a69;
+	/* background-image: url(''); */
+}
+.background-img-merrick-hero-container {
+	background-color: #fff4d5;
+	/* background-image: url(''); */
+}
+.background-img-canidae-hero-container,
+.background-img-blue-buffalo-hero-container,
+.background-img-merrick-hero-container {
+
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center top;
+	position: relative;
+	width: 100%;
+	padding-bottom: 15px;
+}
+.background-img-canidae-hero-content,
+.background-img-blue-buffalo-hero-content,
+.background-img-merrick-hero-content {
+	position: relative;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 0;
+	text-align: center;
+}
+}
+
+@include breakpoint(medium){
+	.background-img-canidae-hero-container {
+	background-color: #8e847a;
+	/* background-image: url(''); */
+}
+.background-img-blue-buffalo-hero-container {
+	background-color: #003a69;
+	/* background-image: url(''); */
+}
+.background-img-merrick-hero-container {
+	background-color: #fff4d5;
+	/* background-image: url(''); */
+}
+.background-img-canidae-hero-container,
+.background-img-blue-buffalo-hero-container,
+.background-img-merrick-hero-container {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center top;
+	position: relative;
+	width: 100%;
+	padding-bottom: 15px;
+}
+.background-img-canidae-hero-content,
+.background-img-blue-buffalo-hero-content,
+.background-img-merrick-hero-content {
+	position: relative;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 0;
+	text-align: center;
+}
+}
+
+@include breakpoint(small){
+	.background-img-canidae-hero-container {
+	background-color: #8e847a;
+	/* background-image: url(''); */
+}
+.background-img-blue-buffalo-hero-container {
+	background-color: #003a69;
+	/* background-image: url(''); */
+}
+.background-img-merrick-hero-container {
+	background-color: #fff4d5;
+	/* background-image: url(''); */
+}
+.background-img-canidae-hero-container,
+.background-img-blue-buffalo-hero-container,
+.background-img-merrick-hero-container {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center top;
+	position: relative;
+	width: 100%;
+	padding-bottom: 15px;
+}
+.background-img-canidae-hero-content,
+.background-img-blue-buffalo-hero-content,
+.background-img-merrick-hero-content {
+	position: relative;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 0;
+	text-align: center;
+}
+}
+.alert {
+  padding: 15px;
+  margin-bottom: 22px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  &.alert-success {
+	  background-color: #dff0d8;
+	  border-color: #d6e9c6;
+	  color: #468847;
+}
+
+	.close {
+	  float: right;
+	  font-size: 21px;
+	  font-weight: bold;
+	  line-height: 1;
+	  color: #000000;
+	  text-shadow: 0 1px 0 $white;
+	  opacity: 0.2;
+	  filter: alpha(opacity=20);
+	}
+	.close:hover,
+	.close:focus {
+	  color: #000000;
+	  text-decoration: none;
+	  cursor: pointer;
+	  opacity: 0.5;
+	  filter: alpha(opacity=50);
+	}
+	button.close {
+	  padding: 0;
+	  cursor: pointer;
+	  background: transparent;
+	  border: 0;
+	  -webkit-appearance: none;
+	}
+}
+
+/*----------------------------------------------------------*/
+/* WHOLEHEARTED BRAND PAGE */
+/*----------------------------------------------------------*/
+.wholehearted-background-img-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/wholehearted-100317-hero-1440w-418h-d');
+}
+.bg-wholehearted {
+	background-color: #f2864a;
+}
+.all-rounded-corners-dropshadow {
+	background-color: $white;
+	border-radius: 5px;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+/*----------------------------------------------------------*/
+/* REPEAT DELIVERY TOOLTIP */
+/*----------------------------------------------------------*/
+.tooltip-container {
+	position: relative;
+	z-index: 0;
+	top: calc(-100% - 2.5rem);
+	left: 50%;
+	transform: translateX(-50%);
+	border: solid 6px $white;
+	border-radius: 5px;
+	box-shadow: 3px 4px 8px 0px rgba(0, 0, 0, 0.1);
+}
+.tooltip-text:before, .tooltip-text:after {
+	display: block;
+	content: "";
+	position: absolute;
+	z-index: -100;
+	width: 50%;
+	top: 0;
+	bottom: 0;
+	transition: transform 200ms ease-out;
+}
+.tooltip-text {
+	background: #00aae7;
+	padding: 0.75rem 1rem 0 1rem;
+}
+.tooltip-tip {
+	position: absolute;
+	z-index: -100;
+	display: block;
+	width: 70px;
+	height: 70px;
+	background: #00aae7;
+	left: 50%;
+	bottom: -3%;
+	transform: translateX(-50%)  rotate(45deg);
+	transition: transform 200ms ease-out;
+	border: solid 6px $white;
+	box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.10);
+}
+
+/*----------------------------------------------------------*/
+/* REPEAT DELIVERY TOOLTIP */
+/*----------------------------------------------------------*/
+.tooltip-container {
+	position: relative;
+	z-index: 0;
+	top: calc(-100% - 2.5rem);
+	left: 50%;
+	transform: translateX(-50%);
+	border: solid 6px $white;
+	border-radius: 5px;
+	box-shadow: 3px 4px 8px 0px rgba(0, 0, 0, 0.1);
+}
+.tooltip-text:before, .tooltip-text:after {
+	display: block;
+	content: "";
+	position: absolute;
+	z-index: -100;
+	width: 50%;
+	top: 0;
+	bottom: 0;
+	transition: transform 200ms ease-out;
+}
+.tooltip-text {
+	background: #00aae7;
+	padding: 0.75rem 1rem 0 1rem;
+}
+.tooltip-tip {
+	position: absolute;
+	z-index: -100;
+	display: block;
+	width: 70px;
+	height: 70px;
+	background: #00aae7;
+	left: 50%;
+	bottom: -3%;
+	transform: translateX(-50%)  rotate(45deg);
+	transition: transform 200ms ease-out;
+	border: solid 6px $white;
+	box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.10);
+}
+
+/*----------------------------------------------------------*/
+/* PET GUIDES GLOBAL TAB NAVIGATION (2, 3, 4  styles) */
+/*----------------------------------------------------------*/
+.triangle {
+	position: relative;
+	margin: 3em;
+	box-sizing: border-box;
+	background-color: $white;
+	border-radius: 5px;
+	box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.1);
+}
+.triangle::after {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	margin-left: -0.5em;
+	bottom: -1.5em;
+	left: 50%;
+	box-sizing: border-box;
+	border: .75em solid black;
+	border-color: transparent transparent #fff #fff;
+	transform-origin: 0 0;
+	transform: rotate(-45deg);
+	box-shadow: -6px 6px 15px 0 rgba(0, 0, 0, 0.07);
+}
+p {
+	&.animal_type_label{
+		display: block;
+		float: left;
+		width: 20%;
+		text-align: center;
+		padding-top: 10px;
+	}
+}
+.age_nav > li {
+	a:hover:not(.active) {
+		background-color: #00aae7;
+		color: #fff;
+	
+	}
+}
+a {
+	&.active{
+		background-color: #00aae7;
+		color: white;
+	}
+}
+.rounded-top-left {
+	border-top-left-radius: 5px;
+}
+.rounded-top-right {
+	border-top-right-radius: 5px;
+}
+.rounded-bottom-left {
+	border-bottom-left-radius: 5px;
+}
+.rounded-bottom-right {
+	border-bottom-right-radius: 5px;
+}
+.services-tile-md {
+	box-sizing: border-box;
+	border: 1px solid #e6e6e6;
+	border-radius: 5px;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+	transition: 0.2s;
+	background-color: $white;
+}
+.rounded-tab {
+	box-sizing: border-box;
+	border-radius: 5px 5px 0 0;
+	transition: 0.2s;
+	border-right: solid #e6e6e6 1px;
+	border-top: solid #e6e6e6 1px;
+	border-left: solid #e6e6e6 1px;
+	background: red; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(white, #ddd); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(white, #ddd); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(white, #ddd); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(white, #ddd); /* Standard syntax */
+	width: 150px;
+	padding: 10px 0;
+}
+
+/*-------------------------*/
+/* NEW PET - GUIDES GLOBAL */
+/*-------------------------*/
+
+/* NEW PET PAGE - article -  what new pet parents are reading */
+.service-title {
+	height: 65px;
+}
+.border-medium {
+	border: 10px solid $white;
+}
+.all-rounded-corners-dropshadow {
+	background-color: $white;
+	border-radius: 5px;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+}
+.text-tile-lg {
+	background-color: $white;
+	border-radius: 5px;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+}
+.height-adjust {
+	display: flex;
+}
+.rounded-border {
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+.text-wrap {
+	white-space:normal;
+}
+.background-addselfie-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/addselfie-091917-image-200w-200h-d');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	width: 100%;
+}
+.background-addselfie-content {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-justify-content: center;
+	justify-content: center;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+/*---------------------------------------------------------*/
+/* NEW PET PAGE LANDING & PET GUIDES - BACKGROUND IMAGES */	
+/*---------------------------------------------------------*/
+
+/* NEW PET - BACKGROUND IMAGES */
+.family-background-img-hero-container {
+	 background-image: url('//s7d1.scene7.com/is/image/PETCO/family-081017-hero-1440w-418h-d');}
+.selfies-background-img-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/petselfies--081017-hero-1440w-418h-d');}
+.background-img-newpetguidebook-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/newpetguidebook-081117-hero-1440w-418h-d');}
+.petneeds-background-img-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/petneeds-081017-hero-1440w-418h-d');}
+
+	
+/* NEW DOG GUIDE - BACKGROUND IMAGES */
+.background-img-newpuppy-hero-container  {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/newpuppy-081117-hero-1440w-418h-d');}
+.background-img-newadultdog-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/dognewhomeadult-090617-hero-1440w-418h-d');}
+.background-img-newseniordog-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/dognewhomesenior-090617-hero-1440w-418h-d');}
+.background-img-puppyneeds-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/puppyneeds-082817-hero-1440w-418h-d');}
+.background-img-petneedsadult-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/petneedsadult-090617-hero-1440w-418h-d');}
+.background-img-petneedssenior-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/petneedssenior-090617-hero-1440w-418h-d');}
+.background-img-newpuppyquestions-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/newpuppyquestions-083117-hero-1440w-418h-d');}
+.background-img-newadultquestions-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/newadultdogquestions-090117-hero-1440w-418h-d');}
+.background-img-newseniorquestions-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/newseniordogquestions-090117-hero-1440w-418h-d');}
+.background-img-whattobuy-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/whattobuy-082317-image-520w-285h-d');}
+.background-img-whattoknow-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/whattoknow-082317-image-520w-285h-d');}
+.background-img-vetco-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/vetco-081117-hero-1440w-418h-d');}
+.background-img-nutrition-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/nutrition-082817-hero-1440w-418h-d');}
+.background-img-puppyhome-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/puppyhome-092117-hero-1440w-418h-d');}
+.background-img-doghome-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/doghome-082817-hero-1440w-418h-d');}
+.background-img-onthego-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/onthego-082817-hero-1440w-418h-d');}
+.background-img-play-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/play-082817-hero-1440w-418h-d');}
+.background-img-health-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/health-082817-hero-1440w-418h-d');}
+	
+/* NEW CAT GUIDE - BACKGROUND IMAGES */
+.background-img-newkitten-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/newkitten-090717-hero-1440w-418h-d');}
+.background-img-newadultcat-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/newadultcat-090717-hero-1440w-418h-d');}
+.background-img-newseniorcat-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/newseniorcat-090717-hero-1440w-418h-d');}
+.background-img-kittenneeds-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/kittenneeds-090717-hero-1440w-418h-d');}
+.background-img-adultcatneeds-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/everythingpetneedsadultcat-090717-hero-1440w-418h-d');}	
+.background-img-seniorcatneeds-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/petneedsseniorcat-090717-hero-1440w-418h-d');}
+.background-img-newkittenquestions-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/newkittenquestions-090717-hero-1440w-418h-d');}
+.background-img-newadultcatquestions-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/newadultcatquestions-090717-hero-1440w-418h-d');}
+.background-img-newseniorcatquestions-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/newseniorcatquestions-090717-hero-1440w-418h-d');}
+.background-img-whattobuycat-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/whattobuycat-090717-image-520w-285h-d');}
+.background-img-whattoknowcat-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/whattoknowcat-090717-image-520w-285h-d');}
+.background-img-cat-nutrition-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/nutritioncat-090717-hero-1440w-418h-d');}
+.background-img-cat-waste-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/litterwastedisposalcat-090717-hero-1440w-418h-d');}
+.background-img-cat-homeonthego-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/onthego-cat-090717-hero-1440w-418h-d');}
+.background-img-cat-play-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/play-cat-090717-hero-1440w-418h-d');}
+.background-img-cat-health-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/health-cat-090717-hero-1440w-418h-d');}
+
+/* NEW FISH GUIDE - BACKGROUND IMAGES */
+.background-img-newsaltwaterfish-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/newsaltwaterfish-090717-hero-1440w-418h-d');}
+.background-img-newfreshwaterfish-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/newfreshwaterfish-090717-hero-1440w-418h-d');}
+.background-img-fishneedssaltwater-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/petneedssaltwaterfish-090717-hero-1440w-418h-d');}
+.background-img-fishneedsfreshwater-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/petneedsfreshwaterfish-090717-hero-1440w-418h-d');}
+.background-img-newsaltfishquestions-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/freshwaterfishquestions-090717-hero-1440w-418h-d');}
+.background-img-newfreshfishquestions-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/newfreshwaterfishquestions-090717-hero-1440w-418h-d');}
+.background-img-whattobuyfish-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/whattobuyfish-091317-image-520w-285h-d-v2');}
+.background-img-whattoknowfish-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/whattobuyfish-090717-image-520w-285h-d');}
+.background-img-foodcarefish-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/foodcarefish-090717-hero-1440w-418h-d');}
+.background-img-aquariumsfish-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/aquariumsfish-090717-hero-1440w-418h-d');}
+.background-img-equipmentfish-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/equipmentfish-090717-hero-1440w-418h-d');}
+
+
+/* SMALL PET GUIDE - BACKGROUND IMAGES */
+.background-img-newrabbit-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/newrabbit-090717-hero-1440w-418h-d');}
+.background-img-newguineapig-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/newguineapig-090717-hero-1440w-418h-d');}
+.background-img-newhamster-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/newhamster-090717-hero-1440w-418h-d');}
+.background-img-newothersmallanimal-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/newothersmall-090717-hero-1440w-418h-d');}
+.background-img-smallpetneedsrabbit-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/petneedsrabbit-090717-hero-1440w-418h-d');}
+.background-img-smallpetneedsguinea-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/everythingpetneedsguinea-090717-hero-1440w-418h-d');}
+.background-img-smallpetneedshamster-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/everythingpetneedshamster-090717-hero-1440w-418h-d');}
+.background-img-smallpetneedsother-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/everythingpetneedsother-091217-hero-1440w-418h-d');}
+.background-img-newrabbitquestions-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/newrabbitquestions-090717-hero-1440w-418h-d');}
+.background-img-newguineaquestions-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/newguineaquestions-090717-hero-1440w-418h-d');}
+.background-img-newhamsterquestions-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/newhamsterquestions-091217-hero-1440w-418h-d');}
+.background-img-newsmpetotherquestions-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/newsmpetotherquestions-091217-hero-1440w-418h-d');}
+.background-img-whattobuyrabbit-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/whattobuyrabbit-090717-image-520w-285h-d');}
+.background-img-whattoknowrabbit-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/whattoknowrabbit-090717-image-520w-285h-d');}
+.background-img-whattobuyguineapig-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/whattobuyguineapig-090717-image-520w-285h-d');}
+.background-img-whattoknowguineapig-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/whattoknowguineapig-090717-image-520w-285h-d');}
+.background-img-whattobuyhamster-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/whattobuyhamster-090717-image-520w-285h-d');}
+.background-img-whattoknowhamster-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/whattoknowhamster-090717-image-520w-285h-d');}
+.background-img-whattobuyothersmallanimal-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/whattobuyothersmall-090717-image-520w-285h-d');}
+.background-img-whattoknowothersmallanimal-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/whattoknowothersmall-090717-image-520w-285h-d');}
+.background-img-foodrabbit-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/foodrabbit-090717-image-540w-305h-d');}
+.background-img-homerabbit-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/nutritionrabbit-090717-image-540w-305h-d');}
+.background-img-carehealthrabbit-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/carehealthrabbit-090717-image-540w-305h-d');}
+.background-img-foodguinea-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/foodguinea-090717-hero-1440w-418h-d');}
+.background-img-homeguinea-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/guineahome-090717-hero-1440w-418h-d');}
+.background-img-carehealthguinea-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/carehealthguinea-090717-hero-1440w-418h-d');}
+.background-img-foodhamster-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/foodhamster-090717-hero-1440w-418h-d');}
+.background-img-homehamster-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/petneedshamster-090717-hero-1440w-418h-d');}
+.background-img-carehealthhamster-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/carehealthhamster-090717-hero-1440w-418h-d');}
+.background-img-chinchilla-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/wtbchinchilla-091217-hero-1440w-418h-d');}
+.background-img-ferret-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/wtbferret-091217-hero-1440w-418h-d');}
+.background-img-gerbil-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/wtbgerbil-091217-hero-1440w-418h-d');}
+
+/* REPTILE GUIDE - BACKGROUND IMAGES */
+.background-img-newreptile-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/newreptile-091217-hero-1440w-418h-d');}
+.background-img-newreptileneeds-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/everythingpetneedsreptile-091217-hero-1440w-418h-d');}
+.background-img-newreptilequestions-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/newreptilequestions-091217-hero-1440w-418h-d');}
+.background-img-whattobuyreptile-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/wtbreptile-091217-image-520w-285h-d');}
+.background-img-whattoknowreptile-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/wtkreptile-091217-image-520w-285h-d');}
+	.background-img-homereptile-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/nutritionreptile-091217-hero-1440w-418h-d');}
+.background-img-foodreptile-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/habitatreptile-091217-hero-1440w-418h-d');}
+.background-img-carehealthreptile-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/cleaningreptile-091217-hero-1440w-418h-d');}
+
+/* BIRD GUIDE - BACKGROUND IMAGES */
+.background-img-newbird-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/newbird-091217-hero-1440w-418h-d');}
+.background-img-newbirdneeds-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/everythingpetneedsbird-091217-hero-1440w-418h-d');}
+.background-img-newbirdquestions-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/newbirdquestions-091217-hero-1440w-418h-d');}
+.background-img-whattobuybird-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/wtbtbird-091217-image-520w-285h-d');}
+.background-img-whattoknowbird-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/wtkbird-091217-image-520w-285h-d');}
+.background-img-foodbird-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/foodtreatsbird-091817-hero-1440w-418h-d-v2');}
+.background-img-homebird-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/foodbird-091217-hero-1440w-418h-d');}
+.background-img-carehealthbird-hero-container {
+	background-image: url('//s7d1.scene7.com/is/image/PETCO/carebird-091217-hero-1440w-418h-d');}
+	
+@include breakpoint(x-large){
+/*----------------------*/
+/* WHOLEHEARTED LANDING PAGE */	
+/*----------------------*/
+.wholehearted-background-img-hero-container {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	width: 100%;
+	padding-bottom: 25%;
+}
+.wholehearted-background-img-hero-content {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-justify-content: center;
+	justify-content: center;
+	position: absolute;
+	top: 5%;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+	
+/*----------------------*/
+/* NEW PET LANDING PAGE */	
+/*----------------------*/
+
+/* guide tabs */
+.petguides-wrapper {
+	position: relative;
+    margin-bottom: -150px;
+    top: -150px;
+}
+/* hero */
+.family-background-img-hero-container 
+{
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	width: 100%;
+	padding-bottom: 350px;
+}
+.family-background-img-hero-content {
+	 display: -webkit-box;
+	 display: -moz-box;
+	 display: -ms-flexbox;
+	 display: -moz-flex;
+	 display: -webkit-flex;
+	 display: flex;
+	 -webkit-flex-direction: column;
+	 -ms-flex-direction: column;
+	 flex-direction: column;
+	 -webkit-justify-content: center;
+	 justify-content: center;
+	 position: absolute;
+	 top: 20px;
+	 bottom: 0;
+	 left: 0;
+	 right: 0;
+}
+.selfies-background-img-hero-container
+{
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	width: 100%;
+	padding-bottom: 350px;
+}
+.selfies-background-img-hero-content
+{
+	 display: -webkit-box;
+	 display: -moz-box;
+	 display: -ms-flexbox;
+	 display: -moz-flex;
+	 display: -webkit-flex;
+	 display: flex;
+	 -webkit-flex-direction: column;
+	 -ms-flex-direction: column;
+	 flex-direction: column;
+	 -webkit-justify-content: center;
+	 justify-content: center;
+	 position: absolute;
+	 top: 0;
+	 bottom: 0;
+	 left: 0;
+	 right: 0;
+}
+.petneeds-background-img-hero-container 
+{
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	width: 100%;
+	padding-bottom: 400px;
+}
+.petneeds-background-img-hero-content 
+{
+	 display: -webkit-box;
+	 display: -moz-box;
+	 display: -ms-flexbox;
+	 display: -moz-flex;
+	 display: -webkit-flex;
+	 display: flex;
+	 -webkit-flex-direction: column;
+	 -ms-flex-direction: column;
+	 flex-direction: column;
+	 -webkit-justify-content: center;
+	 justify-content: center;
+	 position: absolute;
+	 top: 0;
+	 bottom: 0;
+	 left: 0;
+	 right: 0;
+}
+
+/*------------*/
+/* PET GUIDES */	
+/*------------*/
+
+/* hero */
+.background-img-newpuppy-hero-container,
+.background-img-newadultdog-hero-container,
+.background-img-newseniordog-hero-container,
+.background-img-puppyneeds-hero-container,
+.background-img-petneedsadult-hero-container,
+.background-img-petneedssenior-hero-container,
+.background-img-newpuppyquestions-hero-container,
+.background-img-newadultquestions-hero-container, 
+.background-img-newseniorquestions-hero-container,
+.background-img-newkitten-hero-container,
+.background-img-newadultcat-hero-container,
+.background-img-newseniorcat-hero-container,
+.background-img-kittenneeds-hero-container,
+.background-img-adultcatneeds-hero-container,
+.background-img-seniorcatneeds-hero-container,
+.background-img-newkittenquestions-hero-container,
+.background-img-newadultcatquestions-hero-container,
+.background-img-newseniorcatquestions-hero-container,
+.background-img-newsaltwaterfish-hero-container,	
+.background-img-newfreshwaterfish-hero-container,
+.background-img-fishneedssaltwater-hero-container, 
+.background-img-fishneedsfreshwater-hero-container,
+.background-img-newsaltfishquestions-hero-container,
+.background-img-newfreshfishquestions-hero-container,
+.background-img-newrabbit-hero-container,	
+.background-img-newguineapig-hero-container,
+.background-img-newhamster-hero-container,
+.background-img-newothersmallanimal-hero-container,
+.background-img-smallpetneedsrabbit-hero-container,
+.background-img-smallpetneedsguinea-hero-container,
+.background-img-smallpetneedshamster-hero-container,
+.background-img-smallpetneedsother-hero-container,
+.background-img-newrabbitquestions-hero-container,
+.background-img-newguineaquestions-hero-container,
+.background-img-newhamsterquestions-hero-container,
+.background-img-newsmpetotherquestions-hero-container,
+.background-img-newreptile-hero-container,
+.background-img-newreptileneeds-hero-container,
+.background-img-newreptilequestions-container, 
+.background-img-newbird-hero-container,
+.background-img-newbirdneeds-hero-container,
+.background-img-newbirdquestions-hero-container
+{ 
+	 background-repeat: no-repeat;
+	 background-size: cover;
+	 background-position: center;
+	 position: relative;
+	 width: 100%;
+	 padding-bottom: 350px;
+}
+.background-img-newpuppy-hero-content,
+.background-img-newadultdog-hero-content,
+.background-img-newseniordog-hero-content,
+.background-img-puppyneeds-hero-content,
+.background-img-petneedsadult-hero-content,
+.background-img-petneedssenior-hero-content,
+.background-img-newpuppyquestions-hero-content,
+.background-img-newadultquestions-hero-content,
+.background-img-newseniorquestions-hero-content,
+.background-img-newkitten-hero-content,
+.background-img-newadultcat-hero-content,
+.background-img-newseniorcat-hero-content,
+.background-img-kittenneeds-hero-content,
+.background-img-adultcatneeds-hero-content,
+.background-img-seniorcatneeds-hero-content, 
+.background-img-newkittenquestions-hero-content,
+.background-img-newadultcatquestions-hero-content,
+.background-img-newseniorcatquestions-hero-content,
+.background-img-newsaltwaterfish-hero-content,
+.background-img-newfreshwaterfish-hero-content, 
+.background-img-fishneedssaltwater-hero-content, 
+.background-img-fishneedsfreshwater-hero-content,
+.background-img-newsaltfishquestions-hero-content, 
+.background-img-newfreshfishquestions-hero-content,
+.background-img-newrabbit-hero-content,	
+.background-img-newguineapig-hero-content,
+.background-img-newhamster-hero-content,
+.background-img-newothersmallanimal-hero-content,
+.background-img-smallpetneedsrabbit-hero-content,
+.background-img-smallpetneedsguinea-hero-content,
+.background-img-smallpetneedshamster-hero-content,
+.background-img-smallpetneedsother-hero-content,
+.background-img-newrabbitquestions-hero-content,
+.background-img-newguineaquestions-hero-content,
+.background-img-newhamsterquestions-hero-content,
+.background-img-newsmpetotherquestions-hero-content,
+.background-img-newreptile-hero-content,
+.background-img-newreptileneeds-hero-content,
+.background-img-newreptilequestions-content,
+.background-img-newbird-hero-content,
+.background-img-newbirdneeds-hero-content,
+.background-img-newbirdquestions-hero-content
+{
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-justify-content: center;
+	justify-content: center;
+	position: absolute;
+	top: 75px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+/* what to buy and what to know main page tiles */
+.background-img-whattobuy-hero-container,
+.background-img-whattoknow-hero-container,
+.background-img-whattobuycat-hero-container,
+.background-img-whattoknowcat-hero-container,
+.background-img-whattobuyfish-hero-container,
+.background-img-whattoknowfish-hero-container, 
+.background-img-whattobuyrabbit-hero-container,
+.background-img-whattoknowrabbit-hero-container,
+.background-img-whattobuyguineapig-hero-container, 
+.background-img-whattoknowguineapig-hero-container, 
+.background-img-whattobuyhamster-hero-container, 
+.background-img-whattoknowhamster-hero-container, 
+.background-img-whattobuyothersmallanimal-hero-container, 
+.background-img-whattoknowothersmallanimal-hero-container, 
+.background-img-whattobuyreptile-hero-container,
+.background-img-whattoknowreptile-hero-container, 
+.background-img-whattobuybird-hero-container,
+.background-img-whattoknowbird-hero-container
+{
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	width: 100%;
+	padding-bottom: 290px;
+	opacity: 0.7;
+}
+.background-img-whattobuy-hero-content,
+.background-img-whattoknow-hero-content,
+.background-img-whattobuycat-hero-content,
+.background-img-whattoknowcat-hero-content,
+.background-img-whattobuyfish-hero-content,
+.background-img-whattoknowfish-hero-content,
+.background-img-whattobuyrabbit-hero-content,
+.background-img-whattoknowrabbit-hero-content,
+.background-img-whattobuyguineapig-hero-content, 
+.background-img-whattoknowguineapig-hero-content, 
+.background-img-whattobuyhamster-hero-content, 
+.background-img-whattoknowhamster-hero-content, 
+.background-img-whattobuyothersmallanimal-hero-content, 
+.background-img-whattoknowothersmallanimal-hero-content, 
+.background-img-whattobuyreptile-hero-content,
+.background-img-whattoknowreptile-hero-content,
+.background-img-whattobuybird-hero-content,
+.background-img-whattoknowbird-hero-content
+{
+	 display: -webkit-box;
+	 display: -moz-box;
+	 display: -ms-flexbox;
+	 display: -moz-flex;
+	 display: -webkit-flex;
+	 display: flex;
+	 -webkit-flex-direction: column;
+	 -ms-flex-direction: column;
+	 flex-direction: column;
+	 -webkit-justify-content: center;
+	 justify-content: center;
+	 position: absolute;
+	 top: 45px;
+	 bottom: 0;
+	 left: 0;
+	 right: 0;
+}
+.background-img-vetco-hero-container
+{
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	width: 100%;
+	padding-bottom: 400px;
+}
+.background-img-vetco-hero-content
+{
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-justify-content: center;
+	justify-content: center;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+/* what to buy page hero*/ 
+.background-img-nutrition-hero-container,
+.background-img-puppyhome-hero-container,
+.background-img-doghome-hero-container,
+.background-img-onthego-hero-container,
+.background-img-play-hero-container,
+.background-img-health-hero-container,
+.background-img-cat-nutrition-hero-container,
+.background-img-cat-waste-hero-container,
+.background-img-cat-homeonthego-hero-container, 
+.background-img-cat-play-hero-container,
+.background-img-cat-health-hero-container,
+.background-img-foodcarefish-hero-container, 
+.background-img-aquariumsfish-hero-container,
+.background-img-equipmentfish-hero-container,
+.background-img-foodrabbit-hero-container,
+.background-img-homerabbit-hero-container,
+.background-img-carehealthrabbit-hero-container,
+.background-img-foodguinea-hero-container,
+.background-img-homeguinea-hero-container,
+.background-img-carehealthguinea-hero-container,
+.background-img-foodhamster-hero-container,
+.background-img-homehamster-hero-container,
+.background-img-carehealthhamster-hero-container,
+.background-img-chinchilla-hero-container,
+.background-img-ferret-hero-container,
+.background-img-gerbil-hero-container,
+.background-img-homereptile-hero-container, 
+.background-img-foodreptile-hero-container, 
+.background-img-carehealthreptile-hero-container, 
+.background-img-foodbird-hero-container, 
+.background-img-homebird-hero-container, 
+.background-img-carehealthbird-hero-container 
+{
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	width: 100%;
+	padding-bottom: 220px;
+}
+.background-img-nutrition-hero-content,
+.background-img-puppyhome-hero-content,
+.background-img-doghome-hero-content,
+.background-img-onthego-hero-content,
+.background-img-play-hero-content,
+.background-img-health-hero-content,
+.background-img-cat-nutrition-hero-content,
+.background-img-cat-waste-hero-content,
+.background-img-cat-homeonthego-hero-content, 
+.background-img-cat-play-hero-content,
+.background-img-cat-health-hero-content,
+.background-img-foodcarefish-hero-content,
+.background-img-aquariumsfish-hero-content,
+.background-img-equipmentfish-hero-content, 
+.background-img-foodrabbit-hero-content,
+.background-img-homerabbit-hero-content,
+.background-img-carehealthrabbit-hero-content,
+.background-img-foodguinea-hero-content,
+.background-img-homeguinea-hero-content,
+.background-img-carehealthguinea-hero-content,
+.background-img-foodhamster-hero-content,
+.background-img-homehamster-hero-content,
+.background-img-carehealthhamster-hero-content,
+.background-img-chinchilla-hero-content,
+.background-img-ferret-hero-content,
+.background-img-gerbil-hero-content,
+.background-img-homereptile-hero-content,
+.background-img-foodreptile-hero-content, 
+.background-img-carehealthreptile-hero-content, 
+.background-img-foodbird-hero-content, 
+.background-img-homebird-hero-content, 
+.background-img-carehealthbird-hero-content
+{
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-justify-content: center;
+	justify-content: center;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+/* new parent guidebook*/
+.background-img-newpetguidebook-hero-container {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	width: 100%;
+	padding-bottom: 100px;
+}
+.background-img-newpetguidebook-hero-content
+{
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-justify-content: center;
+	justify-content: center;
+	position: relative;
+	top: 55px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+/* NEW PET LANDING PAGE - GUIDE TABS */
+.white-border-md {
+	border-top: solid $white 1px;
+	border-right: solid $white 3px;
+	border-bottom: solid $white 1px;
+	border-left: solid $white 3px;
+}
+
+/* PET GUIDES - GLOBAL TAB - STYLING (2, 3, 4 styles) */
+.age_tabs_wrapper {
+	display: block;
+	margin: 0 auto;
+	width: 45%;
+	padding: 23px 0 20px 0;
+	position: relative;
+	top: -50px;
+	z-index: 1;
+}
+.age_tabs_wrapper-tab-4 {
+	display: block;
+	margin: 0 auto;
+	width: 65%;
+	padding: 23px 0 20px 0;
+	position: relative;
+	top: -50px;
+	z-index: 1;
+}
+.age_content_container {
+	width: 100%;
+	display: block;
+	margin: 0 auto;
+	overflow: auto;
+}
+.age-label-navigation {
+	display: block;
+	float: left;
+	width: 25%;
+	cursor: pointer;
+	text-decoration: none;
+	text-align: center;
+	color: #00aae7;
+	background: $white;
+	border: solid 1px #8E9DA2;
+	clear: none;
+}
+.age-label-navigation-tab-2 { 
+	display: block;
+	float: left;
+	width: 38%; /* tab 2 difference from tab 3 */
+	cursor: pointer;
+	text-decoration: none;
+	text-align: center;
+	color: #00aae7;
+	background: $white;
+	border: solid 1px #8E9DA2;
+	clear: none;
+}
+.age-label-navigation-tab-4 { 
+	display: block;
+	float: left;
+	width: 18.7%; /* tab 3 difference */
+	cursor: pointer;
+	text-decoration: none;
+	text-align: center;
+	color: #00aae7;
+	background: $white;
+	border: solid 1px #8E9DA2;
+	clear: none;
+}
+.age_nav_container > ul {
+
+	li{
+		a{
+		display: block;
+		text-align: center;
+		padding: 14px 12px;
+		text-decoration: none;
+		}
+	}
+
+	
+}
+
+/* what to know / buy mini ad guide */	
+.vertical-align-container {
+	position: relative;
+}
+div {
+	&.vertical-align-text {
+		position: absolute;
+		top: 40px;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+}
+.img-rounded {
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+.services-row-full-md {
+	[class*="col-"] {
+		float: left;
+		margin: 0px;
+		min-height: 0.125rem;
+		box-sizing: border-box;
+		width: 50%;
+	}
+}
+}
+@include breakpoint(large){
+/*----------------------*/
+/* WHOLEHEARTED LANDING PAGE */	
+/*----------------------*/
+.wholehearted-background-img-hero-container {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center top;
+	position: relative;
+	width: 100%;
+	padding-bottom: 0;
+}
+.wholehearted-background-img-hero-content {
+	position: relative;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 0;
+	text-align: center;
+}
+
+/*--------------*/
+/* NEW PET PAGE */	
+/*--------------*/
+
+/* guide tabs */
+.petguides-wrapper {
+    position: relative;
+    margin-bottom: -170px;
+    top: -170px;
+}
+/* hero */
+.family-background-img-hero-container 
+{
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	width: 100%;
+	padding-bottom: 100px;
+}
+.family-background-img-hero-content {
+	position: relative;
+	top: -40px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 0;
+	text-align: center;
+}
+.selfies-background-img-hero-container
+{
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	width: 100%;
+	padding-bottom: 0;
+}
+.selfies-background-img-hero-content
+{
+	position: relative;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 0;
+}
+.petneeds-background-img-hero-container 
+{
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	width: 100%;
+	padding-bottom: 0;
+}
+.petneeds-background-img-hero-content 
+{
+	position: relative;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 0;
+}
+
+/*------------*/
+/* PET GUIDES */	
+/*------------*/
+
+/* hero */
+.background-img-newpuppy-hero-container,
+.background-img-newadultdog-hero-container,
+.background-img-newseniordog-hero-container,
+.background-img-puppyneeds-hero-container,
+.background-img-petneedsadult-hero-container,
+.background-img-petneedssenior-hero-container,
+.background-img-newpuppyquestions-hero-container,
+.background-img-newadultquestions-hero-container, 
+.background-img-newseniorquestions-hero-container,
+.background-img-newkitten-hero-container,
+.background-img-newadultcat-hero-container,
+.background-img-newseniorcat-hero-container,
+.background-img-kittenneeds-hero-container,
+.background-img-adultcatneeds-hero-container,
+.background-img-seniorcatneeds-hero-container,
+.background-img-newkittenquestions-hero-container,
+.background-img-newadultcatquestions-hero-container,
+.background-img-newseniorcatquestions-hero-container,
+.background-img-newsaltwaterfish-hero-container,	
+.background-img-newfreshwaterfish-hero-container,
+.background-img-fishneedssaltwater-hero-container, 
+.background-img-fishneedsfreshwater-hero-container,
+.background-img-newsaltfishquestions-hero-container,
+.background-img-newfreshfishquestions-hero-container,
+.background-img-newrabbit-hero-container,	
+.background-img-newguineapig-hero-container,
+.background-img-newhamster-hero-container,
+.background-img-newothersmallanimal-hero-container,
+.background-img-smallpetneedsrabbit-hero-container,
+.background-img-smallpetneedsguinea-hero-container,
+.background-img-smallpetneedshamster-hero-container,
+.background-img-smallpetneedsother-hero-container,
+.background-img-newrabbitquestions-hero-container,
+.background-img-newguineaquestions-hero-container,
+.background-img-newhamsterquestions-hero-container,
+.background-img-newsmpetotherquestions-hero-container,
+.background-img-newreptile-hero-container,
+.background-img-newreptileneeds-hero-container,
+.background-img-newreptilequestions-container, 
+.background-img-newbird-hero-container,
+.background-img-newbirdneeds-hero-container,
+.background-img-newbirdquestions-hero-container
+{ 
+	 background-repeat: no-repeat;
+	 background-size: cover;
+	 background-position: center;
+	 position: relative;
+	 width: 100%;
+	 padding-bottom: 350px;
+}
+
+.background-img-newpuppy-hero-content,
+.background-img-newadultdog-hero-content,
+.background-img-newseniordog-hero-content,
+.background-img-puppyneeds-hero-content,
+.background-img-petneedsadult-hero-content,
+.background-img-petneedssenior-hero-content,
+.background-img-newpuppyquestions-hero-content,
+.background-img-newadultquestions-hero-content,
+.background-img-newseniorquestions-hero-content,
+.background-img-newkitten-hero-content,
+.background-img-newadultcat-hero-content,
+.background-img-newseniorcat-hero-content,
+.background-img-kittenneeds-hero-content,
+.background-img-adultcatneeds-hero-content,
+.background-img-seniorcatneeds-hero-content, 
+.background-img-newkittenquestions-hero-content,
+.background-img-newadultcatquestions-hero-content,
+.background-img-newseniorcatquestions-hero-content,
+.background-img-newsaltwaterfish-hero-content,
+.background-img-newfreshwaterfish-hero-content, 
+.background-img-fishneedssaltwater-hero-content, 
+.background-img-fishneedsfreshwater-hero-content,
+.background-img-newsaltfishquestions-hero-content, 
+.background-img-newfreshfishquestions-hero-content,
+.background-img-newrabbit-hero-content,	
+.background-img-newguineapig-hero-content,
+.background-img-newhamster-hero-content,
+.background-img-newothersmallanimal-hero-content,
+.background-img-smallpetneedsrabbit-hero-content,
+.background-img-smallpetneedsguinea-hero-content,
+.background-img-smallpetneedshamster-hero-content,
+.background-img-smallpetneedsother-hero-content,
+.background-img-newrabbitquestions-hero-content,
+.background-img-newguineaquestions-hero-content,
+.background-img-newhamsterquestions-hero-content,
+.background-img-newsmpetotherquestions-hero-content,
+.background-img-newreptile-hero-content,
+.background-img-newreptileneeds-hero-content,
+.background-img-newreptilequestions-content,
+.background-img-newbird-hero-content,
+.background-img-newbirdneeds-hero-content,
+.background-img-newbirdquestions-hero-content
+{
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-justify-content: center;
+	justify-content: center;
+	position: absolute;
+	top: 75px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+/* what to buy and what to know main page tiles */
+.background-img-whattobuy-hero-container,
+.background-img-whattoknow-hero-container,
+.background-img-whattobuycat-hero-container,
+.background-img-whattoknowcat-hero-container,
+.background-img-whattobuyfish-hero-container,
+.background-img-whattoknowfish-hero-container, 
+.background-img-whattobuyrabbit-hero-container,
+.background-img-whattoknowrabbit-hero-container,
+.background-img-whattobuyguineapig-hero-container, 
+.background-img-whattoknowguineapig-hero-container, 
+.background-img-whattobuyhamster-hero-container, 
+.background-img-whattoknowhamster-hero-container, 
+.background-img-whattobuyothersmallanimal-hero-container, 
+.background-img-whattoknowothersmallanimal-hero-container, 
+.background-img-whattobuyreptile-hero-container,
+.background-img-whattoknowreptile-hero-container, 
+.background-img-whattobuybird-hero-container,
+.background-img-whattoknowbird-hero-container
+{
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	width: 100%;
+	padding-bottom: 230px;
+	opacity: 0.7;
+}
+.background-img-whattobuy-hero-content,
+.background-img-whattoknow-hero-content,
+.background-img-whattobuycat-hero-content,
+.background-img-whattoknowcat-hero-content,
+.background-img-whattobuyfish-hero-content,
+.background-img-whattoknowfish-hero-content,
+.background-img-whattobuyrabbit-hero-content,
+.background-img-whattoknowrabbit-hero-content,
+.background-img-whattobuyguineapig-hero-content, 
+.background-img-whattoknowguineapig-hero-content, 
+.background-img-whattobuyhamster-hero-content, 
+.background-img-whattoknowhamster-hero-content, 
+.background-img-whattobuyothersmallanimal-hero-content, 
+.background-img-whattoknowothersmallanimal-hero-content, 
+.background-img-whattobuyreptile-hero-content,
+.background-img-whattoknowreptile-hero-content,
+.background-img-whattobuybird-hero-content,
+.background-img-whattoknowbird-hero-content
+{
+	 display: -webkit-box;
+	 display: -moz-box;
+	 display: -ms-flexbox;
+	 display: -moz-flex;
+	 display: -webkit-flex;
+	 display: flex;
+	 -webkit-flex-direction: column;
+	 -ms-flex-direction: column;
+	 flex-direction: column;
+	 -webkit-justify-content: center;
+	 justify-content: center;
+	 position: absolute;
+	 top: 25px;
+	 bottom: 0;
+	 left: 0;
+	 right: 0;
+}
+.background-img-vetco-hero-container
+{
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	width: 100%;
+	padding-bottom: 0;
+}
+.background-img-vetco-hero-content
+{
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0;
+}
+/* what to buy page hero*/ 
+.background-img-nutrition-hero-container,
+.background-img-puppyhome-hero-container,
+.background-img-doghome-hero-container,
+.background-img-onthego-hero-container,
+.background-img-play-hero-container,
+.background-img-health-hero-container,
+.background-img-cat-nutrition-hero-container,
+.background-img-cat-waste-hero-container,
+.background-img-cat-homeonthego-hero-container, 
+.background-img-cat-play-hero-container,
+.background-img-cat-health-hero-container,
+.background-img-foodcarefish-hero-container, 
+.background-img-aquariumsfish-hero-container,
+.background-img-equipmentfish-hero-container,
+.background-img-foodrabbit-hero-container,
+.background-img-homerabbit-hero-container,
+.background-img-carehealthrabbit-hero-container,
+.background-img-foodguinea-hero-container,
+.background-img-homeguinea-hero-container,
+.background-img-carehealthguinea-hero-container,
+.background-img-foodhamster-hero-container,
+.background-img-homehamster-hero-container,
+.background-img-carehealthhamster-hero-container,
+.background-img-chinchilla-hero-container,
+.background-img-ferret-hero-container,
+.background-img-gerbil-hero-container,
+.background-img-homereptile-hero-container, 
+.background-img-foodreptile-hero-container, 
+.background-img-carehealthreptile-hero-container, 
+.background-img-foodbird-hero-container, 
+.background-img-homebird-hero-container, 
+.background-img-carehealthbird-hero-container 
+{
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	width: 100%;
+	padding-bottom: 40px;
+}
+.background-img-nutrition-hero-content,
+.background-img-puppyhome-hero-content,
+.background-img-doghome-hero-content,
+.background-img-onthego-hero-content,
+.background-img-play-hero-content,
+.background-img-health-hero-content,
+.background-img-cat-nutrition-hero-content,
+.background-img-cat-waste-hero-content,
+.background-img-cat-homeonthego-hero-content, 
+.background-img-cat-play-hero-content,
+.background-img-cat-health-hero-content,
+.background-img-foodcarefish-hero-content,
+.background-img-aquariumsfish-hero-content,
+.background-img-equipmentfish-hero-content, 
+.background-img-foodrabbit-hero-content,
+.background-img-homerabbit-hero-content,
+.background-img-carehealthrabbit-hero-content,
+.background-img-foodguinea-hero-content,
+.background-img-homeguinea-hero-content,
+.background-img-carehealthguinea-hero-content,
+.background-img-foodhamster-hero-content,
+.background-img-homehamster-hero-content,
+.background-img-carehealthhamster-hero-content,
+.background-img-chinchilla-hero-content,
+.background-img-ferret-hero-content,
+.background-img-gerbil-hero-content,
+.background-img-homereptile-hero-content,
+.background-img-foodreptile-hero-content, 
+.background-img-carehealthreptile-hero-content, 
+.background-img-foodbird-hero-content, 
+.background-img-homebird-hero-content, 
+.background-img-carehealthbird-hero-content
+{
+	position: relative;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 0;
+	text-align: center;
+}
+
+.background-img-newpetguidebook-hero-container {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	width: 100%;
+	padding-bottom: 100px;
+}
+.background-img-newpetguidebook-hero-content
+{
+	position: relative;
+	top: 55px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 0;
+}
+
+/* NEW PET GUIDES - GLOBAL TAB - STYLING (2, 3, 4 styles) */
+.age_tabs_wrapper {
+	display: block;
+	margin: 0 auto;
+	width: 60%;
+	padding: 23px 0 20px 0;
+	position: relative;
+	top: -50px;
+	z-index: 1;
+}
+.age_tabs_wrapper-tab-4 {
+	display: block;
+	margin: 0 auto;
+	width: 60%;
+	padding: 23px 0 20px 0;
+	position: relative;
+	top: -50px;
+	z-index: 1;
+}
+.age_content_container {
+	width: 100%;
+	display: block;
+	margin: 0 auto;
+	overflow: auto;
+}
+.age-label-navigation {
+	display: block;
+	float: left;
+	width: 25%;
+	cursor: pointer;
+	text-decoration: none;
+	text-align: center;
+	color: #00aae7;
+	background: $white;
+	border: solid 1px #8E9DA2;
+	clear: none;
+}
+.age-label-navigation-tab-2 {
+	display: block;
+	float: left;
+	width: 38%; /* tab 2 difference from tab 3 */
+	cursor: pointer;
+	text-decoration: none;
+	text-align: center;
+	color: #00aae7;
+	background: $white;
+	border: solid 1px #8E9DA2;
+	clear: none;
+}
+.age-label-navigation-tab-4 { 
+	display: block;
+	float: left;
+	width: 18.7%; /* tab 3 difference */
+	cursor: pointer;
+	text-decoration: none;
+	text-align: center;
+	color: #00aae7;
+	background: $white;
+	border: solid 1px #8E9DA2;
+	clear: none;
+}
+.age_nav_container > ul {
+	
+	li{
+	  a{
+	  display: block;
+		text-align: center;
+		padding: 14px 1px;
+		text-decoration: none;
+	  }
+	}
+	
+}
+
+/* NEW PET LANDING PAGE - GUIDE TABS */
+.white-border-md {
+	border-top: solid $white 1px;
+	border-right: solid $white 3px;
+	border-bottom: solid $white 1px;
+	border-left: solid $white 3px;
+}
+.petguides-tile-sm {
+	box-sizing: border-box;
+	box-sizing: border-box;
+	transition: 0.2s;
+	width: 16.66%;
+	height: 100%;
+}
+
+/* what to know / buy mini ad guide */	
+.vertical-align-container {
+	position: relative;
+}
+div {
+	&.vertical-align-text {
+		position: absolute;
+		top: 25px;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+}
+.img-rounded {
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+.services-row-full-md {
+	[class*="col-"] {
+		float: left;
+		margin: 0px;
+		min-height: 0.125rem;
+		box-sizing: border-box;
+		width: 50%;
+	}
+}
+}
+
+@include breakpoint(medium){
+	/*----------------------*/
+/* WHOLEHEARTED LANDING PAGE */	
+/*----------------------*/
+.wholehearted-background-img-hero-container {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center top;
+	position: relative;
+	width: 100%;
+	padding-bottom: 0;
+}
+.wholehearted-background-img-hero-content {
+	position: relative;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 0;
+	text-align: center;
+}
+
+/*----------------------*/
+/* NEW PET LANDING PAGE */	
+/*----------------------*/
+
+/* guide tabs */
+.petguides-wrapper {
+	position: relative;
+	margin-bottom: -150px;
+	top: -175px;
+}
+/* hero */
+.family-background-img-hero-container 
+{
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	width: 100%;
+	padding-bottom: 100px;
+}
+.family-background-img-hero-content {
+	position: relative;
+	top: -40px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 0;
+	text-align: center;
+}
+.selfies-background-img-hero-container
+{
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	width: 100%;
+	padding-bottom: 0;
+}
+.selfies-background-img-hero-content
+{
+	position: relative;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 0;
+}
+.petneeds-background-img-hero-container 
+{
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	width: 100%;
+	padding-bottom: 0;
+}
+.petneeds-background-img-hero-content 
+{
+	position: relative;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 0;
+}
+
+/*------------*/
+/* PET GUIDES */	
+/*------------*/
+
+/* hero */
+.background-img-newpuppy-hero-container,
+.background-img-newadultdog-hero-container,
+.background-img-newseniordog-hero-container,
+.background-img-puppyneeds-hero-container,
+.background-img-petneedsadult-hero-container,
+.background-img-petneedssenior-hero-container,
+.background-img-newpuppyquestions-hero-container,
+.background-img-newadultquestions-hero-container, 
+.background-img-newseniorquestions-hero-container,
+.background-img-newkitten-hero-container,
+.background-img-newadultcat-hero-container,
+.background-img-newseniorcat-hero-container,
+.background-img-kittenneeds-hero-container,
+.background-img-adultcatneeds-hero-container,
+.background-img-seniorcatneeds-hero-container,
+.background-img-newkittenquestions-hero-container,
+.background-img-newadultcatquestions-hero-container,
+.background-img-newseniorcatquestions-hero-container,
+.background-img-newsaltwaterfish-hero-container,	
+.background-img-newfreshwaterfish-hero-container,
+.background-img-fishneedssaltwater-hero-container, 
+.background-img-fishneedsfreshwater-hero-container,
+.background-img-newsaltfishquestions-hero-container,
+.background-img-newfreshfishquestions-hero-container,
+.background-img-newrabbit-hero-container,	
+.background-img-newguineapig-hero-container,
+.background-img-newhamster-hero-container,
+.background-img-newothersmallanimal-hero-container,
+.background-img-smallpetneedsrabbit-hero-container,
+.background-img-smallpetneedsguinea-hero-container,
+.background-img-smallpetneedshamster-hero-container,
+.background-img-smallpetneedsother-hero-container,
+.background-img-newrabbitquestions-hero-container,
+.background-img-newguineaquestions-hero-container,
+.background-img-newhamsterquestions-hero-container,
+.background-img-newsmpetotherquestions-hero-container,
+.background-img-newreptile-hero-container,
+.background-img-newreptileneeds-hero-container,
+.background-img-newreptilequestions-container, 
+.background-img-newbird-hero-container,
+.background-img-newbirdneeds-hero-container,
+.background-img-newbirdquestions-hero-container
+{ 
+	 background-repeat: no-repeat;
+	 background-size: cover;
+	 background-position: center;
+	 position: relative;
+	 width: 100%;
+	 padding-bottom: 0;
+}
+
+.background-img-newpuppy-hero-content,
+.background-img-newadultdog-hero-content,
+.background-img-newseniordog-hero-content,
+.background-img-puppyneeds-hero-content,
+.background-img-petneedsadult-hero-content,
+.background-img-petneedssenior-hero-content,
+.background-img-newpuppyquestions-hero-content,
+.background-img-newadultquestions-hero-content,
+.background-img-newseniorquestions-hero-content,
+.background-img-newkitten-hero-content,
+.background-img-newadultcat-hero-content,
+.background-img-newseniorcat-hero-content,
+.background-img-kittenneeds-hero-content,
+.background-img-adultcatneeds-hero-content,
+.background-img-seniorcatneeds-hero-content, 
+.background-img-newkittenquestions-hero-content,
+.background-img-newadultcatquestions-hero-content,
+.background-img-newseniorcatquestions-hero-content,
+.background-img-newsaltwaterfish-hero-content,
+.background-img-newfreshwaterfish-hero-content, 
+.background-img-fishneedssaltwater-hero-content, 
+.background-img-fishneedsfreshwater-hero-content,
+.background-img-newsaltfishquestions-hero-content, 
+.background-img-newfreshfishquestions-hero-content,
+.background-img-newrabbit-hero-content,	
+.background-img-newguineapig-hero-content,
+.background-img-newhamster-hero-content,
+.background-img-newothersmallanimal-hero-content,
+.background-img-smallpetneedsrabbit-hero-content,
+.background-img-smallpetneedsguinea-hero-content,
+.background-img-smallpetneedshamster-hero-content,
+.background-img-smallpetneedsother-hero-content,
+.background-img-newrabbitquestions-hero-content,
+.background-img-newguineaquestions-hero-content,
+.background-img-newhamsterquestions-hero-content,
+.background-img-newsmpetotherquestions-hero-content,
+.background-img-newreptile-hero-content,
+.background-img-newreptileneeds-hero-content,
+.background-img-newreptilequestions-content,
+.background-img-newbird-hero-content,
+.background-img-newbirdneeds-hero-content,
+.background-img-newbirdquestions-hero-content
+{
+    position: relative;
+    top: -30px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0;
+
+}
+/* what to buy and what to know main page tiles */
+.background-img-whattobuy-hero-container,
+.background-img-whattoknow-hero-container,
+.background-img-whattobuycat-hero-container,
+.background-img-whattoknowcat-hero-container,
+.background-img-whattobuyfish-hero-container,
+.background-img-whattoknowfish-hero-container, 
+.background-img-whattobuyrabbit-hero-container,
+.background-img-whattoknowrabbit-hero-container,
+.background-img-whattobuyguineapig-hero-container, 
+.background-img-whattoknowguineapig-hero-container, 
+.background-img-whattobuyhamster-hero-container, 
+.background-img-whattoknowhamster-hero-container, 
+.background-img-whattobuyothersmallanimal-hero-container, 
+.background-img-whattoknowothersmallanimal-hero-container, 
+.background-img-whattobuyreptile-hero-container,
+.background-img-whattoknowreptile-hero-container, 
+.background-img-whattobuybird-hero-container,
+.background-img-whattoknowbird-hero-container
+{
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	width: 100%;
+	padding-bottom: 0;
+	opacity: 0.7;
+}
+.background-img-whattobuy-hero-content,
+.background-img-whattoknow-hero-content,
+.background-img-whattobuycat-hero-content,
+.background-img-whattoknowcat-hero-content,
+.background-img-whattobuyfish-hero-content,
+.background-img-whattoknowfish-hero-content,
+.background-img-whattobuyrabbit-hero-content,
+.background-img-whattoknowrabbit-hero-content,
+.background-img-whattobuyguineapig-hero-content, 
+.background-img-whattoknowguineapig-hero-content, 
+.background-img-whattobuyhamster-hero-content, 
+.background-img-whattoknowhamster-hero-content, 
+.background-img-whattobuyothersmallanimal-hero-content, 
+.background-img-whattoknowothersmallanimal-hero-content, 
+.background-img-whattobuyreptile-hero-content,
+.background-img-whattoknowreptile-hero-content,
+.background-img-whattobuybird-hero-content,
+.background-img-whattoknowbird-hero-content
+{
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0;
+	text-align: center;
+}
+/* what to buy page hero*/ 
+.background-img-nutrition-hero-container,
+.background-img-puppyhome-hero-container,
+.background-img-doghome-hero-container,
+.background-img-onthego-hero-container,
+.background-img-play-hero-container,
+.background-img-health-hero-container,
+.background-img-cat-nutrition-hero-container,
+.background-img-cat-waste-hero-container,
+.background-img-cat-homeonthego-hero-container, 
+.background-img-cat-play-hero-container,
+.background-img-cat-health-hero-container,
+.background-img-foodcarefish-hero-container, 
+.background-img-aquariumsfish-hero-container,
+.background-img-equipmentfish-hero-container,
+.background-img-foodrabbit-hero-container,
+.background-img-homerabbit-hero-container,
+.background-img-carehealthrabbit-hero-container,
+.background-img-foodguinea-hero-container,
+.background-img-homeguinea-hero-container,
+.background-img-carehealthguinea-hero-container,
+.background-img-foodhamster-hero-container,
+.background-img-homehamster-hero-container,
+.background-img-carehealthhamster-hero-container,
+.background-img-chinchilla-hero-container,
+.background-img-ferret-hero-container,
+.background-img-gerbil-hero-container,
+.background-img-homereptile-hero-container, 
+.background-img-foodreptile-hero-container, 
+.background-img-carehealthreptile-hero-container, 
+.background-img-foodbird-hero-container, 
+.background-img-homebird-hero-container, 
+.background-img-carehealthbird-hero-container 
+{
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	width: 100%;
+	padding-bottom: 55px;
+}
+.background-img-nutrition-hero-content,
+.background-img-puppyhome-hero-content,
+.background-img-doghome-hero-content,
+.background-img-onthego-hero-content,
+.background-img-play-hero-content,
+.background-img-health-hero-content,
+.background-img-cat-nutrition-hero-content,
+.background-img-cat-waste-hero-content,
+.background-img-cat-homeonthego-hero-content, 
+.background-img-cat-play-hero-content,
+.background-img-cat-health-hero-content,
+.background-img-foodcarefish-hero-content,
+.background-img-aquariumsfish-hero-content,
+.background-img-equipmentfish-hero-content, 
+.background-img-foodrabbit-hero-content,
+.background-img-homerabbit-hero-content,
+.background-img-carehealthrabbit-hero-content,
+.background-img-foodguinea-hero-content,
+.background-img-homeguinea-hero-content,
+.background-img-carehealthguinea-hero-content,
+.background-img-foodhamster-hero-content,
+.background-img-homehamster-hero-content,
+.background-img-carehealthhamster-hero-content,
+.background-img-chinchilla-hero-content,
+.background-img-ferret-hero-content,
+.background-img-gerbil-hero-content,
+.background-img-homereptile-hero-content,
+.background-img-foodreptile-hero-content, 
+.background-img-carehealthreptile-hero-content, 
+.background-img-foodbird-hero-content, 
+.background-img-homebird-hero-content, 
+.background-img-carehealthbird-hero-content
+{
+	position: relative;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 0;
+}
+
+.background-img-newpetguidebook-hero-container {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center top;
+	position: relative;
+	width: 100%;
+	padding-bottom: 100px;
+}
+.background-img-newpetguidebook-hero-content {
+	position: relative;
+	top: 55px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 0;
+}
+
+/* NEW PET GUIDES - GLOBAL TAB - STYLING (2, 3, 4 styles) */
+.age_tabs_wrapper {
+	display: block;
+	margin: 0 auto;
+	width: 75%;
+	padding: 23px 0 20px 0;
+	position: relative;
+	top: -50px;
+	z-index: 1;
+}
+.age_tabs_wrapper-tab-4 { 
+	display: block;
+	margin: 0 auto;
+	width: 95%;
+	padding: 23px 0 20px 0;
+	position: relative;
+	top: -50px;
+	z-index: 1;
+}
+.age_content_container {
+	width: 100%;
+	display: block;
+	margin: 0 auto;
+	overflow: auto;
+}
+.age-label-navigation {
+	display: block;
+	float: left;
+	width: 25%;
+	cursor: pointer;
+	text-decoration: none;
+	text-align: center;
+	color: #00aae7;
+	background: $white;
+	border: solid 1px #8E9DA2;
+	clear: none;
+}
+.age-label-navigation-tab-2 { 
+	display: block;
+	float: left;
+	width: 38%; /* tab 2 difference from tab 3 */
+	cursor: pointer;
+	text-decoration: none;
+	text-align: center;
+	color: #00aae7;
+	background: $white;
+	border: solid 1px #8E9DA2;
+	clear: none;
+}
+.age-label-navigation-tab-4 {
+	display: block;
+	float: left;
+	width: 19%; /* tab 3 difference */
+	cursor: pointer;
+	text-decoration: none;
+	text-align: center;
+	color: #00aae7;
+	background: $white;
+	border: solid 1px #8E9DA2;
+	clear: none;
+}
+.age_nav_container > ul {
+	li{
+		a{
+		display: block;
+		text-align: center;
+		padding: 14px 1px;
+		text-decoration: none;
+		}
+	}
+	
+}
+/* NEW PET LANDING PAGE - GUIDE TABS */
+.white-border-md {
+	border-top: solid $white 3px;
+	border-right: solid $white 2px;
+	border-bottom: solid $white 3px;
+	border-left: solid $white 4px;
+}
+.petguides-tile-sm {
+	box-sizing: border-box;
+	box-sizing: border-box;
+	transition: 0.2s;
+	width: 49.89%;
+	height: 100%;
+}
+/* what to know / buy mini ad guide */	
+.vertical-align-container {
+	position: relative;
+}
+div {
+	&.vertical-align-text {
+		position: absolute;
+		top: 35px;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+}
+.img-rounded {
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+.services-row-full-md {
+	[class*="col-"] {
+		float: left;
+		margin: 0px;
+		min-height: 0.125rem;
+		box-sizing: border-box;
+		width: 50%;
+	}
+}
+}
+
+@include breakpoint(small){
+/*----------------------*/
+/* WHOLEHEARTED LANDING PAGE */	
+/*----------------------*/
+.wholehearted-background-img-hero-container {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center top;
+	position: relative;
+	width: 100%;
+	padding-bottom: 0;
+}
+.wholehearted-background-img-hero-content {
+	position: relative;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 0;
+	text-align: center;
+}
+
+/*----------------------*/
+/* NEW PET LANDING PAGE */	
+/*----------------------*/
+
+/* guide tabs */
+.petguides-wrapper {
+    position: relative;
+    margin-bottom: -100px;
+    top: -95px;	
+}
+/* hero */
+.family-background-img-hero-container 
+{
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	width: 100%;
+	padding-bottom: 0;
+}
+.family-background-img-hero-content {
+	position: relative;
+	top: -55px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 0;
+	text-align: center;
+}
+.selfies-background-img-hero-container
+{
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	width: 100%;
+	padding-bottom: 0;
+}
+.selfies-background-img-hero-content
+{
+	position: relative;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 0;
+	text-align: center;
+
+}
+.petneeds-background-img-hero-container 
+{
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	width: 100%;
+	padding-bottom: 0;
+}
+.petneeds-background-img-hero-content 
+{
+	position: relative;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 0;
+	text-align: center;
+}
+
+/*------------*/
+/* PET GUIDES */	
+/*------------*/
+
+/* hero */
+.background-img-newpuppy-hero-container,
+.background-img-newadultdog-hero-container,
+.background-img-newseniordog-hero-container,
+.background-img-puppyneeds-hero-container,
+.background-img-petneedsadult-hero-container,
+.background-img-petneedssenior-hero-container,
+.background-img-newpuppyquestions-hero-container,
+.background-img-newadultquestions-hero-container, 
+.background-img-newseniorquestions-hero-container,
+.background-img-newkitten-hero-container,
+.background-img-newadultcat-hero-container,
+.background-img-newseniorcat-hero-container,
+.background-img-kittenneeds-hero-container,
+.background-img-adultcatneeds-hero-container,
+.background-img-seniorcatneeds-hero-container,
+.background-img-newkittenquestions-hero-container,
+.background-img-newadultcatquestions-hero-container,
+.background-img-newseniorcatquestions-hero-container,
+.background-img-newsaltwaterfish-hero-container,	
+.background-img-newfreshwaterfish-hero-container,
+.background-img-fishneedssaltwater-hero-container, 
+.background-img-fishneedsfreshwater-hero-container,
+.background-img-newsaltfishquestions-hero-container,
+.background-img-newfreshfishquestions-hero-container,
+.background-img-newrabbit-hero-container,	
+.background-img-newguineapig-hero-container,
+.background-img-newhamster-hero-container,
+.background-img-newothersmallanimal-hero-container,
+.background-img-smallpetneedsrabbit-hero-container,
+.background-img-smallpetneedsguinea-hero-container,
+.background-img-smallpetneedshamster-hero-container,
+.background-img-smallpetneedsother-hero-container,
+.background-img-newrabbitquestions-hero-container,
+.background-img-newguineaquestions-hero-container,
+.background-img-newhamsterquestions-hero-container,
+.background-img-newsmpetotherquestions-hero-container,
+.background-img-newreptile-hero-container,
+.background-img-newreptileneeds-hero-container,
+.background-img-newreptilequestions-container, 
+.background-img-newbird-hero-container,
+.background-img-newbirdneeds-hero-container,
+.background-img-newbirdquestions-hero-container
+{ 
+	 background-repeat: no-repeat;
+	 background-size: cover;
+	 background-position: center;
+	 position: relative;
+	 width: 100%;
+	 padding-bottom: 0;
+}
+
+.background-img-newpuppy-hero-content,
+.background-img-newadultdog-hero-content,
+.background-img-newseniordog-hero-content,
+.background-img-puppyneeds-hero-content,
+.background-img-petneedsadult-hero-content,
+.background-img-petneedssenior-hero-content,
+.background-img-newpuppyquestions-hero-content,
+.background-img-newadultquestions-hero-content,
+.background-img-newseniorquestions-hero-content,
+.background-img-newkitten-hero-content,
+.background-img-newadultcat-hero-content,
+.background-img-newseniorcat-hero-content,
+.background-img-kittenneeds-hero-content,
+.background-img-adultcatneeds-hero-content,
+.background-img-seniorcatneeds-hero-content, 
+.background-img-newkittenquestions-hero-content,
+.background-img-newadultcatquestions-hero-content,
+.background-img-newseniorcatquestions-hero-content,
+.background-img-newsaltwaterfish-hero-content,
+.background-img-newfreshwaterfish-hero-content, 
+.background-img-fishneedssaltwater-hero-content, 
+.background-img-fishneedsfreshwater-hero-content,
+.background-img-newsaltfishquestions-hero-content, 
+.background-img-newfreshfishquestions-hero-content,
+.background-img-newrabbit-hero-content,	
+.background-img-newguineapig-hero-content,
+.background-img-newhamster-hero-content,
+.background-img-newothersmallanimal-hero-content,
+.background-img-smallpetneedsrabbit-hero-content,
+.background-img-smallpetneedsguinea-hero-content,
+.background-img-smallpetneedshamster-hero-content,
+.background-img-smallpetneedsother-hero-content,
+.background-img-newrabbitquestions-hero-content,
+.background-img-newguineaquestions-hero-content,
+.background-img-newhamsterquestions-hero-content,
+.background-img-newsmpetotherquestions-hero-content,
+.background-img-newreptile-hero-content,
+.background-img-newreptileneeds-hero-content,
+.background-img-newreptilequestions-content,
+.background-img-newbird-hero-content,
+.background-img-newbirdneeds-hero-content,
+.background-img-newbirdquestions-hero-content
+{
+	position: relative;
+	top: -20px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 0;
+	text-align: center;
+
+}
+/* what to buy and what to know main page tiles */
+.background-img-whattobuy-hero-container,
+.background-img-whattoknow-hero-container,
+.background-img-whattobuycat-hero-container,
+.background-img-whattoknowcat-hero-container,
+.background-img-whattobuyfish-hero-container,
+.background-img-whattoknowfish-hero-container, 
+.background-img-whattobuyrabbit-hero-container,
+.background-img-whattoknowrabbit-hero-container,
+.background-img-whattobuyguineapig-hero-container, 
+.background-img-whattoknowguineapig-hero-container, 
+.background-img-whattobuyhamster-hero-container, 
+.background-img-whattoknowhamster-hero-container, 
+.background-img-whattobuyothersmallanimal-hero-container, 
+.background-img-whattoknowothersmallanimal-hero-container, 
+.background-img-whattobuyreptile-hero-container,
+.background-img-whattoknowreptile-hero-container, 
+.background-img-whattobuybird-hero-container,
+.background-img-whattoknowbird-hero-container
+{
+	background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    position: relative;
+    padding-bottom: 0;
+    opacity: 0.7;
+}
+.background-img-whattobuy-hero-content,
+.background-img-whattoknow-hero-content,
+.background-img-whattobuycat-hero-content,
+.background-img-whattoknowcat-hero-content,
+.background-img-whattobuyfish-hero-content,
+.background-img-whattoknowfish-hero-content,
+.background-img-whattobuyrabbit-hero-content,
+.background-img-whattoknowrabbit-hero-content,
+.background-img-whattobuyguineapig-hero-content, 
+.background-img-whattoknowguineapig-hero-content, 
+.background-img-whattobuyhamster-hero-content, 
+.background-img-whattoknowhamster-hero-content, 
+.background-img-whattobuyothersmallanimal-hero-content, 
+.background-img-whattoknowothersmallanimal-hero-content, 
+.background-img-whattobuyreptile-hero-content,
+.background-img-whattoknowreptile-hero-content,
+.background-img-whattobuybird-hero-content,
+.background-img-whattoknowbird-hero-content
+{
+	position: relative;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 0;
+	text-align: center;
+}
+.background-img-vetco-hero-container
+{
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	width: 100%;
+	padding-bottom: 0;
+}
+.background-img-vetco-hero-content
+{
+	position: relative;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 0;
+	text-align: center;
+}
+/* what to buy page hero*/ 
+.background-img-nutrition-hero-container,
+.background-img-puppyhome-hero-container,
+.background-img-doghome-hero-container,
+.background-img-onthego-hero-container,
+.background-img-play-hero-container,
+.background-img-health-hero-container,
+.background-img-cat-nutrition-hero-container,
+.background-img-cat-waste-hero-container,
+.background-img-cat-homeonthego-hero-container, 
+.background-img-cat-play-hero-container,
+.background-img-cat-health-hero-container,
+.background-img-foodcarefish-hero-container, 
+.background-img-aquariumsfish-hero-container,
+.background-img-equipmentfish-hero-container,
+.background-img-foodrabbit-hero-container,
+.background-img-homerabbit-hero-container,
+.background-img-carehealthrabbit-hero-container,
+.background-img-foodguinea-hero-container,
+.background-img-homeguinea-hero-container,
+.background-img-carehealthguinea-hero-container,
+.background-img-foodhamster-hero-container,
+.background-img-homehamster-hero-container,
+.background-img-carehealthhamster-hero-container,
+.background-img-chinchilla-hero-container,
+.background-img-ferret-hero-container,
+.background-img-gerbil-hero-container,
+.background-img-homereptile-hero-container, 
+.background-img-foodreptile-hero-container, 
+.background-img-carehealthreptile-hero-container, 
+.background-img-foodbird-hero-container, 
+.background-img-homebird-hero-container, 
+.background-img-carehealthbird-hero-container 
+{
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	width: 100%;
+	padding-bottom: 0;
+}
+.background-img-nutrition-hero-content,
+.background-img-puppyhome-hero-content,
+.background-img-doghome-hero-content,
+.background-img-onthego-hero-content,
+.background-img-play-hero-content,
+.background-img-health-hero-content,
+.background-img-cat-nutrition-hero-content,
+.background-img-cat-waste-hero-content,
+.background-img-cat-homeonthego-hero-content, 
+.background-img-cat-play-hero-content,
+.background-img-cat-health-hero-content,
+.background-img-foodcarefish-hero-content,
+.background-img-aquariumsfish-hero-content,
+.background-img-equipmentfish-hero-content, 
+.background-img-foodrabbit-hero-content,
+.background-img-homerabbit-hero-content,
+.background-img-carehealthrabbit-hero-content,
+.background-img-foodguinea-hero-content,
+.background-img-homeguinea-hero-content,
+.background-img-carehealthguinea-hero-content,
+.background-img-foodhamster-hero-content,
+.background-img-homehamster-hero-content,
+.background-img-carehealthhamster-hero-content,
+.background-img-chinchilla-hero-content,
+.background-img-ferret-hero-content,
+.background-img-gerbil-hero-content,
+.background-img-homereptile-hero-content,
+.background-img-foodreptile-hero-content, 
+.background-img-carehealthreptile-hero-content, 
+.background-img-foodbird-hero-content, 
+.background-img-homebird-hero-content, 
+.background-img-carehealthbird-hero-content
+{
+	position: relative;
+	top: -20px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 0;
+}
+.background-img-newpetguidebook-hero-container {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center top;
+	position: relative;
+	width: 100%;
+	padding-bottom: 75px;
+}
+.background-img-newpetguidebook-hero-content {
+	position: relative;
+	top: 40px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 0;
+}
+
+p.animal_type_label {
+	display: block;
+	float: left;
+	width: 100%;
+	text-align: center;
+	padding-bottom: 15px;
+}
+
+/* NEW PET GUIDES - GLOBAL TAB - STYLING (2, 3, 4 styles) */
+.age_tabs_wrapper {
+	display: block;
+	margin: 0 auto;
+	width: 96%;
+	padding: 3px 0 20px 0;
+	position: relative;
+	top: -50px;
+	z-index: 1
+}
+.age_tabs_wrapper-tab-4 {
+	display: block;
+	margin: 0 auto;
+	width: 96%;
+	padding: 3px 0 20px 0;
+	position: relative;
+	top: -50px;
+	z-index: 1;
+}
+.age-label-navigation-tab-2 > a { 
+	display: block;
+	text-align: center;
+	padding: 10px 5px;
+	text-decoration: none;
+}
+.age-label-navigation-tab-4 > a {
+	display: block;
+	text-align: center;
+	padding: 10px 5px;
+	text-decoration: none;
+}
+.mobile-rounded-top-right {
+    border-top-right-radius: 5px;
+}
+.mobile-rounded-bottom-right {
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: unset;
+}
+.mobile-rounded-bottom-left {
+    border-bottom-left-radius: 5px;
+}
+.mobile-rounded-top-left {
+    border-top-left-radius: 5px;
+	border-bottom-left-radius: unset;
+}
+.age_content_container {
+	width: 98%;
+	display: block;
+	margin: 0 auto;
+	overflow: auto;
+}
+.age-label-navigation {
+	display: block;
+	float: left;
+	width: 32.5%;
+	cursor: pointer;
+	text-decoration: none;
+	text-align: center;
+	color: #00aae7;
+	background: $white;
+	border: solid 1px #8E9DA2;
+	clear: none;
+}
+.age-label-navigation-tab-2 {
+	display: block;
+	float: left;
+	width: 49%; /* tab 2 difference from tab 3 */
+	cursor: pointer;
+	text-decoration: none;
+	text-align: center;
+	color: #00aae7;
+	background: $white;
+	border: solid 1px #8E9DA2;
+	clear: none;
+}
+.age-label-navigation-tab-4 {
+	display: block;
+	float: left;
+	width: 49%; /* tab 3 difference */
+	cursor: pointer;
+	text-decoration: none;
+	text-align: center;
+	color: #00aae7;
+	background: $white;
+	clear: none;
+    border: solid 1px #7E9DA2;
+}
+.age_nav_container {
+	width: 98%;
+	clear: both;
+	margin: 0 auto;
+	display: block;
+}
+.age_nav {
+	width: 90%;
+	margin: 0 auto;
+	display: block;
+}
+.age-label-navigation > a {
+	display: block;
+	text-align: center;
+	padding: 10px 5px;
+	text-decoration: none;
+}
+/* NEW PET LANDING PAGE - GUIDE TABS */
+.white-border-md {
+	border-top: solid $white 3px;
+	border-right: solid $white 1px;
+	border-bottom: solid $white 3px;
+	border-left: solid $white 5px;
+}
+.petguides-tile-sm {
+	box-sizing: border-box;
+	box-sizing: border-box;
+	transition: 0.2s;
+	width: 49%;
+	height: 100%;
+}
+.width-auto {
+	width: auto;
+}
+/* what to know / buy mini ad guide */	
+.vertical-align-container {
+	position: relative;
+}
+div {
+	&.vertical-align-text {
+		position: relative;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+}
+.img-rounded {
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+.services-row-full-md {
+	[class*="col-"] {
+		float: left;
+		margin: 0px;
+		min-height: 0.125rem;
+		box-sizing: border-box;
+		width: auto;
+	}
+}
+}
+
+.margin-top-none {
+	margin-top: 0px !important;
+}
+.margin-bottom-none {
+	margin-bottom: 0px !important;
+}
+.margin-left-none {
+	margin-left: 0px !important;
+}
+.margin-right-none {
+	margin-right: 0px !important;
+}
+@include breakpoint(large x-large){
+	.persistent-brand-nav{
+		position: relative;
+  		position: -webkit-sticky;
+  		position: sticky;
+  		top: 60px;
+	}
+}
+
+.sr-only{position:absolute;left:-9999px;}
+.float-none{
+	float:none;
+}
+
+.no-backgroud{
+	background: none;
+}
+
+.custom-look{
+    font-size: 40px;
+    font-weight: bolder;
+    text-align:center;
+}
+
+.move-div-center{
+       float: none !important;
+    display: block;
+    margin: 0 auto !important
+}
+
+.repeat-deliver-select{
+	border-radius: 5px;
+	}
+
+.repeat-delivery-confirm-text{
+ text-align:center;
+ position: relative;
+ top: 20%;
+ left: 31%;
+}
+.no-background{
+	background:none;
+}
+
+

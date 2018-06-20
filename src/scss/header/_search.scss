@@ -1,0 +1,236 @@
+/* stylelint-disable */
+
+// High-contrast mode accessibility styles at bottom of file
+.search {
+  display: none;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: $white;
+  box-shadow: inset 0 7px 17px -8px rgba(0, 0, 0, 0.18);
+
+  &.open { display: block; }
+
+  @include breakpoint(large x-large){
+    display: block;
+    float: left;
+    max-width: 480px;
+    width: 40%;
+    padding: 0;
+    position: relative;
+    box-shadow: none;
+  }
+
+  @include breakpoint('max-width: 900px) and (min-width: 769px'){
+    width: 35%;
+  }
+}
+
+.primary-search {
+  background-color: $lightBackground;
+  border: $mainBorder;
+
+  height: 44px;
+  position: relative;
+
+  input[type="text"] {
+    background-color: transparent;
+    border: none;
+    box-sizing: border-box;
+    font-weight: bold;
+    height: 100%;
+    padding: 10px;
+    width: 91%;
+
+    &:focus {
+     &::-webkit-input-placeholder { color: transparent; }
+     &::-moz-placeholder { color: transparent; }
+     &:-ms-input-placeholder { color: transparent; }
+     &:-moz-placeholder { color: transparent; }
+    }
+  }
+
+  #submitButton,
+  #noResults_submitButton {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 44px;
+    border: none;
+    border-radius: 0;
+    background-position: -128px -38px;
+    background-color: transparent;
+    opacity: 0.5;
+    text-indent: -9000px;
+
+    &.active {
+      background-color: $primary;
+      background-position: -406px -38px;
+      opacity: 1;
+    }
+  }
+
+  #NoResults_SimpleSearchForm_SearchTerm {
+    width: 88%;
+    @include breakpoint(large x-large){
+      width: 90%;
+    }
+  }
+
+  #noResults_submitButton {
+    width: 70px;
+    background-position: -115px -30px !important;
+    @include breakpoint(large x-large){
+      background-position: -115px -28px !important;
+    }
+
+    &.active {
+      background-position: -395px -30px !important;
+      @include breakpoint(large x-large){
+        height: 101%;
+        background-position: -395px -28px !important;
+      }
+    }
+  }
+}
+
+#look-ahead {
+  opacity: 0;
+  visibility: hidden;
+  //display: none;
+  background-color: $white;
+  box-shadow: 0 2px 17px 0 rgba(0, 0, 0, 0.18);
+  box-sizing: border-box;
+  width: 428px;
+  overflow: hidden;
+  margin: 40px 0 0 0;
+  transition: margin 0.2s ease-in, opacity 0.2s ease-in;
+  z-index: -1;
+  position: relative;
+
+  @include breakpoint(medium small){
+    width: 100vw;
+    margin: 40px 0 0 -22px;
+  }
+/*
+  &:before {
+    content: "";
+    height:  calc(100% - 60px);
+    display: block;
+    border-right: $lighterBorder;
+    width: 1px;
+    margin-left: -1px;
+    left: 50%;
+    top: 30px;
+    position: absolute;
+
+    @include breakpoint(medium small){
+      display: none;
+    }
+  }
+*/
+  &.active {
+    margin-top: 10px;
+    opacity: 1;
+    visibility: visible;
+
+    @include breakpoint(medium small){
+      margin: 10px 0 0 -22px;
+    }
+  }
+
+  .look-ahead-column {
+    box-sizing: border-box;
+    margin: 30px 0;
+    padding: 0 20px;
+    font-size: em(13);
+    line-height: em(25, 13);
+    font-weight: bold;
+
+    @include breakpoint(medium small){
+      width: 100%;
+      float: none;
+    }
+
+    a {
+      font-weight: normal;
+      font-size: em(15, 13);
+      line-height: em(25, 15);
+    }
+
+    .look-ahead-section {
+      margin: 10px 0;
+    }
+  }
+
+  #autoSuggestProducts {
+    width: 50%;
+    float: right;
+    overflow: hidden;
+    padding: 30px 20px 10px;
+    box-sizing: border-box;
+    font-size: em(13);
+    line-height: em(25, 13);
+    font-weight: bold;
+
+    @include breakpoint(medium small){
+      display: none;
+    }
+
+    .suggested-product {
+      padding: 20px 0;
+      box-sizing: border-box;
+      border-bottom: $lighterBorder;
+      overflow: hidden;
+      font-size: em(13, 13);
+      font-weight: normal;
+
+      .product-image {
+        width: 25%;
+        float: left;
+
+        img {
+          display: block;
+          width: 100%;
+        }
+      }
+
+      .product-info {
+        width: 75%;
+        float: right;
+      }
+
+      .product-name {
+        font-size: em(13, 13);
+        height: auto;
+      }
+    }
+
+    .btn {
+      margin: 20px 0;
+      font-size: em(15, 13);
+    }
+  }
+
+}
+
+// High-contrast mode accessibility styles
+@media screen and (-ms-high-contrast: active) {
+  @include breakpoint("max-width: 820px"){
+    .search {
+      width: 30%;
+      margin: auto;
+    }
+  }
+
+  .primary-search {
+    #submitButton,
+    #noResults_submitButton {
+      text-indent: -9px;
+      border: 1px solid;
+    }
+  }
+}

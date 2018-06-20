@@ -1,0 +1,30 @@
+/* stylelint-disable */
+// Wish List
+#wishlistName-EditName input {
+	border: 1px solid #cccccc;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    padding: 3px 3px;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    vertical-align: middle;
+    margin-left:-4px;
+}
+
+#wishlistName-EditLink {
+	font-size:11px;
+	cursor:pointer;
+}
+
+div.onOffToggle label.btn {
+	background-color:#4d4d4d;
+	color:#b3b3b3;
+	border-color:#333;
+}
+
+div.onOffToggle label.btn.active {
+	background-color:#00a3e0;
+	color:#fff;
+}
+
+#share-links {
+	margin-left:10px;
+}

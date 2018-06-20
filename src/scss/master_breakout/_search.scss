@@ -1,0 +1,32 @@
+/* stylelint-disable */
+// Primary Search and Look ahead styles
+.primary-search {
+	padding-left:20px;
+}
+
+.primary-search .btn-lg {
+	padding-bottom:9px;
+}
+
+#search-in-active {
+	cursor: pointer;
+}
+
+#search-in-select {
+	opacity: 0;
+	position:absolute;
+	left:20px;
+	width:54px;
+	cursor: pointer;
+}
+
+#look-ahead {
+	border: 1px solid $black;
+	background-color:$white;
+	position:absolute;
+	top:35px;
+	left:88px;
+	z-index:250;
+	padding:10px 16px;
+	display:none;
+}

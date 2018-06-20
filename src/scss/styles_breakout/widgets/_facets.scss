@@ -1,0 +1,352 @@
+/* stylelint-disable */
+.facetWidget .clearAll {
+	float: right;
+	text-align: right;
+	width: 66px;
+	line-height: 22px;
+	font-size: 13px;
+	color: #404040;
+	position: absolute;
+	right: 15px;
+	top: 10px;
+}
+
+	.facetWidget .clearAll:hover {
+		text-decoration: underline;
+	}
+
+.facetWidget .close {
+	float:left;
+	width: 15px;
+	height: 15px;
+	background: url('../images/responsive/rwdUI.png');
+	background-position: -61px -1px;
+	margin-top: 5px;
+}
+
+	.facetWidget .clearAll:hover .close {
+		background-position: -241px -1px;
+	}
+
+#facetFilterListWrapper .facetSelectedCont {
+	border-top:1px solid #e3e1e1;
+	border-bottom:1px solid #e3e1e1;
+	margin:7px 5% 0 0;
+	padding:3px 0;
+	width:95%;
+}
+	#facetFilterListWrapper .facetSelectedCont .filter_option img {
+		border-radius:100%;
+		vertical-align:middle;
+	}
+
+	#facetFilterListWrapper .facetSelected {
+		list-style:none;
+		font-size:13px;
+		line-height:30px;
+	}
+		#facetFilterListWrapper .facetSelected:hover {
+			text-decoration: underline;
+		}
+		#facetFilterListWrapper .facetSelected:hover .close{
+			background-position: -241px -1px;
+		}
+	#facetFilterListWrapper .facetSelected.vertical {
+		width:95%;
+	}
+		.facetSelected .close {
+			margin:9px 3px 0 0;
+		}
+	#facetFilterListWrapper .header {
+		width:95%;
+		margin:0 5% 0 0;
+	}
+
+	.facetWidget > .title,  .facetWidget > .facetHeader > .title{
+		color:#4D4D4D;
+		font-size:17px;
+		font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+		text-align:left;
+		cursor:pointer;
+		float:left;
+		position:relative;
+	}
+
+	.facetWidget .openTab {
+		float:right;
+		font-size: 13px;
+		margin-right: 20px;
+		font-style: normal;
+		font-weight: normal;
+		cursor: pointer;
+	}
+
+	.facetSelectContainer {
+		background:#FFF;
+		margin:0;
+	/*	padding:0 0 10px 0; */
+		border-radius:0 0 5px 5px;
+	}
+	.facetSelectContainer > ul {
+		padding: 0;
+	}
+	.facetSelectContainer .facetSelectedHighlight {
+		color:#CA4200;
+		font-weight:bold;
+	}
+	.facetSelectContainer .facetSelect li.singleFacet {
+		border-bottom:none;
+		margin-bottom:2px;
+		padding:10px 5%;
+		text-align:center;
+		width:30px;
+		float:left;
+	}
+	.facetSelectContainer .swatch .outline > span {
+		display:table-cell;
+		height:34px;
+		vertical-align:middle;
+	}
+	.facetSelectContainer .swatch img,
+	.facetSelected > a > div.filter_option > span > img {
+		border-radius:100%;
+		vertical-align:middle;
+		box-shadow:0 0 0 1px #E5E5E5;
+	}
+	.facetSelectContainer .swatch .outline.facetSelectedHighlight > span > img {
+		box-shadow:0 0 0 3px #FAC549;
+	}
+
+	.facetSelect .swatch .outline {
+		display:inline-block;
+		text-align:center;
+	}
+		.optionContainer.vertical .facetSelectContainer {
+			margin-right:5%;
+		}
+	#catSelectCont,
+	.col12 > .facetWidget > #facetLinkSelect {
+		margin-right: 5%;
+	}
+
+	.facetWidget #facetLinkSelect {
+		max-height: none;
+		overflow-y: inherit;
+		margin-right: 20px;
+		background: none;
+	}
+		#facetFilterListWrapper .facetSelect {
+			margin-top: 0;
+		}
+		.facetSelect li {
+			list-style: none;
+			line-height: 16px;
+			font-size: 12px;
+			color: #565656;
+			padding:10px 5%;
+			border-bottom: 1px solid #e3e1e1;
+		}
+
+		.facetSelect li a {
+			display: block;
+			margin: -10px -5%;
+			padding: 10px 5%;
+		}
+
+		.facetSelect li a:hover {
+			text-decoration: underline;
+		}
+
+		.showMore {
+			line-height: 16px;
+			font-size: 12px;
+			color: #565656;
+			cursor: pointer;
+			text-align: right;
+			padding: 5px 5% 0 0;
+		}
+
+			.showMore:hover {
+				cursor:pointer;
+			}
+
+		#facetFilterListWrapper .facetSelect li:first-child {
+			padding-top: 0;
+		}
+
+		#colorSelect .facetSelect li:first-child {
+			padding-top: 10px;
+		}
+
+			/*Color Facet Selection Specifics*/
+
+			#fSCColor ul li {
+				float:left;
+				text-align:center;
+				width:30px;
+				margin-bottom:2px;
+				border-bottom: none;
+				padding: 10px 5%;
+			}
+
+			#facetLinks ul li {
+				border-bottom: none;
+			}
+
+
+			#facetLinks ul li,
+			#facetCat ul li {
+				padding-left: 10%;
+			}
+
+			#facetCat.col8 li {
+				padding-left: 4%;
+			}
+
+			#facetCat ul li {
+				background:#FFF;
+			}
+
+			#facetCat.col8 li {
+				width:27.3%;
+				float:left;
+				margin-right:2%;
+			}
+
+			#fSCPrice input {
+				height: 20px;
+				border: 1px solid #767676;
+			}
+
+			.facColor {
+				width:20px;
+				height: 20px;
+				border-radius: 10px;
+				margin: 0 auto 2px auto;
+			}
+
+			.facetSelect .checkBox {
+				width: 12px;
+				height: 12px;
+				margin: 0 5px 0 0;
+				border: 1px solid #a5a5a5;
+				background-color: #d7d7d7;
+				float: left;
+				position:relative;
+				display: none;
+			}
+			.singleFacet .facetSelect .checkBox {
+				display: block;
+			}
+			.facetSelect li input:checked + a .checkBox > .checkmark {
+				position:absolute;
+				background: url('../images/responsive/rwdUI.png');
+				background-position: -81px -1px;
+				margin-left: 1px;
+				margin-top:1px;
+				width:12px;
+				height:11px;
+			}
+
+	ul.facetSelect li input[type=checkbox] {
+		height:1px;
+		width:1px;
+		position:absolute;
+		overflow:hidden;
+		left:-30px;
+	}
+	ul.facetSelect li div.facetCountContainer {
+		display:inline-block;
+	}
+
+	.optionContainer.fixed{
+		min-width: 200px;
+		float:left;
+	}
+
+	.optionContainer.percent{
+		width: 33.33333%;
+		float:left;
+	}
+
+	.optionContainer.vertical{
+		width: 100%;
+		float:left;
+	}
+
+#facetFilterListWrapper > .facetSelectedCont {
+	border-top: 1px solid #E3E1E1;
+	border-bottom: 1px solid #E3E1E1;
+	margin-top: 7px;
+	padding: 0px;
+}
+#facetFilterList li {
+	font-size: 14px;
+	list-style: none;
+	padding: 3px 0;
+	/*display: inline-block;*/
+	vertical-align: top;
+	line-height: 28px;
+	min-width: 50%;
+}
+
+@media screen and (min-width: 1281px) {
+	#productsFacetsHorizontal > fieldset{
+		width: 48%;
+		float:left;
+		padding: 1%;
+		/*margin: 2px 4px 2px 4px;*/
+	}
+
+}
+
+@media screen and (max-width: 1280px) {
+	#productsFacetsHorizontal > fieldset{
+		width: 48%;
+		/*display: inline-block;*/
+		float:left;
+		padding: 1%;
+		/*margin: 2px 4px 2px 4px;*/
+	}
+}
+
+
+/*Facets*/
+.facetWidget {
+	background:#f0f0f0;
+	border-radius: 5px;
+}
+
+#content .facetWidget.collapsible {
+	padding: 10px 5%;
+	position: relative;
+}
+
+.facetWidget .dropdownIcon {
+	float:left;
+	width:16px;
+	height:16px;
+	background: url('../images/responsive/rwdUI.png');
+	background-position: -61px -41px;
+	margin: 3px 6px 0 0;
+}
+.facetWidget[aria-expanded="false"] .dropdownIcon {
+	background-position: -41px -41px;
+}
+
+@media screen and (max-width: 600px) {
+	#productsFacetsHorizontal > fieldset {
+		width: 98%;
+	}
+	
+	
+		#contentFacet, #contentProducts {
+			float: none;
+			width: auto;
+		}
+	
+		#contentFacet {
+			height: 300px !important;
+		}
+
+}

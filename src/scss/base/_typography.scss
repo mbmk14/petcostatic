@@ -1,0 +1,253 @@
+// To include:
+// -----------------------
+
+// font choices
+// h1-6 header styles
+// base paragraph styles
+// subheaders
+// bold/italic options
+/* stylelint-disable */
+
+html, body {
+  font-family: $bodyFont;
+  line-height: 1.25em;
+  color: $darkerGray;
+}
+
+// Mobile Safari adjustments to prevent
+// font-size scaling in landscape view
+
+@media only screen and (max-width: 768px) and (orientation: portrait){
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+}
+
+p {
+  color: #666666;
+  font-size: 0.9375em;
+  line-height: 1.6em;
+}
+
+a {
+  color: $primary;
+  font-weight: bold;
+  text-decoration: none;
+  
+  // PDWEB-4646
+  &:hover,
+  &:focus {
+    // This is normally an accessibility issue - not all browsers have 
+    // user agent styles for :focus, so when tabbing to links (esp in a 
+    // body of text), you can't tell where you are.
+    color: $primaryDark;
+  }
+  // END 4646
+  &.no-style {
+    color: $darkGray;
+    font-weight: normal;
+    font-size: 0.9375em;
+  }
+}
+
+// PDWEB-4646
+p a {
+  // In my experience, the vast majority of the time the 'links only
+  // distinguished by color' is thrown is for links embedded with in
+  // <p> or other text heavy tags. This should take care of _most_ of
+  // the links with this issue.
+  text-decoration: underline;
+}
+.text-underline,
+.accessible-link {
+	text-decoration: underline;
+}
+// END 4646
+
+h1 {
+  margin: 0;
+  padding: 2% 0 0;
+  font-size: 2em;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.74em;
+  letter-spacing: normal;
+  color: $darkerGray;
+}
+
+h2 {
+  font-size: 1.5em;
+  line-height: 2em;
+  font-weight: bold;
+  color: $darkerGray;
+}
+
+h3 {
+  font-size: 1.3em;
+  line-height: 1.75em;
+  font-weight: bold;
+  color: $darkerGray;
+}
+
+h4 {
+  font-size: em(25);
+  line-height: em(30, 25);
+  letter-spacing: 0.2px;
+  font-weight: bold;
+}
+h5 {
+  color: $darkGray;
+  font-size: 0.9375em;
+}
+h6 {}
+
+strong { font-weight: bold; }
+
+em { font-style: italic; }
+
+// Content styles that are different in static content pages
+// vs the rest of the site
+.textarea {
+  h1, h2, h3, h4, h5 {
+    color: #333;
+    font-weight: bold;
+    line-height: 1.1em;
+    margin: 20px 0 10px;
+  }
+
+  h1 {
+  	font-size: 2.5em;
+    line-height: 1.1em;
+    color: $darkerGray;
+    margin: 20px 0 10px;
+    font-weight: bold;
+  }
+
+  h2 {
+    font-size: 1.75em;
+    line-height: 1.1em;
+    color: $darkerGray;
+    margin: 20px 0 10px;
+    font-weight: bold;
+  }
+
+  h3 {
+    font-size: 1.375em;
+    line-height: 1.1em;
+    color: $darkerGray;
+    margin: 20px 0 10px;
+    font-weight: bold;
+  }
+  h4{
+  	font-size: 1.125em;
+  	line-height: 1.1em;
+  	color: $darkerGray;
+  	margin: 20px 0 10px;
+  	font-weight: bold;
+}
+  h5 {
+    font-size: 1.0em;
+    line-height: 1.1em;
+    margin: 20px 0 10px;
+  }
+
+  ul, ol {
+    font-size: 1em;
+    margin-left: 25px;
+    li {
+      line-height: 1.6em;
+      color: #666666;
+    }
+  }
+
+  ul, ol {
+    margin-left: 25px;
+    font-size: 0.9375em;
+
+    li {
+      font-size: 0.9375em;
+      line-height: 1.6em;
+      color: $darkGray;
+    }
+  }
+
+  p {
+    margin: 0 0 11px;
+    padding: 5px 0;
+    margin: 0 0 11px;
+  }
+}
+
+// Font Styles
+.text-italic { font-style: italic!important; }
+.text-bold { font-weight: bold!important; }
+.text-normal { font-weight: normal!important; }
+.text-arrow {
+  &:after {
+    content: "";
+    display: inline-block;
+    height: 0;
+    width: 0;
+    border: 6px solid transparent;
+    border-left-color: inherit;
+    border-left-width: 10px;
+    margin: 0 0px 0px 7px;
+  }
+}
+
+
+// Font Sizes
+.text-x-small {
+  font-size: em(13);  // ~13px
+  line-height: 1.25em;
+}
+.text-small {
+  font-size: em(14);  // ~14px
+  line-height: 0.875em;
+}
+.text-medium {
+  font-size: em(15);  // ~15px
+  line-height: 0.9375em;
+}
+.text-large {
+  font-size: em(20);  // ~20px
+  line-height: 1.25em;
+}
+
+// Font Colors
+.text-primary { color: $primary; }
+.text-white {
+  &, a { color: $white; }
+}
+.text-lighter { color: $lightGray; }
+.text-light { color: $darkGray; }
+.text-lightest { color: $gray; }
+.text-dark { color: $darkerGray; }
+.text-darkest { color: $darkestGray; }
+.text-approved { color: $approved; }
+// Text Alignements
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.centerFill {
+  margin: auto;
+  top: 0; left: 0; bottom: 0; right: 0;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+
+@include breakpoint(medium small){
+  .mobile-center { text-align: center; }
+
+  h1 {
+    line-height: 1em;
+  }
+}
+
+.table-full-width {
+	width: 100%;
+}

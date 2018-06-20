@@ -1,0 +1,1629 @@
+/* stylelint-disable */
+@import '_account-repeatdelivery.scss';
+
+.account {
+  padding: 0 20px;
+
+  .breadcrumb {
+    padding: 0;
+
+    @include breakpoint(medium small){
+      border: 0;
+    }
+  }
+
+  #side-nav-button {
+    box-sizing: border-box;
+    margin: 20px 0;
+    padding: 18px 20px;
+    border: $lighterBorder;
+    font-size: em(15);
+  }
+
+  h1 {
+    font-size: em(25);
+    padding-bottom: 10px;
+
+    @include breakpoint(x-large large){
+      font-size: em(35);
+      padding: 0;
+    }
+  }
+
+  @include breakpoint(medium small){
+    .row .side-nav { margin: 0; }
+
+    .col-4.add-button {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+
+  @include breakpoint(x-large large){
+    .add-button {
+      margin-bottom: 30px;
+
+      a.btn {
+        max-width: 191px;
+      }
+    }
+  }
+
+  .local-nav-sub {
+    margin-top: 10px;
+
+    li {
+      font-size: inherit;
+      padding: 10px;
+
+      @include breakpoint(x-large large){
+        padding: 0 0 10px 0;
+      }
+
+      a:after { display: none; }
+      &.active a { color: $bodyText; }
+    }
+  }
+
+
+  @include breakpoint(medium small){
+    & > .row > .col-9 { width: 100% };
+  }
+
+  .panel {
+    clear: both;
+    background-color: $lightestGray;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    overflow: hidden;
+
+    .panel-heading {
+      background-color: $lighterGray3;
+      padding: 20px;
+      overflow: hidden;
+
+      @include breakpoint(x-large large){
+        padding: 20px 30px;
+      }
+
+      h3 {
+        float: left;
+        font-size: em(20);
+      }
+
+      a {
+        float: right;
+        font-size: em(15);
+        line-height: em(35, 15);
+      }
+    }
+
+    .panel-body {
+      padding: 20px 10px;
+      overflow: hidden;
+
+      @include breakpoint(x-large large){
+        padding: 20px 30px;
+      }
+
+      input { background-color: $white; }
+    }
+  }
+
+  .static-label {
+    color: $bodyText;
+    font-size: em(15);
+    font-weight: bold;
+  }
+
+  .control-label {
+    display: block;
+    clear: both;
+    float: none;
+  }
+
+  .input {
+    display: block;
+    float: none;
+    width: 100%;
+    max-width: 495px;
+    clear: both;
+    margin-bottom: 10px;
+  }
+
+  .input-half {
+    float: left;
+    width: 48%;
+    margin-right: 4%;
+
+    @include breakpoint(medium x-large large){
+      max-width: 240px;
+      margin-right: 15px;
+    }
+
+    select { height: 41px; }
+
+    &#zipCode_div { margin-right: 0; }
+  }
+
+  #setDefault_div {
+    margin: 20px 0;
+
+    label {
+      font-weight: normal;
+      font-size: em(15);
+    }
+  }
+
+  address {
+    font-size: em(15);
+    line-height: em(20, 15);
+    color: $darkGray;
+  }
+}
+
+#my-account-header {
+  border-top: $lighterBorder;
+  border-bottom: $lighterBorder;
+  padding: 15px 0 0;
+  margin: 10px 0 30px;
+
+  @include breakpoint(x-large large){
+    padding-bottom: 15px;
+  }
+
+  .user-name {
+    font-size: em(15);
+  }
+
+  .user-pals-number {
+    font-size: em(13);
+  }
+
+  .user-member-since {
+    font-size: em(13);
+    color: $darkGray;
+  }
+
+  .user-rewards-available {
+    line-height: em(19, 15);
+
+    a {
+      font-size: em(13, 15);
+    }
+  }
+
+  .user-next-rewards {
+    font-size: em(13);
+  }
+
+  .progress {
+    height: 23px;
+    box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.16);
+    width: 100%;
+    border-radius: 40px;
+    overflow: hidden;
+    background-color: $lightestGray;
+    margin: 5px 0;
+  }
+
+  .progress-bar {
+    height: 100%;
+    background-color: $primary;
+  }
+}
+
+#my_preferred_store {
+  p {
+    padding: 10px 0 0;
+
+    a { font-size: em(13, 15); }
+  }
+
+  .panel-body strong {
+    display: inline-block;
+    padding-bottom: 10px;
+    font-size: em(15);
+  }
+
+  ul {
+    font-size: em(15);
+    color: $darkGray;
+  }
+
+  .col-4 {
+    strong {
+      color: $lighterGray;
+      font-weight: normal;
+    }
+
+    @include breakpoint(medium small){
+      margin-right: 8%;
+
+      a { display: block; }
+
+      span { visibility: hidden; }
+    }
+  }
+}
+
+// Pet Profiles
+
+#petDob_div {
+  .select-style {
+    width: 31.33%;
+    margin-right: 3%;
+    box-sizing: border-box;
+    display: block;
+    float: left;
+
+    &:last-child { margin-right: 0; }
+
+    @include breakpoint(x-large large){
+      width: 23%;
+    }
+  }
+
+  #petDobYear_div {
+    @include breakpoint(x-large large){
+      width: 48%;
+    }
+  }
+}
+
+button.pet-submit, button.account-submit {
+  width: 100%;
+  margin-top: 15px;
+
+  @include breakpoint(x-large large){
+    width: 240px;
+  }
+}
+
+button.pet-cancel, button.account-cancel {
+  width: 100%;
+  padding: 15px 30px;
+  box-sizing: border-box;
+
+  @include breakpoint(x-large large){
+    width: auto;
+  }
+}
+
+.account-row {
+  clear: both;
+
+  @include breakpoint(x-large large){
+    display: flex;
+  }
+}
+
+.account-tile {
+  background-color: $lightestGray;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 23px 30px;
+  margin-bottom: 20px;
+
+  @include breakpoint(x-large large){
+    margin-right: 3%;
+    width: 31.33%;
+    float: left;
+
+    &:nth-child(3n){
+      margin-right: 0;
+    }
+  }
+
+  h5 {
+    font-size: em(15);
+    font-weight: bold;
+    color: $bodyText;
+  }
+
+  ul {
+    font-size: em(13);
+    letter-spacing: 0.1px;
+    line-height: em(22, 13);
+    margin: 15px 0;
+  }
+
+  p { font-size: em(13); }
+
+  address {
+    margin-bottom: 22px;
+
+    strong { color: $bodyText; }
+    span { display: block; }
+  }
+
+  .edit-remove { margin-bottom: 10px;}
+}
+
+.account-payment {
+  address {
+    font-size: em(13);
+    line-height: em(20, 13);
+  }
+
+  ul { margin-bottom: 0; }
+
+  li {
+    color: $darkGray;
+
+    strong { color: $bodyText; }
+  }
+}
+
+.rd-payment,
+.rd-address {
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: $gray;
+
+  &:before {
+    content: "";
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    background-image: $spritesheet;
+    background-position: -420px -261px;
+    vertical-align: text-bottom;
+    margin-right: 5px;
+  }
+}
+
+.default-payment,
+.default-address {
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: $gray;
+
+  &:before {
+    content: "";
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    background-image: $spritesheet;
+    background-position: -420px -120px;
+    vertical-align: text-bottom;
+    margin-right: 5px;
+  }
+}
+
+// Wishlist
+.account {
+  .nav.nav-tabs {
+    margin: 0;
+    li {
+      display: inline-block;
+      list-style: none;
+      margin: 10px 0;
+
+      a {
+        border: 2px solid transparent;
+        border-radius: 5px;
+        padding: 10px 15px;
+        margin-right: 10px;
+      }
+
+      &.active a { border-color: $primary; }
+    }
+  }
+
+  .tab-pane {
+    display: none;
+    border-radius: 5px;
+    background-color: $white;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+    border: solid 1px $lighterGray3;
+    padding: 25px 30px;
+    margin: 30px 0;
+    position: relative;
+
+    @include breakpoint(small) {
+      padding: 16px 20px;
+    }
+
+    &.active { display: block; }
+
+  }
+}
+
+#wishlistName-EditLink {
+  display: inline-block;
+  text-indent: -9000px;
+  background-image: $spritesheet;
+  background-position: -630px -120px;
+  height: 23px;
+  width: 20px;
+  vertical-align: text-bottom;
+}
+
+#myWishList {
+  .print-wishlist {
+    position: absolute;
+    top: 23px;
+    right: 33px;
+
+    &:before {
+      content: "";
+      display: inline-block;
+      height: 20px;
+      width: 20px;
+      background-image: $spritesheet;
+      background-position: -560px -119px;
+      vertical-align: text-bottom;
+      margin-right: 5px;
+    }
+  }
+
+  .label {
+    display: block;
+    float: none;
+  }
+
+  .onOffToggle {
+    background-color: $lightestGray;
+    border: $lightBorder;
+    border-radius: 70px;
+    overflow: hidden;
+    position: relative;
+    display: block;
+    float: left;
+
+    span {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      background-color: $gray;
+      border-radius: 70px;
+      z-index: 0;
+      width: 44%;
+      transition: 0.2s ease-in;
+    }
+
+    #wishlist-public:checked ~ span {
+      left: 45%;
+      width: 56%;
+    }
+
+    input { display: none; }
+
+    label {
+      display: inline-block;
+      clear: none;
+      margin-bottom: 0;
+      padding: 4px 15px 3px;
+      cursor: pointer;
+      position: relative;
+      z-index: 1;
+      transition: 0.2s ease-in;
+    }
+
+    input:checked + label {
+      color: $white;
+    }
+  }
+
+  #share-links {
+    float: left;
+    margin: 0 0 0 10px;
+  }
+
+  .email-share {
+    cursor: pointer;
+    display: block;
+    float: left;
+    margin-left: 5px;
+
+    i { float: left; }
+  }
+
+  #twitterShareButton {
+    i { float: left; }
+  }
+
+  .custom-fb-share {
+    height: 28px;
+    width: 28px;
+    background-image: $spritesheet;
+    background-position: -490px -322px;
+    cursor: pointer;
+    text-indent: -9000px;
+    float: left;
+    margin-right: 5px;
+  }
+
+  .product-name {
+    height: auto;
+    padding: 0 20px 10px 0;
+    box-sizing: border-box;
+
+    a {
+      font-size: em(15);
+      line-height: em(20, 15);
+    }
+  }
+
+  .product-sku {
+    float: left;
+    margin-right: 10px;
+    font-size: em(13);
+    line-height: em(22, 13);
+    color: $darkGray;
+
+    strong { color: $bodyText; }
+  }
+
+  .product-availability {
+    border: 0;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    float: left;
+  }
+
+  .product-repeat-delivery {
+    clear: both;
+    font-size: em(13);
+
+    a:before {
+      content: "";
+      display: inline-block;
+      height: 20px;
+      width: 20px;
+      background-image: $spritesheet;
+      background-position: -350px -260px;
+      vertical-align: text-bottom;
+    }
+  }
+
+  .product-price {
+    text-align: center;
+
+    .product-price-promo {
+      font-size: em(15);
+      font-weight: bold;
+    }
+
+    .product-price-crossout {
+      font-size: em(13);
+      color: $darkGray;
+      text-decoration: line-through;
+    }
+  }
+
+}
+
+// Purchase list
+
+#myPurchaseList {
+  #purchaselistRefineByDateForm {
+    margin-bottom: 15px;
+  }
+  #purchaseStartDate_div, #purchaseEndDate_div {
+    >div {
+      margin-right: 15px;
+      max-width: 202px;
+      width: 34%;
+    }
+    .input-group.date {
+      position: relative;
+    }
+    span.input-group-addon {
+      position: absolute;
+      top: 1px;
+      right: 0;
+      border-left: 1px solid $lightGray;
+      height: 41px;
+      span.icon-calendar {
+        margin: 8px 6px;
+      }
+    }
+  }
+  #purchaseDateSubmit {
+    margin: 0.5rem 0;
+    max-width: 70px;
+    width: 19%;
+    height: 43px;
+    line-height: 11px;
+    color: $gray;
+    border: 1px solid $gray;
+    float: left;
+  }
+  .last-purchased-date {
+    color: $gray;
+    font-weight: bold;
+  }
+  .product-name a {
+    font-size: 15px;
+    letter-spacing: .2px;
+  }
+  .brand {
+    font-weight: bold;
+  }
+  .product-sku {
+    font-size: 13px;
+    float: left;
+    margin: 10px 10px 0 0;
+  }
+  .product-availability {
+    margin-top: 10px;
+    padding: 0;
+    border: none;
+  }
+  .product-repeat-delivery {
+    font-size: 13px;
+    margin-top: 10px;
+    .rd-image {
+      float: left;
+      margin: 3px 0 0 3px;
+    }
+  }
+  .product-attribute-info {
+  	background-color: $lightestGray;
+    margin: 20px 0 0 0;
+    padding: 8px 15px 10px;
+    ul {
+       font-size: em(13);
+    }
+  }
+}
+
+#myWishList, #myPurchaseList {
+  .product-qty {
+    max-width: 43px;
+    input {
+      padding: 0;
+    }
+  }
+  .product-price {
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    max-width: 120px;
+  }
+   .product-price-sm {
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+   }
+  @include breakpoint(medium small large){
+    .listcol-left {
+      width:100%;
+      margin: 0;
+    }
+    .listcol-right {
+      width: 70%;
+      float: right;
+      margin: 0;
+    }
+    .listcol-img {
+      width: 30%;
+      max-height: 182px;
+      float: left;
+      margin: 0;
+      text-align: center;
+    }
+    .listcol-info {
+      width: 70%;
+      float: right;
+    }
+    .product-atc {
+      max-width: 200px;
+    }
+  }
+}
+
+// Email Preferences
+
+#my-subscriptions, #my-pet-interests {
+  .form-group {
+    clear: both;
+    border: $lighterBorder;
+    overflow: hidden;
+    padding: 15px;
+    margin-bottom: 20px;
+
+    label {
+      color: $bodyText;
+      font-size: em(15);
+      margin: 0;
+    }
+
+    p { margin: 0; }
+
+    div.col-4 {
+      margin: 0 2% 0 0;
+    }
+  }
+
+  @include breakpoint(medium small){
+    .col-4 { width: 100%; }
+  }
+}
+
+#my-subscriptions {
+  .col-6 { margin: 0; }
+  .email {
+    margin: 0;
+    @include breakpoint(x-large large){
+      text-align: right;
+      line-height: em(35);
+    }
+  }
+}
+
+#my-pet-interests {
+  .form-group {
+    @include breakpoint(x-large large){
+      margin-right: 3%;
+      clear: none;
+      float: left;
+      max-width: 240px;
+      width: 31.33%;
+      box-sizing: border-box;
+
+      &:nth-child(3n) { margin-right: 0; }
+    }
+
+  }
+
+  div.col-4 { clear: both; }
+}
+
+// Order History
+.order-item {
+    background-color: $white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    padding: 7px 15px 15px;
+    box-sizing: border-box;
+
+    @include breakpoint(x-large large){
+      padding: 18px 20px 20px;
+    }
+
+    .row { clear: both; }
+
+    .col-6-sm { width: 50%;}
+
+    h4 {
+      font-size: em(15);
+      margin-top: 0.5rem;
+    }
+
+    .order-details .row {
+      margin-bottom: 0;
+        font-size: em(13);
+        color: $darkGray;
+
+        strong { color: $bodyText; }
+    }
+
+    @include breakpoint(large x-large){
+      .view-details { text-align: right; }
+      .notice-box {
+        width: 72%;
+        float: right;
+      }
+    }
+
+    .notice-box { margin-bottom: 0; }
+
+    .rd-order {
+      &:before {
+        content: "";
+        display: inline-block;
+        height: 20px;
+        width: 20px;
+        background-image: $spritesheet;
+        background-position: -349px -260px;
+        vertical-align: text-bottom;
+        margin-right: 5px;
+      }
+    }
+}
+
+// Order Details
+.order-tile {
+  border: 1px solid $lighterGray3;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+
+  .order-placed.col-3 {
+    padding: 20px;
+    margin: 0;
+
+    @include breakpoint(medium small){
+      border-bottom: $lighterBorder;
+      width: 100%;
+
+      .col-6-sm:first-child {
+        margin-right: 8%
+      }
+    }
+
+    h4 {
+      font-size: em(20);
+    }
+
+    .col-12 { margin: 0;}
+
+    .pals-info {
+      margin-top: 55px;
+
+      p {
+        font-size: em(13);
+        line-height: em(18, 13);
+        padding-top: 4px;
+
+        &.label { padding-top: 0; }
+      }
+    }
+  }
+
+  .return-receipt {
+    font-size: em(13);
+
+    @include breakpoint(medium small){
+      display: inline-block;
+      padding-top: 32px;
+    }
+  }
+
+  .order-details.col-9 {
+    margin: 0;
+
+    @include breakpoint(medium small){
+      border-left: 0;
+      margin: 0;
+      width: 100%;
+    }
+
+    & > .row {
+      padding: 10px 20px;
+
+      @include breakpoint(x-large large){
+        padding: 20px;
+      }
+
+      [class*="col-"] { margin: 0 0 10px 0; }
+
+      @include breakpoint(medium small){
+        .col-6-sm:first-child {
+          margin-right: 8%
+        }
+      }
+    }
+
+    address { margin-bottom: 20px; }
+
+    .address {
+      @include breakpoint(medium small){
+        float: left;
+        width: 48%;
+
+        &:first-child {
+          margin-right: 4%;
+        }
+      }
+    }
+
+    .details {
+      font-size: em(15);
+      color: $darkGray;
+    }
+
+    .well {
+      padding: 26px 30px;
+      background-color: $lightestGray;
+      font-size: em(15);
+      color: $darkGray;
+      margin-bottom: 30px;
+    }
+
+    h5 {
+      font-weight: bold;
+      color: $bodyText;
+      font-size: em(13);
+      margin-bottom: 15px;
+    }
+
+    strong { color: $bodyText; }
+
+    .small {
+      font-size: em(13);
+      color: $gray;
+      position: relative;
+      top: -5px;
+    }
+
+  }
+
+  .label {
+    float: none;
+  }
+}
+
+.order-item.standard-products-list {
+  img { max-width: 100%; }
+
+  .product-name { max-height: none; }
+}
+
+.order-details.standard-products-list {
+  padding: 26px 0;
+  border: 0;
+
+  .order-item {
+
+    img { max-width: 100%; }
+
+    .product-price, .product-qty {
+      line-height: 45px;
+      color: $darkGray;
+
+      @include breakpoint(medium small){
+        font-size: em(15);
+
+        &.product-qty {
+          margin: 0.5rem 4%;
+        }
+
+      }
+
+      strong {
+        color: $bodyText;
+        font-size: em(20);
+      }
+    }
+
+    .col-6 .product-name {
+      display: none;
+    }
+
+    ul {
+      color: $darkGray;
+      font-size: em(13);
+
+      strong { color: $bodyText; }
+    }
+
+    @include breakpoint(medium small){
+      padding-bottom: 0;
+
+      h4 { margin-top: 0 }
+
+      .col-10.col-8-sm {
+        margin-left: 5%;
+      }
+
+      .col-6 {
+        margin: 0;
+      }
+
+      ul {
+        font-size: em(13);
+      }
+
+      .product-status p {
+        font-size: em(13, 12);
+        padding-bottom: 10px;
+      }
+    }
+  }
+}
+
+// Login Page
+
+.login, .account-register {
+  .control-label {
+    text-align: left;
+    margin-top: 10px;
+  }
+}
+
+// Account Registration
+.account-register {
+
+  &.col-6.col-center {
+    margin: auto;
+  }
+
+  .form-group .btn-large {
+    margin: 0.5rem auto;
+    float: none;
+    display: block;
+  }
+
+  #state_div {
+    margin-right: 4%;
+    width: 48%;
+
+    select { height: 43px; }
+  }
+
+  #zipCode_div {
+    width: 48%;
+  }
+}
+// CSR OBO pages
+@include breakpoint(medium small){
+.account.csrfind {
+	.nav.nav-tabs {
+		li {
+			width:23%;
+
+		}
+	}
+}
+}
+
+// Pals Rewards
+.account {
+
+  .pals-header {
+    width: 100%;
+    overflow: hidden;
+    text-align: left;
+    line-height: 1.5;
+    img {
+      float: left;
+      margin-right: 15px;
+    }
+  }
+
+  .row { box-sizing: border-box; }
+
+  .rewards-balance.col-12 {
+    font-size: em(25);
+    color: $darkGray;
+    margin-bottom: 20px;
+
+    strong { color: $bodyText; }
+
+    @include breakpoint(medium small){
+      font-size: em(20);
+    }
+  }
+
+  .program-overview {
+    text-align: right;
+
+    @include breakpoint(medium small) {
+      text-align: left;
+      font-size: em(13);
+    }
+  }
+
+  .rewards-message {
+    box-sizing: border-box;
+    padding: 20px 10px;
+
+    p {
+      color: $gray;
+      font-size: em(13);
+      line-height: em(18, 13);
+      letter-spacing: 0.1px;
+    }
+  }
+
+  .rewards-buttons {
+    padding: 20px 30px;
+
+    @include breakpoint(medium small){
+      .btn {
+        width: 100%;
+      }
+    }
+  }
+
+  .rewards-table-container {
+    padding: 0 30px;
+  }
+
+  .rewards-table {
+    width: 100%;
+    margin: auto;
+
+    &.in-store {
+      margin-top: 20px;
+
+      td, th {
+          padding: 10px;
+
+          @include breakpoint(medium small){
+            padding-left: 48px;
+          }
+
+          &.text-left {
+            @include breakpoint(x-large large){
+              padding-right: 20px;
+            }
+
+            @include breakpoint(medium small){
+              float: left;
+              width: 75%;
+              padding-left: 10px;
+              padding-top: 12px;
+              font-size: em(15);
+            }
+          }
+      }
+
+      .check {
+        vertical-align: top;
+
+        @include breakpoint(medium small){
+          float: left;
+          padding: 10px 5px 10px 20px;
+        }
+
+        .checkbox-button {
+          margin: 0;
+          vertical-align: top;
+
+          i { margin: 0; }
+        }
+      }
+    }
+
+    thead {
+      tr {
+        background-color: transparent;
+        border: 0;
+      }
+    }
+
+    th {
+      font-weight: bold;
+      text-align: center;
+      font-size: em(13);
+      line-height: em(18, 13);
+      padding: 5px 0;
+
+      &.text-left { text-align: left; }
+    }
+
+    tbody {
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    tr {
+      background-color: $white;
+      border-bottom: $lighterBorder;
+
+      &:last-child {
+        border-bottom: 0;
+      }
+
+      &.success { background-color: lighten($approved, 45); }
+      &.warning { background-color: lighten($notice, 35); }
+    }
+
+    td {
+      padding: 10px 5px;
+      font-size: em(15);
+      color: $darkGray;
+      text-align: center;
+      vertical-align: middle;
+
+      &.text-left { text-align: left; }
+
+      span {
+        font-size: em(13, 15);
+        font-weight: bold;
+
+        &.text-warning { color: $notice; }
+        &.text-success { color: $approved; }
+      }
+    }
+
+    label.checkbox-button {
+      display: block;
+      width: 100%;
+      text-align: center;
+      float: none;
+
+      i {
+        margin: 6px 0 0 5px;
+      }
+    }
+
+    .btn {
+      font-size: em(13);
+      padding: 5px 25px;
+    }
+
+    @include breakpoint(medium small){
+
+      thead { display: none; }
+
+      td {
+        padding: 0 0 0 34px;
+        display: block;
+        text-align: left;
+        font-size: em(13);
+
+        strong { color: $bodyText; }
+
+        span { font-size: em(13, 13); }
+
+        .btn {
+          font-size: em(13, 14);
+          padding: 3px 10px;
+          margin-left: 5px;
+
+          strong { color: $white; }
+        }
+
+        .prog-status {
+          display: inline-block;
+        }
+      }
+
+      td:first-child {
+        display: inline-block;
+        padding: 10px 5px;
+
+        & + td {
+          display: inline-block;
+          padding: 10px 5px;
+        }
+      }
+
+      td:last-child {
+        display: inline-block;
+        padding-bottom: 20px;
+      }
+
+
+    }
+  }
+
+  .offers-panel {
+    overflow: visible;
+
+    .panel-body { overflow: visible; }
+  }
+
+  .offer-tile-container {
+    padding: 0 2%;
+  }
+
+  .offer-tile {
+    background-color: $white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+    text-align: center;
+
+    .title {
+      font-size: em(15);
+      line-height: em(20, 15);
+      color: $bodyText;
+      font-weight: bold;
+      padding: 0 20px 10px;
+    }
+
+    .description {
+      font-size: em(15);
+      line-height: em(20, 15);
+      color: $darkGray;
+    }
+
+    .valid {
+      font-size: em(13);
+      line-height: em(18, 13);
+      color: $gray;
+    }
+
+    .offer-buttons {
+      padding: 20px;
+      font-size: em(13);
+
+      .btn {
+        margin-bottom: 10px;
+        font-size: em(15, 13);
+
+        &.btn-activated {
+          border: 1px solid $approved;
+          background-color: lighten($approved, 40%);
+          cursor: default;
+          color: $approved;
+          padding: 9px 15px;
+        }
+      }
+    }
+    .modal-dialog {
+      padding: 64px 30px 52px;
+      width: 400px;
+
+      @include breakpoint(medium small){
+        width: 100%;
+        max-width: 400px;
+        position: fixed;
+        box-sizing: border-box;
+        max-height: 100%;
+        overflow: auto;
+      }
+
+      .col-4.col-center {
+        margin: 0.5rem auto;
+      }
+    }
+
+  }
+}
+
+.order-reciept-page {
+
+  .main-body {
+    padding: 0 15px 15px;
+  }
+  
+  h1 {
+    display: none;
+  } 
+  .text-muted{
+    color: $darkerGray;
+  }
+  .col-9>.text-muted {
+    margin-left: 5px;
+  }
+  
+  .main-body {
+    //targets all .rows
+    >.row {
+      display: none;
+    }
+    //overwrites styles for all .rows but the first
+    >.row ~ .row {
+      display: block;
+    }
+  }
+  .well.well-sm hr{
+    margin-top: 2px;
+  }
+  td, th{
+    width: 24%;
+  } 
+  td span {
+    display: none;
+  }
+  th{
+    text-align: left;
+  }
+  .standard-products-list {
+    padding: 26px 0 26px 2.8%;
+    //right aligns  this to other rows, tough to do otherwise w/o changing html
+    margin-right: -60px;
+  }
+  .panel-heading {
+    [class*="col-"] {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    .col-3 {
+      text-align: left;
+    }
+    .product-qty {
+      text-align: center;
+    }
+    //targets second .product-qty 
+    .product-qty ~ .product-qty {
+      text-align: left;
+    }
+  }
+
+  p.form-control-static {
+    border: 0 transparent;
+    height: auto;
+    margin: 0;
+    line-height: normal;
+    color: $darkerGray;
+    text-align: center;
+  }
+  .panel-footer{
+    display: none;
+  }
+  .main-body>.panel-footer{
+    display: block;
+    >.row{
+      >.col-3{
+        margin-left: 0;
+      }
+    }
+  }
+  
+  .footer_wrapper_position {
+    display: none;
+  }
+  
+  @include breakpoint (small) {
+    h5 {
+      color: $darkerGray;
+    }
+    .panel-footer {
+      th {
+        display: none;
+      }
+      td {
+        width: 120%;
+        margin: 5px 0;
+        display: block;
+      }
+      td span {
+        display: inline;
+      }
+    }
+    .standard-products-list {
+      padding: 0;
+      margin-right: 0; 
+    }
+  }
+  
+  
+  @include breakpoint (small medium) {
+
+    .col-9 {
+      width: 98%;
+    }
+    
+    .spacer-sm-bottom {
+      padding-bottom: 0;
+    }
+    
+    .col-9.border-left-thin {
+       border-left: transparent;
+    }
+    .col-8.text-right, .col-4.text-right {
+      text-align: left;
+      margin-left: 0;
+    }
+    .panel-heading .col-7 .col-3 {
+      display: none;
+    }
+    .col-7 .col-3 {
+      margin-bottom: 0;
+    }
+    
+    .col-3.text-center {
+      text-align: left;
+    }
+    
+    .product-price {
+      margin-left: 0;
+    }
+    
+    p.form-control-static {
+      width: 9%;
+      display: inline-block;
+    }
+    
+    .product-qty{
+      display: inline-block;
+      margin-left: 0;
+    }
+    
+    .product-disc {
+      margin-left: 0;
+    }
+  }
+  
+  @include breakpoint (medium) {
+    .col-6 {
+      width: 45%;
+    }
+    .hidden-medium {
+      display: none;
+    }
+    .panel-footer {
+        th {
+          font-weight: bold;
+        }
+    }
+  }
+  
+  @include breakpoint (large) {  
+    .spacer-sm-bottom {
+      .col-3{
+        margin-left: 0;
+      }
+      .col-9 {
+        margin-right: 0;
+        width: 71%;
+      }
+    }
+    
+    //the container class isn't present in print, so the col styles aren't properly targeted
+    .col-3 {
+      width: 21%;
+    }
+    .col-4 {
+      width: 29.33333%;
+    }
+    .col-5 {
+      width: 37.66667%;
+    }
+    .col-6 {
+      width: 46%;
+    }
+    .col-7 {
+      width: 54.33333%;
+    }
+    .col-8 {
+      width: 62.66667%;
+    }
+    .col-9 {
+      width: 71%;
+    }
+    
+    .panel-footer {
+      td span {
+        display: none;
+      }
+    }
+  }  
+  
+  @media print {
+    //the container class isn't present in print, so the col styles aren't properly targeted
+    .col-3 {
+      width: 21%;
+    }
+    .col-4 {
+      width: 29.33333%;
+    }
+    .col-5 {
+      width: 37.66667%;
+    }
+    .col-6 {
+      width: 46%;
+    }
+    .col-7 {
+      width: 54.33333%;
+    }
+    .col-8 {
+      width: 62.66667%;
+    }
+    .col-9 {
+      width: 71%;
+    }
+    .logo {
+      width: 1056px;
+      
+      //adds page header to the same row as logo
+       &::after {
+         //content is pulled from page header
+        content: " Return to Store Receipt";
+        margin-left: 12%;
+        margin-top: -15px;
+        
+        //copy/pasted styles for h2
+        font-size: 1.5em;
+        font-weight: bold;
+        color: $darkerGray;
+      }
+    }
+    td span {
+      display: none;
+    }
+    .mobile-only {
+      display: none;
+    }
+    
+    .btn {
+      display: none;
+    }
+  }
+}
+

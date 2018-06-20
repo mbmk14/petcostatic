@@ -1,0 +1,399 @@
+// To include:
+// -----------------------
+// header
+// -- collapsable promo
+// -- search
+// -- utility nav (live chat, stores, account, cart)
+// ---- utility nav dropdowns
+// -- navigation
+// -- secondary promo
+/* stylelint-disable */
+
+@import '_nav';
+@import '_utility-nav';
+@import '_mini-cart';
+@import '_search';
+@import '_smart-banner';
+
+.header_wrapper_position {
+  position: relative;
+  z-index: 999;
+
+  .sticky-header & {
+    z-index: 989;
+  }
+}
+.banner-promo .collapse-toggle:focus {
+  text-decoration: underline;
+}
+#header-offer,
+#nav-header-offer {
+  font-size: em(14);
+
+  @include breakpoint(medium small){
+    width: 100%;
+    padding: 0 0 10px;
+    text-align: center;
+    max-height: 50px;
+    overflow: hidden;
+  }
+
+  a { font-weight: normal; }
+}
+#header-offer {
+  display: none;
+  @include breakpoint("max-width: 930px"){
+    display: block;
+    clear: both;
+    text-align: center;
+    padding-top: 15px;
+    margin-bottom: -20px;
+  }
+  @include breakpoint(medium small) {
+    margin-bottom: 0;
+    padding-top: 0;
+  }
+}
+#header {
+  width: 100%;
+  margin: auto;
+  position: relative;
+  background: white;
+  z-index: 989;
+
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-around;
+
+  @include breakpoint(medium small){
+    z-index: 1000;
+  }
+
+  @include breakpoint(large x-large){
+    max-width: 1095px;
+
+    display: block;
+    padding: 20px;
+    box-sizing: border-box;
+
+    [id*="mobile"]{ display: none; }
+  }
+
+  [class*="icon"]{
+    display: inline-block;
+  }
+
+  div[id*="mobile"] {
+    padding: 15px 0;
+    flex-basis: 15%;
+    text-align: center;
+  }
+}
+
+@include breakpoint(x-large){
+  padding: 20px 0;
+}
+
+.logo {
+  display: inline-block;
+  height: 26px;
+
+  @include breakpoint(large x-large){
+    float: left;
+    height: auto;
+    margin-right: 4%
+  }
+
+  img {
+    display: inline-block;
+    max-height: 100%;
+  }
+}
+
+@include breakpoint("min-width: 769px) and (max-width: 1080px") {
+  .petco-us-city-upper {
+    display: none;
+  }
+}
+
+.persistent-utility { display: none; }
+
+.persistent-logo { display: none; }
+
+.sticky-header {
+  #header {
+    position: fixed;
+    top: 0;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+
+    @include breakpoint(medium small){
+      #header-offer {
+        max-height: 0;
+        padding: 0;
+        transition: 0.2s;
+      }
+    }
+
+    @include breakpoint(x-large large){
+      width: 100%;
+      padding: 0 20px;
+      max-width: none;
+
+      #header-offer {
+        display: none;
+      }
+
+      .navbar-utility {
+        position: relative;
+        top: 0;
+        left: 0;
+        height: 1px;
+        width: 100%;
+        margin: -1px 0 0 0;
+
+        nav li > div:not(.cart) { display: none; }
+
+        .cart {
+          display: block;
+          padding: 0;
+          #mini-cart-icon { display: none; }
+
+          .mini-cart {
+            visibility: hidden;
+            transition: visibility 0s;
+            display: block;
+            position: absolute;
+            top: -36px;
+            right: auto;
+            left: auto;
+            margin: 0;
+
+            &.persist-active { transition-delay: 0.2s; }
+
+            &.active { visibility: visible; }
+          }
+
+        }
+      }
+
+      #search {
+        visibility: hidden;
+        transition: visibility 0s;
+        display: block;
+        position: absolute;
+        top: 45px;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0px 5px 3px rgba(0, 0, 0, 0.1);
+
+        &.persist-active {
+          transition-delay: 0.2s;
+        }
+
+        input[type="text"] {
+          transition: none;
+        }
+       
+      }
+      #search.active {
+        visibility: visible;
+        z-index:50;
+      }
+		
+      .logo {
+        width: 100%;
+        max-width: 1095px;
+        margin: auto;
+        display: block;
+        float: none;
+        padding: 10px 0;
+        overflow: hidden;
+
+        a {
+          visibility: hidden;
+        }
+
+        img {
+          float: none;
+          max-width: 150px;
+          display: block;
+        }
+      }
+    }
+  }
+
+  @include breakpoint(x-large large){
+    #primary-nav {
+      position: fixed;
+      height: auto;
+      top: 0;
+      margin: auto;
+      box-sizing: border-box;
+
+      .persistent-logo {
+        max-width: 1095px;
+        width: 100%;
+        margin: auto;
+        display: block;
+
+        img {
+          display: inline-block;
+          float: left;
+          padding: 5px 0 0 10px;
+          max-width: 150px;
+        }
+      }
+
+      & > ul {
+        background: transparent;
+        padding-left: 20%;
+      }
+
+      & > ul li > a {
+        padding-bottom: 10px;
+      }
+
+      #header-top-banner { visibility: hidden; }
+
+      .drawer, div.drawer ul.pet-list li div.pet-nav {
+        box-shadow: inset 0px 4px 10px -5px rgba(0, 0, 0, 0.1), 0px 4px 10px -5px rgba(0, 0, 0, 0.1);
+      }
+    }
+
+    .persistent-utility {
+      display: block;
+      position: absolute;
+      top: 5px;
+      max-width: 1095px;
+      width: 100%;
+      margin: auto;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: right;
+
+      i {
+        cursor: pointer;
+        padding: 10px;
+      }
+
+      .icon-search { background-position: -127px -38px; }
+      .icon-cart { background-position: 12px -39px; }
+    }
+  }
+
+  @include breakpoint("max-width: 1130px) and (min-width: 1081px"){
+    #primary-nav .persistent-logo img {
+      padding-left: 10px;
+    }
+  }
+
+  @include breakpoint("max-width: 1080px) and (min-width: 876px"){
+    #primary-nav {
+      & > ul {
+        padding-left: 22%;
+
+        li {
+          margin-right: 0px;
+        }
+
+        li > a {
+          span { display: none; }
+
+          &:after { background-position: -56px -107px;}
+
+          &:not(.has-subnav){
+            background-position: -56px -109px;
+            font-size: em(13);
+          }
+        }
+
+      }
+    }
+  }
+
+  @include breakpoint("max-width: 875px) and (min-width: 769px") {
+    #primary-nav {
+      .persistent-logo img {
+        max-width: 120px;
+        padding-top: 10px;
+      }
+
+      & > ul {
+        padding-left: 16%;
+
+        li {
+          margin-right: 0px;
+        }
+
+        li > a {
+          font-size: em(13);
+
+          span { display: none; }
+
+          &:after { background-position: -56px -107px;}
+        }
+
+        #shop-by-pet a.top-level {
+          font-size: em(18);
+        }
+      }
+
+    }
+  }
+}
+
+#mobileOverlay {
+  position: fixed;
+  top: 0;//199px;
+  left: 0;
+  bottom: -500px;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 0;
+  margin: 0;
+  z-index: 901;
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}
+
+#header-top-banner {
+  position: relative;
+  z-index: 902;
+}
+
+// High-contrast mode accessibility
+@media screen and (-ms-high-contrast: active) {
+  .sticky-header {
+    #primary-nav {
+      border-bottom: 1px solid;
+    }
+
+    .persistent-utility {
+      .icon-search {
+        &:before {
+          content: "Search";
+          border: 1px solid;
+          padding: 10px;
+        }
+      }
+
+      .icon-cart {
+        &:before {
+          content: "Cart";
+          border: 1px solid;
+          padding: 10px;
+        }
+      }
+    }
+
+  }
+}
+.sticky-header {
+  .cart-list-item {
+    width: 100%;
+  }
+}

@@ -1,0 +1,26 @@
+/* stylelint-disable */
+.main-site-tabs {
+	margin-left:-15px;
+}
+
+.main-site-tabs a {
+	padding:10px 10px;
+	background-color: $gray-dark;
+	color: $white;
+	text-transform:uppercase;
+	font-size:($font-size-large - 2);
+	font-weight:bold;
+}
+
+.main-site-tabs a.active {
+	background-color:  $gray-lighter;
+	color:$black;
+}
+
+.main-site-tabs a:hover {
+	text-decoration:none;
+}
+
+.main-site-tabs a.shop-tab {
+	padding:14px 25px;
+}

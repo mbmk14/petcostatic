@@ -1,0 +1,54 @@
+/* stylelint-disable */
+.definingAttributes {
+	padding-bottom: 5px;
+	font-size: 14px;
+}
+
+.definingAttributes .attBorder {
+	border-top: 1px solid #e5e5e5;
+}
+
+.definingAttributes .color_swatch_label {
+	display: inline-block;
+	padding-top: 10px;
+}
+
+.definingAttributes > div:first-child {
+	padding-top: 0px;
+	border-top: none;
+}
+
+.definingAttributes div[id^="swatch_selection_"] {
+	display: inline-block;
+}
+
+.color_swatch_list {
+	line-height: 35px;
+}
+
+.color_swatch_list > ul,
+div.product_listing_container .list_mode .product > .product_info > .product_color_swatches > .color_swatch_list > ul {
+	padding: 0;
+}
+.color_swatch_list > ul > li,
+div.product_listing_container .list_mode .product > .product_info > .product_color_swatches > .color_swatch_list > ul > li {
+	width: 34px;
+	text-align: center;
+}
+.color_swatch_list .color_swatch,
+div.product_listing_container .list_mode .product > .product_info > .product_color_swatches > .color_swatch_list .color_swatch {
+	border-radius: 100%;
+	box-shadow: 0 0 0 1px #e5e5e5;
+	vertical-align: middle;
+}
+
+@media screen and (max-width: 600px) {
+	
+	.definingAttributes{
+		width: 95%;
+		padding-left: 10px;
+	}
+	.definingAttributes .color_swatch_label {
+		padding-top: 10px;
+	}
+}

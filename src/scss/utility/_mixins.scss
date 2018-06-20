@@ -1,0 +1,49 @@
+/* stylelint-disable */
+@mixin breakpoint($point){
+  @each $bp in $point {
+    @if $bp == x-large { // large desktops
+      @media screen and (min-width: 976px) { @content; }
+    }
+
+    @else if $bp == large { // desktop
+      @media screen and (min-width: 769px) and (max-width: 975px) { @content; }
+    }
+
+    @else if $bp == medium { // tablet
+      @media screen and (min-width: 421px) and (max-width: 768px) { @content; }
+    }
+
+    @else if $bp == small { // phone
+      @media screen and (max-width: 420px) { @content; }
+    }
+
+    @else { // custom, for sepcial cases only
+      @media screen and ($bp) { @content; }
+    }
+  }
+}
+
+// visually hides text, but still available for screen readers
+@mixin hideText(){
+  position: absolute;
+  left: -10000px;
+} .hide-text { @include hideText() }
+
+// Easy EM calculation for font sizes
+// Usage:  {
+//    font-size: em(13);
+//    line-height: em(16, 13);
+//  }
+$browser-context: 16;
+
+@function em($pixels, $context: $browser-context) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return $pixels / $context * 1em;
+}

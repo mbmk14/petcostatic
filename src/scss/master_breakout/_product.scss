@@ -1,0 +1,141 @@
+/* stylelint-disable */
+
+// Product Display Styles
+
+div[id^="container_"] > .page-header {
+	margin: 15px 0;
+}
+
+.product-listing hr {
+	margin: 10px 0;
+}
+
+.product-image {
+	margin-bottom:8px;
+}
+
+.product-listing .product-image {
+	margin:0px auto 5px;
+	height: 200px;
+	width: 200px;
+	text-align: center;
+}
+
+.product-listing .img-responsive {
+	display: inline;
+}
+
+#quickbuy .product-image {
+	margin:0px auto 8px;
+	height: 290px;
+	width: 290px;
+	text-align: center;
+}
+
+#quickbuy .img-responsive {
+	display: inline;
+}
+
+.product-listing .product-name {
+	margin-bottom:0px;
+	height:54px;
+	font-weight:bold;
+	line-height:1.25;
+}
+
+.compare-prod .product-name {
+	height:60px;
+}
+
+.product-listing .product-name a {
+	color:	$gray-darker;
+}
+
+.product-name h4 {margin-top:0;margin-bottom:0;}
+.product-name-full {height:auto;}
+.product-name-full h1 {font-size:24px;margin-bottom:5px;}
+.product-sku {color:$gray-darker;font-size:$font-size-small;margin-bottom:5px;text-transform:uppercase;}
+.product-promo-text {color:$petco-red}
+.product-listing .product-promo-text {font-size:.85em;}
+.product-attributes {margin-bottom:5px;}
+.product-attributes ul {margin-bottom:0;}
+.product-availability {margin-bottom:5px;}
+.product-availability .glyphicon {margin-right:4px;}
+.product-availability .in-stock {color:$brand-success;}
+.product-rating {margin-bottom:5px; height:22px;}
+.product-listing .product-rating {font-size:.85em;}
+.product-qty {text-align:center;}
+.product-pricing {height: 44px;}
+.product-options {text-align:center; color:#666; font-size:.85em; height:16px; margin-bottom:8px;}
+.product-price {}
+.product-price-crossout {text-decoration:line-through;}
+.product-price-promo {font-weight:bold; color:$petco-red;}
+.product-price-rd {}
+.product-atc {@extend .text-center !optional;}
+.subtotal-price {font-weight:bold;}
+.product-brand {color:$gray-darker;font-size:$font-size-small;margin-bottom:5px;}
+
+.product-listing .product-pricing {line-height:1.2; white-space:nowrap; margin-bottom:3px;height:50px;}
+.product-price-save, .product-listing .product-price-save {color:$petco-red; margin-left:10px; font-weight:bold;font-size:$font-size-small;}
+
+.product-name-rd h4 {
+ 	margin-top:0;
+ 	margin-bottom:0;
+}
+
+.product-detail-page .form-group {margin-bottom:10px;}
+.product-detail-page .form-horizontal .control-label, .form-horizontal .radio, .form-horizontal .checkbox, .form-horizontal .radio-inline, .form-horizontal .checkbox-inline {
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-top: 7px;}
+.product-price-banner {display:inline-block; background-color:$petco-blue; color:white; height:18px; font-weight:bold; font-size:$font-size-small; line-height:1.5; margin-left:7px; padding-right:3px; padding-left:0px;}
+.product-promo-callout {color:$petco-red; font-size:15px; margin: 10px 0 0 0;}
+
+.product-detail-page .product-rating {height:auto;}
+
+.panel-rd .panel-body .product-name {
+	line-height:1.1;
+	font-weight:bold;
+}
+
+.product-rec-horizontal .product-name {
+	margin-top:5px;
+	font-weight:bold;
+	height: 54px;
+	line-height:1.25;
+	overflow: hidden;
+}
+
+.product-rec-horizontal .product-rating {
+	height:22px;
+}
+
+.product-rec-horizontal .product-price {
+	@extend .text-left !optional;
+	margin-bottom:5px;
+}
+
+.product-rec-horizontal .product-pricing {
+	height:auto;
+}
+
+.product-rec-horizontal .product-options {
+    display: none;
+}
+
+.product-rec-horizontal .product-options + .row {
+	display: none;
+}
+
+.product-flare {
+	text-align:center;
+	color:$petco-red;
+	font-size:$font-size-large;
+}
+
+.color-swatches .active {
+	border:2px solid $black;
+}
+
+
+.product-rx-message {font-style:italic; margin-bottom:5px;}

@@ -1,0 +1,82 @@
+/* stylelint-disable */
+.shopperActions .dropdown_list {
+	top: 31px;
+	min-width: 270px;
+	z-index: 1000;
+}
+
+.shopperActions .dropdown_list .created_list_wrapper {
+	width: auto;
+}
+
+.shopperActions .dropdown_list .message {
+	font-style: italic;
+	padding: 6px;
+	border-bottom: 1px solid #e4e4e4;
+	line-height: 14px;
+}
+
+.shopperActions .button.primary,
+.shopperActions .button.secondary {
+	width: 97%;
+	max-width: 270px;
+}
+
+.shopperActions .dropdown_primary {
+	background: linear-gradient(rgb(255, 255, 255), rgb(229, 232, 233) 100%);
+	border-width: 1px;
+	border-style: solid;
+	border-color: rgb(191, 191, 191);
+	border-radius: 4px;
+	position: relative;
+	width: 97%;
+	max-width: 270px;
+	min-height: 29px;
+	height: 100%;
+}
+.shopperActions .dropdown_primary > a {
+	padding-bottom: 1px;
+	font-size: 14px;
+	text-align: center;
+	color: rgb(50, 50, 50);
+	min-width: 200px;
+	width: 100%;
+}
+
+.shopperActions .dropdown_primary > .drop  {
+	height: 100%;
+	width: 30px;
+	border-left: 1px solid rgb(191,191,191);
+	line-height: 29px;
+	right: 0;
+	position: absolute;
+}
+
+.shopperActions .dropdown_primary > .drop > a {
+	padding-left: 9px;
+	display: block;
+	vertical-align: middle;
+	height: 100%;
+}
+
+.shopperActions .dropdown_primary > .drop div {
+	margin: auto;
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+}
+
+.shopperActions .dropdown_primary .shoppping_list_content {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	width: 65%;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	word-wrap:break-word;
+}
+
+@media screen and (max-width: 600px) {
+	.shopperActions {
+		padding-left: 10px;
+	}
+}

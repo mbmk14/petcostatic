@@ -1,0 +1,27 @@
+/* stylelint-disable */
+@media screen and (max-width: 535px) {
+	#shoppingListItemAddedPopup  > div.dijitDialogPaneContent {
+		width: auto !important;
+		height: auto !important;
+	}
+
+	.widget_subscription_item > .top, .widget_subscription_item > .bottom {
+		width: auto;
+	}
+
+	.widget_subscription_item > .top > .middle {
+		width: auto;
+	}
+
+	.widget_subscription_item > .middle {
+		width: auto;
+	}
+
+	.widget_subscription_item > .middle > .content_left_border {
+		width: auto;
+	}
+
+	.widget_subscription_item > .middle > .content_left_border > .content_right_border {
+		width: auto;
+	}
+}

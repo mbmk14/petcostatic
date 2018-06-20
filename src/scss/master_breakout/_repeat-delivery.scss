@@ -1,0 +1,29 @@
+/* stylelint-disable */
+// RD overlay
+.rdOverlay {
+	postition: relative;
+	margin-left:-15px;
+	margin-right:-15px;
+}
+
+[id*="rdCancelSpot"] {
+	position: absolute; 
+	z-index:100; 
+	background-color:white; 
+	padding:25px; 
+	border: 1px solid rgba(0, 0, 0, 0.2); 
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.rdCancelValuesButtons {
+	margin-left:35%;
+}
+
+.rdCancelValuesButtons .btn-primary {
+	margin-bottom:10px;
+}
+
+// Repeat Delivery Styles
+.rd-date {
+	font-weight:bold;
+}

@@ -1,0 +1,48 @@
+/* stylelint-disable */
+.compare_target {
+	display: inline-block;
+	font-size: 14px;
+ /* text-transform: uppercase; */
+	color: #5B5B5B;
+	line-height: 15px;
+	font-weight: bold;
+	min-width: 90px;
+	padding: 7px 7px 7px 9px;
+	text-align: left;
+}
+.compare_target[data-state="2"] {
+	padding: 0px 0px 0px 9px;
+}
+.compare_target[data-state="1"], .compare_target[data-state="2"] {
+/*	background-color: #f0f0f0; */
+	border-radius: 4px;
+}
+.compare_target > input {
+	position: relative;
+	cursor: pointer;
+	vertical-align: middle;
+	top: -1px;
+}
+.compare_target > label {
+	cursor: pointer;
+}
+.compare_target > a {
+	display: none;
+	padding: 7px;
+	background-color: #767676;
+	border-radius: 0 4px 4px 0;
+	color: #ffffff;
+	text-decoration: none;
+	margin-left: 4px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.compare_target[data-state="2"] > a {
+	display: inline-block;
+}
+.compare_target_hidden {
+	visibility: hidden;
+}
+.compareCheckboxLabels {
+	display: none;
+}

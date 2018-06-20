@@ -1,0 +1,623 @@
+/* stylelint-disable */
+.productDescDropMerch {
+	margin-top: 7px;
+	background-color: transparent !important;
+	padding: 0px !important;
+	border-radius: 0px !important;
+}
+
+.productDescDropMerch > a > .showDetails {
+	font-size: 12px !important;
+	font-weight: bold;
+	color: #767676 !important;
+	line-height: 21px !important;
+}
+
+.productDescDropMerch .product_info {
+	margin: 0px 0px 0px 0px;
+}
+
+.productDescDropMerch .product_info > .header {
+	font-size: 14px;
+}
+
+.productDescDropMerch .product_info .quantity_section {
+	margin-top: 0px !important;
+}
+
+.productDescDropMerch .product_info > .product_description {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	font-size: 12px;
+}
+
+.productDescDropMerch .product_info > .product_description > .sku {
+	font-size: 10px;
+	color: #777;
+}
+
+.productDescDropMerch > a > .arrow {
+	float: left;
+	background: url("../images/responsive/rwdUI.png") no-repeat;
+	width: 15px;
+	height: 15px;
+	margin: 3px 5px 0 3px;
+	background-position: -80px -40px;
+}
+
+.productDescDropMerch[aria-expanded="true"] > a > .arrow {
+	background-position: -100px -40px;
+}
+
+
+.product_listing_container .list_mode .product > .product_info > .product_option .button_secondary {
+	margin-top: 7px;
+}
+
+.color_swatch_list ul li,
+div.product_listing_container .list_mode .product > .product_info > .product_color_swatches > .color_swatch_list ul li {
+	display: block;
+	float: left;
+	margin: 0 10px 10px 0;
+	cursor: pointer;
+}
+
+#widget_coordinate .list_mode .product > .product_image_merch {
+	position: relative;
+	width: 100%;
+	margin: 0px;
+}
+
+#widget_coordinate .list_mode .product > .product_name_merch {
+	font-size: 16px;
+	color: #767676;
+	height: 90px;
+}
+
+div.product_listing_container .list_mode .product .product_info > .product_color_swatches {
+	clear: left;
+	overflow: hidden;
+}
+
+.product_listing_container div.col {
+	padding-top: 20px;
+}
+.product_listing_container .list_mode .product {
+	float: left;
+	max-width: 100%;
+}
+.product_listing_container .list_mode .product .product_info > .product_option {
+	margin-top: 7px;
+}
+
+.color_swatch_list .color_swatch_disabled,
+div.product_listing_container .list_mode .product > .product_info > .product_color_swatches > .color_swatch_list .color_swatch_disabled {
+	border-radius: 100%;
+	box-shadow:0 0 0 1px #c1c1c1;
+	vertical-align: middle;
+	cursor: default;
+}
+
+.color_swatch_list .color_swatch_selected,
+.color_swatch_list .color_swatch:hover,
+div.product_listing_container .list_mode .product > .product_info > .product_color_swatches > .color_swatch_list .color_swatch_selected,
+div.product_listing_container .list_mode .product > .product_info > .product_color_swatches > .color_swatch_list .color_swatch:hover {
+	border-radius: 100%;
+	box-shadow: 0 0 0 3px #fac549;
+	vertical-align: middle;
+}
+
+.productListingWidget > .header_bar {
+	padding: 10px;
+	border-bottom: 1px solid #e9e9e9;
+}
+.productListingWidget > .footer_bar {
+	padding: 10px;
+	border-top: 1px solid #e9e9e9;
+}
+.productListingWidget > .header_bar > .title {
+	float: left;
+	padding: 5px;
+	font-size: 13px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.productListingWidget > .header_bar > .title > .num_products {
+	font-weight: normal;
+	text-transform: lowercase;
+}
+.productListingWidget > .header_bar:after, .productListingWidget > .footer_bar:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+/*.controls {
+	float: right;
+}*/
+.controls > * {
+	display: inline-block;
+	padding: 5px;
+}
+.productListingWidget > .header_bar .controls .sorting_controls,
+.productListingWidget > .header_bar .controls .view_controls {
+	float: left;
+	margin-left: 4px;
+	padding-right: 0px;
+}
+/*
+.paging_controls {
+	float: right;
+	display: block;
+}*/
+.sorting_view_controls_container {
+	padding-left: 0px;
+	padding-right: 15px;
+	padding-bottom: 0px;
+	float: right;
+	margin-left: 4px;
+	display: block;
+}
+.sorting_controls > span, .sorting_controls > span > label ,
+.view_controls > span, .sorting_controls > span > label {
+	font-size: 11px;
+	vertical-align: top;
+}
+.sorting_controls > span.page_size_label,
+.sorting_controls > span.order_by_label {
+	display: inline-block;
+	width: 53px;
+}
+.page_size_label > label,
+.order_by_label > label {
+	text-transform: uppercase;
+}
+.productListingWidget #orderByDropdown,
+.productListingWidget .orderByDropdown {
+	margin-right: 20px;
+}
+
+
+
+
+@media (max-width: 600px) {
+	.productListingWidget {
+		border-top: 1px solid #e9e9e9;
+	}
+	.tab .productListingWidget {
+		border-top: none;
+	}
+	
+	div.namePartPriceContainer > .print_section {
+		display:none;
+	}
+
+}
+
+@media (min-width: 601px) {
+	.productListingWidget {
+		border: 1px solid #e9e9e9;
+		border-radius: 5px;
+	}
+	.tab .productListingWidget {
+		border: none;
+		border-radius: 0px;
+	}
+	.product_page_content #productSlot56 > div:nth-child(2) {
+		margin: 0px 5px;
+	}
+}
+
+
+.view_controls > *, .paging_controls > * {
+	display: inline-block;
+	vertical-align: middle;
+}
+.paging_controls > .right_arrow  > img,
+.paging_controls > .left_arrow  > img {
+	padding: 10px;
+}
+.paging_controls > .left_arrow  > img {
+	padding-left: 0px;
+}
+.paging_controls > .right_arrow  > img {
+	padding-right: 0px;
+}
+.not_allowed {
+	cursor:not-allowed;
+}
+.paging_controls > .invisible {
+	visibility: hidden;
+}
+.paging_controls > .invisible_none {
+	display: none;
+}
+.grid_icon, .list_icon {
+	display: inline-block;
+	border: 1px solid #a0a0a0;
+	border-radius: 5px;
+	position: relative;
+	overflow: hidden;
+	padding: 11px;
+	width: 17px;
+	height: 17px;
+}
+.grid_icon:before, .list_icon:before {
+	content: url("../images/responsive/rwdUI.png");
+	position: absolute;
+	top: -10px;
+}
+div.grid_icon, a.grid_icon:hover, div.list_icon, a.list_icon:hover {
+	background-color: #767676;
+}
+a.grid_icon:before {
+	left: -30px;
+	clip: rect(21px,58px,38px,41px);
+}
+div.grid_icon:before, a.grid_icon:hover:before {
+	left: -50px;
+	clip: rect(21px,78px,38px,61px);
+}
+a.list_icon:before {
+	left: -70px;
+	clip: rect(21px,98px,38px,81px);
+}
+div.list_icon:before, a.list_icon:hover:before {
+	left: -90px;
+	clip: rect(21px,118px,38px,101px);
+}
+
+.pages > * {
+	display: inline-block;
+	vertical-align: middle;
+}
+.pages > ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.pages > ul > * {
+	display: inline-block;
+	vertical-align: middle;
+}
+.pages > ul > .active {
+	width: 39px;
+	background-color: #767676;
+	border: 1px solid #a0a0a0;
+	border-radius: 5px;
+	color: #ffffff;
+	line-height: 39px;
+	text-align: center;
+}
+.controlBar .pageControl {
+	list-style: none;
+}
+.pageControlMenu .controlBar .pageControl.number > a {
+	margin: 0px;
+}
+.hoverover > a {
+	display: block;
+	width: 39px;
+	border: 1px solid #a0a0a0;
+	border-radius: 5px;
+	line-height: 39px;
+	text-align: center;
+}
+.hoverover > a:hover {
+	background-color: #767676;
+	color: #fff;
+}
+
+.grid > .col {
+	float: left;
+}
+.grid:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+.product_listing_container > .grid_mode li {
+	padding-top: 20px;
+}
+.product_listing_container > .list_mode > li {
+	min-height: 410px;
+	height: 100%;
+	padding-bottom: 10px;
+	position:relative;
+}
+
+
+#pageNumber3, #pageNumber4 {
+	display: none;
+}
+
+.pages .pageNumber > .arrow,
+.pageControl.number > .dropdownToggleButton > .arrow {
+	background: url('../images/responsive/rwdUI.png');
+	background-position: -141px -1px;
+	width: 7px;
+	height: 9px;
+	position: absolute;
+	right: 2px;
+	bottom: 2px;
+}
+
+.pageOptionsDropdown {
+	position: absolute;
+	display: none;
+	top: 45px;
+	left: -5px;
+	z-index: 100;
+	width: 84px;
+	background: #FFF;
+	border: 1px solid #A0A0A0;
+	padding: 0px 3px 3px 0px;
+}
+.spanacce {
+	height: 1px;
+	width: 1px;
+	position: absolute;
+	overflow: hidden;
+	top: -1px;
+}
+.pagination > li > .ellipsis:after {
+    content: '\2026';
+}
+.pageOptionsDropdown > .ellipsis {
+	list-style: none;
+	width: auto !important;
+	text-align: center;
+	line-height: 15px;
+	margin: 5px 5px 5px 40px !important;
+	font-weight: bold;
+	border: 0 !important;
+	cursor: default;
+	/* Safari */
+	-webkit-transform: rotate(90deg);
+	/* Firefox */
+	-moz-transform: rotate(90deg);
+	/* IE */
+	-ms-transform: rotate(90deg);
+	/* Opera */
+	-o-transform: rotate(90deg);
+	/* Internet Explorer */
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+}
+
+.pageOptionsDropdown > .pageDropdownClose {
+	list-style: none;
+	float: left !important;
+	width: 15px !important;
+	height: 15px !important;
+	border: 0 !important;
+	background: url('../images/responsive/rwdUI.png');
+	background-position: -61px -1px ;
+	margin: 16px 0 0 15px !important;
+}
+
+.pageOptionsDropdown > .pageDropdownClose:hover {
+	background-position: -241px -1px ;
+}
+
+.pageDropdownClose {
+	list-style: none;
+	float: left;
+	width: 15px;
+	height: 15px;
+	background: url('../images/responsive/rwdUI.png');
+	background-position: -61px -1px;
+	border: 14px solid #ffffff;
+}
+
+.pageNumber:hover, .pageNumber.active {
+	border-color: #767676;
+	background: #767676;
+	color: #FFF;
+	cursor: pointer;
+}
+
+.pageNumber {
+	margin-left: 3px;
+	float: left;
+	border: 1px solid #A0A0A0;
+	background: #FFF;
+	width: 37px;
+	height: 30px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	padding-top: 8px;
+	text-align: center;
+	list-style: none;
+}
+
+.pagingLeft {
+	float: left;
+	background-position: -21px -1px;
+	width: 6px;
+	height: 12px;
+	margin-top: 13px;
+	margin-right: 17px;
+}
+
+.pagingRight {
+	float: left;
+	background-position: -41px -1px;
+	width: 11px;
+	height: 12px;
+	margin-top: 13px;
+	margin-left: 16px;
+}
+
+.productListingWidget > .header_bar .pagination_controls {
+	clear: left;
+}
+
+@media screen and (max-width: 952px) {
+	.productListingWidget > .header_bar .pagination_present {
+		min-height: 91px;
+	}
+	
+	
+	.sorting_view_controls_container {
+		clear: both;
+		padding-top: 0px;
+		padding-right: 0px
+	}
+	
+	.paging_controls > .left_arrow  > img {
+		padding-left: 10px;
+	}
+	.paging_controls > .right_arrow  > img {
+		padding-right: 10px;
+	}
+}
+
+
+
+.grid_mode .product_name {
+	padding: 5px 0px 0px 15px;
+	min-height: 53px;
+}
+.list_mode .product_info > .product_name > a {
+	padding-bottom: 15px;
+	font-size: 17px;
+	line-height: 18px;
+	height: inherit;
+	color: #646464;
+}
+
+
+.grid_mode .product_price {
+	padding: 5px 0px 0px 15px;
+	min-height: 24px;
+}
+.product_info > .header {
+	display: inline-block;
+	font-size: 11px;
+}
+
+.catPos {
+	width: 90%;
+	margin: 0 auto;
+	background: #e9e9e9;
+	border: 1px solid #cccbcb;
+	overflow:hidden;
+	position: relative;
+	border-radius: 4px;
+}
+
+.productListHeader {
+	padding: 10px 20px 0 20px;
+}
+
+.catPos_catalog {
+	width: 90%;
+	margin: 0 auto;
+	overflow:hidden;
+	border-radius: 4px;
+}
+
+
+
+@media screen and (max-width: 480px), screen and (min-width: 601px) and (max-width: 738px) {
+	.productListingWidget > .header_bar .pagination_present {
+		margin-top: -30px;
+	}
+}
+
+@media screen and (max-width: 420px), screen and (min-width: 601px) and (max-width: 652px) {
+	.product_listing_container .list_mode .product > .product_image {
+		width: 180px;
+		position: relative;
+	}
+	.product_listing_container .list_mode .product {
+		padding-left: 15px;
+	}
+	.product_listing_container .list_mode .catEntryList_border {
+		margin: 10px 0px;
+		width: 100%;
+	}
+}
+
+
+@media screen and (max-width: 377px) {
+	
+	.productListingWidget > .header_bar .pagination_present {
+		margin-top: 0px;
+	}
+	.productListingWidget > .header_bar .controls {
+		margin-right: -7px;
+	}
+	.productListingWidget #orderByDropdown, 
+	.productListingWidget .orderByDropdown {
+		margin-right: 0px;
+	}
+}
+
+@media (-webkit-device-pixel-ratio: 2) {
+	.searchAssocAssets > a > .arrow,
+	.productDescDropMerch > a > .arrow,
+	.selectWrapper .dijitSelect .dijitArrowButtonContainer:before,
+	.facetWidget .dropdownIcon,
+	.facetWidget .close,
+	.facetSelect li input:checked + a .checkBox > .checkmark,
+	.pages .pageNumber > .arrow,
+	.pageControl.number > .dropdownToggleButton > .arrow,
+	.pageOptionsDropdown > .pageDropdownClose,
+	.pageDropdownClose {
+		background: url('../images/responsive/rwdUI@2x.png');
+		background-size: 300px 400px;
+	}
+	#content .collapsible > h3:before,
+	.categoryNavWidget.collapsible > h3:before,
+	.grid_icon:before,
+	.list_icon:before,
+	.optionContainer .arrow:before {
+		content: url("../images/responsive/rwdUI@2x.png");
+		-webkit-transform: scale(0.5);
+		-webkit-transform-origin: 0 0 0;
+	}
+	#content .collapsible > h3:before,
+	.categoryNavWidget.collapsible > h3:before {
+		clip: rect(82px,156px,116px,122px);
+	}
+	#content .collapsible[aria-expanded="false"] > h3:before,
+	.categoryNavWidget.collapsible[aria-expanded="false"] > h3:before {
+		clip: rect(82px,116px,116px,82px);
+	}
+	a.grid_icon:before {
+		clip: rect(42px,116px,76px,82px);
+	}
+	div.grid_icon:before, a.grid_icon:hover:before {
+		clip: rect(42px,156px,76px,122px);
+	}
+	a.list_icon:before {
+		clip: rect(42px,196px,76px,162px);
+	}
+	div.list_icon:before, a.list_icon:hover:before {
+		clip: rect(42px,236px,76px,202px);
+	}
+}
+
+@media screen and (max-width: 1280px) {
+	.productListingWidget > .header_bar .controls > * {
+		float: right;
+		display: block;
+	}
+}
+
+
+@media screen and (max-width: 1133px) {
+	.pageSelection {
+		display: block;
+	}
+	.productListingWidget > .header_bar .controls {
+		position: relative;
+	}
+	.pageControlMenu .controlBar .pageControl.number > a {
+		margin: 4px;
+	}
+	.pageControlButton:focus {
+		border: 1px dotted #000000;
+	}
+}

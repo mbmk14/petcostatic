@@ -1,0 +1,42 @@
+/* stylelint-disable */
+.breadcrumb {
+  padding: 14px 10px;
+  border-bottom: $lighterBorder;
+
+  @include breakpoint(x-large large){
+    border: none;
+    padding: 0 2%;
+
+    .search-page &,
+    .category-page & {
+      float: left;
+    }
+  }
+
+  li {
+    display: inline-block;
+    font-size: em(13px);
+    font-weight: bold;
+    color: $gray;
+  }
+
+  a:after {
+    content: "";
+    display: inline-block;
+    height: 15px;
+    width: 5px;
+    background-image: $spritesheet;
+    background-position: -630px -615px;
+    margin: 0 2px 0 7px;
+  }
+
+  li:last-child a {
+    color: $gray;
+
+    &:after { display: none; }
+  }
+
+  li:first-child a {
+    color: $primary;
+  }
+}

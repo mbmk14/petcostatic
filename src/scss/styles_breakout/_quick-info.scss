@@ -1,0 +1,19 @@
+/* stylelint-disable */
+.quick_info_toggle {
+	display: none;
+}
+
+div.widget_quick_info_popup > .top,
+div.widget_quick_info_popup > .bottom {
+	width: auto;
+}
+
+div.widget_quick_info_popup > .middle > .content_left_border > .content_right_border > .content > .left_column,
+div.widget_quick_info_popup > .middle > .content_left_border > .content_right_border > .content > .right_column {
+	width: auto;
+	max-width: 330px;
+}
+
+#quickInfoPopup {
+	top: 0px !important;
+}

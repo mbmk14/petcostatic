@@ -1,0 +1,63 @@
+/* stylelint-disable */
+
+.primary-nav {
+ 	background-color:$primary-nav-bg-color;
+	margin-left:-15px;
+	margin-right:-15px;
+	margin-top:-35px;
+	text-transform:lowercase;
+	font-weight:bold;
+}
+
+.primary-nav .nav li a {
+	color:$primary-nav-color;
+	font-size: $font-size-base + 1;
+	border-radius:0;
+	border-right: 1px solid;
+	border-color:$primary-nav-border-color;
+	white-space:nowrap;
+	padding-top:11px;
+	padding-bottom:9px;
+}
+
+.primary-nav .nav li:last-child a {
+	border-right:0px solid;
+}
+
+.primary-nav .nav li a:hover, .primary-nav .nav li a:focus {
+ 	background-color: $primary-nav-bg-hover-color;
+	color: $primary-nav-hover-color;
+}
+
+.navbar-utility {
+  border-bottom: 1px solid $gray-lighter;
+  margin-bottom:18px;
+  padding-top:$font-size-base - 4;
+  padding-bottom:$font-size-base - 4;
+  font-size: $font-size-small;
+  text-transform: lowercase;
+  min-width: 1010px;
+
+}
+
+// Nav Drawer
+.nav-drawer {
+	background-color:$gray-darker;
+	margin:0 -15px;
+	padding:15px;
+	display:none;
+	color:$white;
+}
+
+.nav-drawer a{
+	color: $white;
+}
+
+.nav-drawer .wel {
+	color:$black;
+}
+
+.nav-drawer h4 {
+	margin-bottom:5px;
+	margin-top:20px;
+}

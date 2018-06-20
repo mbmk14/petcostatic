@@ -1,0 +1,53 @@
+/* stylelint-disable */
+#accordion {
+  margin-top: 20px;
+
+  .panel:last-child {
+    .panel-heading a {
+      border-bottom: $lighterBorder;
+    }
+  }
+
+  .panel-heading {
+    a {
+      border-top: $lighterBorder;
+      color: $bodyText;
+      display: block;
+      font-size: em(15, 20);
+      padding: 10px 0;
+      position: relative;
+
+      &:after {
+        content: "";
+        display: block;
+
+        background-image: $spritesheet;
+        background-position: -140px -125px;
+        height: 12px;
+        width: 12px;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+      }
+
+      &.collapsed:after {
+        background-position: -282px -125px;
+      }
+    }
+  }
+
+  .panel-body {
+    padding-bottom: 20px;
+  }
+
+  .panel-collapse {
+    transition: height 0.4s ease-in;
+    overflow: hidden;
+    height: 0;
+
+    &.open {
+      height: auto;
+    }
+  }
+}

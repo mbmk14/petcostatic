@@ -1,0 +1,36 @@
+/* stylelint-disable */
+div#widget_breadcrumb {
+  padding: 0 10px;
+}
+div#widget_breadcrumb > ul {
+  padding: 0;
+  list-style-type: none;
+}
+div#widget_breadcrumb > ul li {
+  display: inline;
+  color: #CA4200;
+  font-size: 12px;
+  margin:0;
+}
+div#widget_breadcrumb > ul li a{
+  text-decoration: none;
+  color: #CA4200;
+}
+div#widget_breadcrumb > ul li:hover a{
+  text-decoration: underline;
+}
+div#widget_breadcrumb > ul li.current {
+  color: #767676;
+}
+div#widget_breadcrumb > ul span.divider,
+div#widget_breadcrumb > ul li.divider {
+  margin: 0 6px;
+  color: #dedede;
+  font-size: 12px;
+}
+
+@media screen and (max-width: 600px) {
+  div#widget_breadcrumb {
+    display: none;
+  }
+}

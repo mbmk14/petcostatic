@@ -1,0 +1,21 @@
+/* stylelint-disable */
+// CSR content styles
+.csr-utility {
+	background-color:#1C1C1C;
+	color: $white;
+	padding:12px 0;
+}
+
+.csr-utility a {
+	color: $white;
+	text-decoration:underline;
+}
+
+.csr-utility a.btn {
+	color: $white;
+	text-decoration:none;
+}
+
+.csr-utility ul {
+	margin:0;
+}

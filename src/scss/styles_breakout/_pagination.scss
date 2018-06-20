@@ -1,0 +1,16 @@
+/* stylelint-disable */
+#attachmentPaginationContainer .attachment > .attachment {
+	float: left;
+	max-width: 100px;
+	padding-top: 2px;
+	padding-right: 15px;
+}
+
+#attachmentPaginationContainer .attachment > .attachment > .description  {
+	padding-left: 2px;
+}
+
+#attachmentPaginationContainer .header {
+	text-transform: capitalize;
+	font-size: 14px;
+}

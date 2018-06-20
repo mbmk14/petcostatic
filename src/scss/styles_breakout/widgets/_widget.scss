@@ -1,0 +1,107 @@
+/* stylelint-disable */
+div.widget_title_container {
+	width: 100%;
+	line-height: 30px;
+}
+
+div#widget_coordinate > .middle > .content > .coordinate_body > .left_column > .cross_image {
+	height: 103px;
+	width: 16.3333%;
+	max-width: 113px;
+}
+
+div#widget_coordinate > .middle > .content > .coordinate_body > .left_column > .product {
+	width: 33.3333%;
+	height: auto;
+	max-width: 105px;
+}
+
+div#widget_coordinate > .middle > .content > .coordinate_body > .left_column > .product img {
+	width: 100%;
+	height: auto;
+	max-width: 105px;
+}
+
+div#widget_coordinate > .middle > .content > .coordinate_body > .right_column {
+	margin-left: 0px;
+	width: 100%;
+}
+div#widget_coordinate > .middle > .content > .coordinate_body > .left_column {
+	padding-bottom:35px;
+	width:100%;
+}
+
+div#widget_coordinate {
+	width: 100%;
+}
+
+div#widget_coordinate > .content  {
+	padding-bottom: 10px;
+}
+
+div#widget_coordinate > .content > .coordinate_title  {
+	width: 20%;
+}
+
+div#widget_coordinate > .middle {
+	width: 100%;
+}
+
+div#widget_coordinate > .middle > .content {
+	padding: 0px 0px 40px 0px;
+	width: 100%;
+}
+
+div#widget_coordinate > .middle > .content .down_arrow {
+	width: 20px;
+	height: 10px;
+	position: absolute;
+	left: 43%;
+	visibility: hidden;
+}
+
+div#widget_coordinate > .middle > .content .up_arrow {
+	position: absolute;
+	top: -17px;
+	left: 43%;
+	width: 20px;
+	height: 10px;
+	visibility: hidden;
+}
+
+div#widget_coordinate > .middle > .content .down_active {
+	visibility: visible;
+}
+
+div#widget_coordinate > .middle > .content .up_active {
+	visibility: visible;
+}
+
+div.widget_sidebar_container > div.header_content {
+	line-height: 25px;
+	border-bottom: 1px solid #e5e5e5;
+	position: relative;
+	padding-bottom: 4px;
+	min-height: 59px;
+}
+
+@media screen and (max-width: 600px) {
+	div#widget_coordinate > .middle > .content {
+		padding: 0px 0px 40px 0px;
+	}
+
+	div#widget_coordinate > .middle > .content > .up_arrow {
+		left: 199px;
+	}
+
+	div#widget_coordinate > .middle > .content > .down_arrow {
+		left: 199px;
+	}
+}
+
+@media screen and (max-width: 856px) {
+
+	div.widget_title_container h1 {
+		font-size: 23px;
+	}
+}

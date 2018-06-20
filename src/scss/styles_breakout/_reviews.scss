@@ -1,0 +1,17 @@
+/* stylelint-disable */
+#star_box,
+.star_bg{
+  color: black;
+  position: absolute;
+  margin: 4px 0;
+  display: table;
+}
+.star_limiter_class .glyphicon,.star_bg .glyphicon{
+  display: table-cell;
+  padding: 0 0 0 2px;
+}
+.star_limiter_class{
+  width:100%;
+  overflow: hidden;
+  position: relative;
+}

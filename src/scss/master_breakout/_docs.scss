@@ -1,0 +1,178 @@
+/* stylelint-disable */
+/* Docs Nav sidebar nav - including affix settings */
+#docs-side-nav.affix-top {
+	position: static;
+  	margin-top:10px;
+  	width:223px;
+}
+#docs-side-nav.affix {
+	position: fixed;
+    top:10px;
+    width:223px;
+}
+.affix,.affix-top {
+   position:static;
+}
+#docs-side-nav.affix .docs-nav {
+	width:223px;
+}
+#docs-side-nav.affix-bottom {
+    position: absolute;
+    width:223px;
+  }
+
+ul.docs-nav > li > a {font-weight:bold;}
+ul.docs-nav > li > ul {display:none;margin-top:2px;}
+ul.docs-nav > li > ul > li > a {padding:3px 3px 3px 25px;}
+
+/*
+ * Callouts
+ *
+ * Not quite alerts, but custom and helpful notes for folks reading the docs.
+ * Requires a base and modifier class.
+ */
+
+/* Common styles for all types */
+.bs-callout {
+  margin: 20px 0;
+  padding: 20px;
+  border-left: 3px solid #eee;
+}
+.bs-callout h4 {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+.bs-callout p:last-child {
+  margin-bottom: 0;
+}
+.bs-callout code {
+  background-color: $white;
+  border-radius: 3px;
+}
+
+/* Variations */
+.bs-callout-danger {
+  background-color: #fdf7f7;
+  border-color: #d9534f;
+}
+.bs-callout-danger h4 {
+  color: #d9534f;
+}
+.bs-callout-warning {
+  background-color: #fcf8f2;
+  border-color: #f0ad4e;
+}
+.bs-callout-warning h4 {
+  color: #f0ad4e;
+}
+.bs-callout-info {
+  background-color: #f4f8fa;
+  border-color: #5bc0de;
+}
+.bs-callout-info h4 {
+  color: #5bc0de;
+}
+
+
+.color-swatch {
+  width:  100px;
+  height: 100px;
+  border-radius: 3px;
+}
+
+
+/* Framework colors */
+.color-swatches .gray-darker   			{ background-color: $gray-darker; }
+.color-swatches .gray-dark  				{ background-color: $gray-dark; }
+.color-swatches .gray 		       		{ background-color: $gray; }
+.color-swatches .gray-light    			{ background-color: $gray-light; }
+.color-swatches .gray-lighter  			{ background-color: $gray-lighter; }
+.color-swatches .brand-primary 			{ background-color: $brand-primary; }
+.color-swatches .brand-success 			{ background-color: $brand-success; }
+.color-swatches .brand-warning			{ background-color: $brand-warning; }
+.color-swatches .brand-danger 			{ background-color: $brand-danger; }
+.color-swatches .brand-info   			{ background-color: $brand-info; }
+
+.color-swatches .petco-blue   			{ background-color: $petco-blue; }
+.color-swatches .petco-blue-light 	{ background-color: $petco-blue-light; }
+.color-swatches .petco-red 					{ background-color: $petco-red; }
+.color-swatches .petco-red-light		{ background-color: $petco-red-light; }
+.color-swatches .petco-orange				{ background-color: $petco-orange; }
+.color-swatches .petco-orange-light	{ background-color: $petco-orange-light; }
+.color-swatches .petco-green				{ background-color: $petco-green; }
+.color-swatches .petco-green-light	{ background-color: $petco-green-light; }
+
+.color-swatches .black				{ background-color: $black;}
+.color-swatches .white				{ background-color: $white;border: 1px solid;border-color:$gray-darker; }
+
+.show-grid {
+  margin-bottom: 15px;
+}
+.show-grid [class^="col-"] {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #eee;
+  background-color: rgba(86,61,124,.15);
+  border: 1px solid #ddd;
+  border: 1px solid rgba(86,61,124,.2);
+}
+
+.docs-glyphicons {
+  margin-left: 0;
+    margin-right: 0;
+}
+.docs-glyphicons-list {
+  padding-left: 0;
+  list-style: none;
+}
+.docs-glyphicons li {
+  float: left;
+  width: 12.5%;
+  height: 115px;
+  padding: 10px;
+  font-size: 12px;
+  line-height: 1.4;
+  text-align: center;
+  border: 1px solid $white;
+  background-color: #f9f9f9;
+}
+.docs-glyphicons .glyphicon {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+.docs-glyphicons .glyphicon-class {
+  display: block;
+  text-align: center;
+  word-wrap: break-word; /* Help out IE10+ with class names */
+}
+.docs-glyphicons li:hover {
+  color: $white;
+  background-color: $petco-blue;
+}
+
+.docs .btn-toolbar {
+	margin-top: 10px;
+}
+
+/* Pseudo :focus state for showing how it looks in the docs */
+#focusedInput {
+  border-color: rgb(204,204,204); /* Restate unfocused value to make CSSLint happy that there's a pre-CSS3 fallback*/
+  border-color: rgba(82,168,236,.8);
+  outline: 0;
+  outline: thin dotted \9; /* IE6-9 */
+  -moz-box-shadow: 0 0 8px rgba(82,168,236,.6);
+       box-shadow: 0 0 8px rgba(82,168,236,.6);
+}
+
+
+.bs-example-bg-classes p {
+    padding: 15px;
+}
+
+
+.docs-example > .close {
+    float: none;
+}
+
+.prettyprint {font-size:12px;margin:0;}

@@ -1,0 +1,51 @@
+/* stylelint-disable */
+.primary-footer {
+	border-top:1px solid $gray-light;
+	background-color:$gray-lighter;
+	padding:20px 0 0 0;
+	min-width: 1010px;
+}
+
+.panel-footer table {
+	margin-bottom:0;
+}
+
+.panel-footer td, .panel-footer th {
+	@extend .text-center !optional;
+}
+
+.panel-footer h5 {
+	font-weight:bold;
+	font-size: $font-size-base + 1;
+}
+
+.footer-privacy {
+	background-color:$gray-darker;
+	padding:10px 0 4px 0;
+}
+
+.footer-privacy a {
+	color:$gray-lighter;
+}
+
+.footer-privacy li {
+	padding-right:15px;
+}
+
+.footer-copyright {
+	background-color:$white;
+	padding:10px 0 40px 0;
+}
+
+
+.footer-content-grooming {
+	background-color: #e6e6e6;
+	padding: 20px 0 0 0;
+	margin-top: 0px;
+	padding-bottom: 40px;
+}
+
+.primary-footer-content {
+	background-color: #e6e6e6;
+	padding: 0 0 0 0;
+}

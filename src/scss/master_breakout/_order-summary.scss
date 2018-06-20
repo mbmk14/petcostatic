@@ -1,0 +1,36 @@
+/* stylelint-disable */
+// Order Summary Block
+.order-summary {
+	background-color: $gray-lighter;
+	padding:12px;
+	width:216px;
+}
+
+.order-summary td {
+	padding-top:4px;
+	padding-bottom:4px;
+}
+
+.order-summary.affix {
+	top:25px;
+}
+
+.order-summary.affix-bottom {
+	position:absolute;
+}
+
+.review-order-block {
+	border: 1px solid $gray;
+	padding:15px;
+	font-size:$font-size-small;
+}
+
+.review-order-block h4 {
+	margin-top:0;
+	padding-bottom:12px;
+	border-bottom:1px solid $gray;
+}
+
+.review-order-block a.small {
+	color:$link-color;
+}

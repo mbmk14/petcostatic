@@ -1,0 +1,823 @@
+/* stylelint-disable */
+
+#primary-nav {
+  width: 100%;
+  transition: left 0.3s, background-color 0.1s linear 0.2s;
+  //background-color: $white;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  z-index: 1000;
+  a.persistent-logo {
+    width: auto;
+    img {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  .persistent-utility {
+    width: auto;
+    left: auto;
+    right:0;
+    // added the breakpoints for the minicart and search in the sticky header
+    @include breakpoint("min-width: 1100px"){right:4%;}
+    @include breakpoint("min-width: 1200px"){right:6%;}
+    @include breakpoint("min-width: 1300px"){right:8%;}
+    @include breakpoint("min-width: 1400px"){right:10%;}
+    @include breakpoint("min-width: 1500px"){right:12%;}
+    @include breakpoint("min-width: 1600px"){right:16%;}
+    @include breakpoint("min-width: 1700px"){right:18%;}
+    @include breakpoint("min-width: 1800px"){right:20%;}
+  }
+  li.header-offer-desktop {
+    float: right;
+    margin-top: 19px;
+    > div {
+      font-size: em(15);
+    }
+    @include breakpoint('max-width: 930px'){
+      display: none;
+    }
+    @include breakpoint("max-width: 1120px") {
+      margin-right: 15px;
+    }
+  }
+   @include breakpoint(medium small){
+   	height:100%;
+   }
+  &.active {
+    background-color: rgba(0, 0, 0, 0.6);
+    left: 0;
+  }
+
+  .nav-mask {
+    display: none;
+    position: absolute;
+    height: 3000px;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+  }
+
+  #nav-exit {
+    float: right;
+    width: 54px;
+    height: 54px;
+    background-color: $primary;
+    background-image: $spritesheet;
+    background-position: -470px -103px;
+    cursor: pointer;
+
+    @include breakpoint(large x-large){
+      display: none;
+    }
+  }
+
+  @include breakpoint(medium small){
+    ul > li > a + .drawer-container { display: none; }
+  }
+
+  & > ul {
+    background-color: $white;
+    width: calc(100% - 54px);
+    height: 100%;
+    overflow: scroll;
+
+    &.active {
+      & > li.focus > a {
+        color: $black;
+      }
+      & > li > a {
+        color: lighten($black, 60%);
+      }
+    }
+    @include breakpoint(large x-large){
+      width: 100%;
+      max-width: 1095px;
+      margin: auto;
+      background-color: transparent;
+    }
+
+    & > li {
+      @include breakpoint(x-large){
+        display: inline-block;
+        margin-right: 20px
+      }
+
+      @include breakpoint("max-width: 1120px) and (min-width: 769px"){
+        display: inline-block;
+        margin-right: 0;
+      }
+
+      & > a {
+        border-bottom: 1px solid $lighterGray;
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 25px;
+        letter-spacing: 0.2px;
+        color: $black;
+        display: block;
+        padding: 15px 20px;
+        box-sizing: border-box;
+        position: relative;
+
+        @include breakpoint(large x-large){
+          display: inline-block;
+          border: none;
+          font-size: 15px;
+
+          &:hover + div, &:focus + div { display: block; }
+        }
+
+        &:after {
+          content: '';
+          display: block;
+          height: 50px;
+          width: 30px;
+          background-image: $spritesheet;
+          background-position: -65px -105px;
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+
+          @include breakpoint(large x-large){
+            background-position: -59px -105px;
+            right: -10px;
+            top: 0;
+            transform: rotate(90deg);
+          }
+
+        }
+
+        &.has-subnav {
+          &:after { background-position: -278px -104px; }
+          &.open:after { background-position: -136px -104px; }
+
+          @include breakpoint(large x-large){
+            &:after { background-position: -59px -105px; }
+          }
+        }
+
+        &.has-subnav.open + div {
+          display: block;
+          background-color: $lightestGray;
+
+          .subcategory {font-size: 15px; }
+
+          & > li:last-child { border-bottom: none; }
+
+          .col > .tile-grid { display: block; }
+        }
+
+
+      }
+
+      .pet-nav {
+        @include breakpoint("max-width: 1095px"){
+          // set as important so background-image can be set inline by content team
+          background-image: none!important;
+          background-repeat: no-repeat;
+        }
+
+        .container {
+          display: none;
+          border-bottom: $lighterBorder;
+
+          ul { display: none; }
+
+          h4 {
+            font-size: 15px;
+            padding: 20px;
+            position: relative;
+
+            &.toggle-open:before {
+              content: '';
+              display: inline-block;
+              height: 14px;
+              width: 14px;
+              background-image: $spritesheet;
+              background-position: -350px -197px;
+              margin-right: 5px;
+              transition: 0.2s;
+            }
+
+
+            &.open {
+              &:before {
+                transform: rotate(-180deg);
+                background-position: -350px -200px
+              }
+
+              & + ul { display: block; }
+
+              & + ul:not(.tile-grid) li {
+                padding: 0 0 20px 40px;
+              }
+            }
+          }
+        }
+      }
+
+      h4 a {
+        background-color: $white;
+        border-bottom: 1px solid $lighterGray;
+        box-sizing: border-box;
+        color: $black;
+        display: block;
+        font-size: 15px;
+        font-weight: bold;
+        letter-spacing: 0.2px;
+        line-height: 25px;
+        padding: 15px 20px;
+      }
+
+      h4.mobile-header {
+        color: $black;
+        background-color: $lightestGray;
+        border-bottom: $lighterBorder;
+        padding: 17px 20px;
+        box-sizing: border-box;
+        display: block;
+        font-size: 17px;
+        position: relative;
+
+        &:after {
+          content: '';
+          display: block;
+          height: 50px;
+          width: 30px;
+          background-image: $spritesheet;
+          background-position: -278px -104px;
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+
+        &.open {
+          border-bottom: 0;
+
+          &:after { background-position: -136px -104px; }
+
+          & + .container {
+            display: block;
+          }
+        }
+      }
+
+      .pet-list {
+        @include breakpoint(medium small){
+          display: none;
+        }
+      }
+
+      .pet-help .container {
+        ul {
+          display: block;
+         /* margin: 0 30px;*/
+
+          li {
+            list-style-type: none;
+            padding-bottom: 10px;
+
+            a {
+              font-size: em(20);
+
+              &:hover { color: #0084b4; }
+
+              i { vertical-align: middle; }
+            }
+          }
+        }
+      }
+
+      .tile-grid {
+        margin-top: -1px;
+        padding-left: 20px;
+
+        li {
+          border: $lightBorder;
+          background-color: $white;
+          width: 20%;
+          margin: 1% 2% 0 0;
+          display: inline-block;
+          border-radius: 5px;
+
+          a:after { display: none; }
+
+          &.link {
+            display: block;
+            border: none;
+            width: 100%;
+            margin: 0;
+            border: 0;
+            background-color: transparent;
+
+            a {
+              color: $primary;
+              font-size: 0.9em;
+              padding: 0 10% 10px 0;
+              border: 0;
+            }
+          }
+
+          a {
+            display: block;
+            padding: 10%;
+          }
+
+          img {
+            display: block;
+            width: 100%;
+          }
+        }
+      }
+
+    }
+  }
+
+  .drawer {
+    overflow: auto;
+    height: 100%;
+  }
+
+  .col .bottom-right { display: none; }
+
+  // #primary-nav desktop
+  @include breakpoint(large x-large){
+    left: auto;
+    top: auto;
+    position: relative;
+    z-index: 990;
+
+    #shop-by-pet a.top-level { font-size: em(20, 15); }
+
+    & > ul {
+      overflow: visible;
+      // position: relative;
+      height: auto;
+    }
+
+    & > ul > li h4.mobile-header { display: none; }
+    .mobile-only { display: none; }
+
+    div.drawer-container {
+      width: 100%;
+      margin: auto;
+      position: absolute;
+      left: 0;
+      text-align: center;
+    }
+
+    div.drawer {
+      display: none;
+      background-color: $white;
+      box-sizing: border-box;
+      height: auto;
+      margin: auto;
+      max-width: 1162px;
+      overflow: hidden;
+      text-align: left;
+
+      &.focus {
+        display: inline-block;
+      }
+
+      &.shop-by-pet {
+        width: 100%;
+      }
+
+      div.container {
+        display: block;
+        width: 100%;
+        max-width: 1162px;
+        box-sizing: border-box;
+        margin: auto;
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+        border: 0;
+
+        ul { display: block; }
+      }
+
+      // Need this specificity for Deals images to scale
+      // on desktop
+      @include breakpoint(large x-large) {
+        &.deals {
+          div.container {
+            ul { display: flex; }
+          }
+        }
+      }
+
+    } // div.drawer
+
+    ul.pet-list {
+      float: left;
+      margin: auto;
+      width: 18%;
+      max-width: 195px;
+      margin: 30px 0 30px 30px;
+
+      li {
+        display: block;
+        margin: 0;
+        clear: both;
+        max-width: 195px;
+        width: 100%;
+
+
+        &:first-child {
+          display: block;
+        }
+
+        &:hover, &.focus {
+          a.subcategory {
+            background: $primary;
+            color: $white;
+          }
+        }
+
+        a.subcategory {
+          background-color: $white;
+          border-bottom: $lighterBorder;
+          font-size: 1.25em;
+          display: block;
+          width: 100%;
+          z-index: 10;
+          padding: 10px;
+          box-sizing: border-box;
+          color: $black;
+
+          &:after { display: none; }
+        }
+
+      } // ul.pet-list li
+
+    } // ul.pet-list
+
+    div.pet-nav {
+      background-color: $white;
+      background-position: right bottom;
+      background-repeat: no-repeat;
+      background-size: 30%;
+      display: none;
+      width: 75%;
+      float: right;
+      box-sizing: border-box;
+      min-height: 380px;
+
+      @include breakpoint("max-width: 990px"){
+        background-image: none!important;
+      }
+
+      &.focus { display: block; }
+
+      .container .col {
+        width: 25%;
+        float: left;
+        box-sizing: border-box;
+        display: block;
+        padding: 20px 20px 20px 0;
+        max-width: 195px;
+
+        .pet-img {
+          display: block;
+          max-width: 100%;
+        }
+
+        @include breakpoint("max-width: 1095px"){
+          width: 30%;
+        }
+
+        h4 {
+          padding: 10px 0 5px;
+          font-size: em(20);
+
+          &.toggle-open:before { display: none; }
+        }
+
+        ul li {
+          display: block;
+
+          a {
+            color: $primary;
+            font-size: 13px;
+            line-height: 20px;
+            display: inline;
+            float: none;
+            background-image: none;
+
+            &:after { display: none; }
+
+            &:hover { color: #0084b4; }
+          }
+
+        }
+
+        li, a {
+          padding: 0;
+          border: 0;
+          float: none;
+          width: 100%;
+
+          &:hover, &:hover a { background-color: transparent; }
+        }
+      } // .col
+
+      .tile-grid {
+        padding-left: 0;
+
+        li:not(.link) {
+          width: 40%;
+          padding: 10px;
+          margin: 0 15px 15px 0;
+          border-radius: 5px;
+          border: $lightBorder;
+          float: left;
+          clear: none;
+          box-sizing: border-box;
+        }
+
+        img {
+          display: block;
+          max-width: 100%;
+        }
+
+      } // .tile-gird
+    } // .pet-nav
+
+    .pet-help {
+      width: 1045px;
+
+      @include breakpoint('max-width: 1045px'){
+        width: 100%;
+      }
+
+      .container {
+        ul {
+          float: left;
+          margin-top: 30px;
+        }
+
+        .ask-vet-container {
+          float: right;
+          margin: 30px;
+
+          @include breakpoint('max-width: 935px'){
+            width: 300px;
+          }
+        }
+
+      }
+
+    }// .pet-help
+
+  } // end desktop media query
+
+}
+
+.pet-services {
+  padding: 20px;
+
+  ul {
+    margin: 10px;
+
+    li { list-style-type: none; }
+
+    @include breakpoint(x-large large){
+      &.pet-service-options {
+        float: left;
+      }
+
+      &.pet-service-deals {
+        float: right;
+      }
+    }
+
+    li a {
+      font-size: em(20);
+
+      &:hover { color: #0084b4; }
+
+      img {
+        display: block;
+        max-width: 100%;
+        margin-bottom: 20px;
+      }
+    }
+
+  }
+}
+
+.sticky-header {
+  #primary-nav {
+    li.header-offer-desktop {
+      display: none;
+    }
+  }
+
+  // City takes up too much room except for screens
+  // wider than the x-large breakpoint
+  // Mobile has its own handling of appearance
+  @include breakpoint(large x-large) {
+    .petco-us-city-upper {
+      display: none;
+    }
+  }
+
+  // Slightly arbitrary size
+  // Can fit names up to 20 characters
+  @include breakpoint('min-width: 1280px') {
+    .petco-us-city-upper {
+      display: inline;
+    }
+  }
+}
+
+.deals {
+  padding: 30px;
+
+  li {
+    display: inline-block;
+    padding: 3px;
+
+    a {
+      display: block;
+      padding: 0;
+
+      &:after { display: none; }
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  a.btn {
+    margin-top: 20px;
+
+    @include breakpoint(medium small){
+      width: 100%;
+    }
+  }
+} // .deals
+
+.ask-vet-container {
+  border: $lighterBorder;
+  border-radius: 5px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 423px;
+
+  @include breakpoint(small) {
+    width: auto;
+  }
+
+  textarea {
+    font-family: $bodyFont;
+    background-color: $white;
+  }
+}
+
+.shop-by-brand {
+  .brand-filter {
+    font-size: 0;
+    margin: 15px 14px;
+    min-width: 240px;
+
+    @include breakpoint(x-large large){
+      width: 200px;
+      border-right: $lightBorder;
+      float: left;
+    }
+
+    li {
+      width: 45px;
+      height: 45px;
+      line-height: 45px;
+      text-align: center;
+      box-sizing: border-box;
+      display: inline-block;
+      font-weight: bold;
+      font-size: 15px;
+      color: $gray;
+      cursor: pointer;
+      border: $lightBorder;
+      margin: -1px 0 0 -1px;
+
+      @include breakpoint(medium small){
+        &.active {
+          background-color: $primary;
+          color: $white;
+        }
+      }
+
+
+      @include breakpoint(x-large large){
+        width: 43px;
+        height: 43px;
+        border-radius: 5px;
+        border: none;
+        font-size: 20px;
+        margin: 0;
+
+        &:hover {
+          background-color: $lighterGray3;
+        }
+
+        &[class*="all"] { display: none!important; }
+      }
+    }
+  }
+
+  .brand-list {
+    width: 100%;
+
+    @include breakpoint(x-large large){
+      float: right;
+      margin-top: 30px;
+      padding-right: 10px;
+      box-sizing: border-box;
+      position: relative;
+    }
+
+    @include breakpoint("max-width: 900px) and (min-width: 769"){
+      width: calc(100% - 265px);
+    }
+	ul{
+		li {
+		list-style-type: none;
+		}
+
+	}
+    ul ul {
+
+      @include breakpoint(x-large large){
+        padding: 15px 0 20px;
+
+        a:hover { color: #0084b4; }
+      }
+
+      li {
+        @include breakpoint(medium small){
+          color: $black;
+          background-color: $lightestGray;
+          border-bottom: $lighterBorder;
+          padding: 17px 5px 17px 20px;
+          box-sizing: border-box;
+          display: block;
+          position: relative;
+
+         /* &:after {
+            content: '';
+            display: block;
+            height: 50px;
+            width: 30px;
+            background-image: $spritesheet;
+            background-position: -60px -105px;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+          }*/
+
+          a {
+            font-size: 15px;
+            color: $black;
+          }
+        }
+
+        @include breakpoint(x-large large){
+          width: 30%;
+          display: inline-block;
+          padding: 0 20px;
+          box-sizing: border-box;
+        }
+      }
+    }
+  }
+
+  .brand-section {
+    background: $lighterGray3;
+    width: 100%;
+    display: block;
+    border-radius: 5px;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    font-size: em(20);
+    color: $gray;
+  }
+}
+
+ @include breakpoint(x-large large){
+		.nav-items{
+			.account-mobile {
+				display: none !important;
+			}
+		}
+ }
