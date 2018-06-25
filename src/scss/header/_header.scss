@@ -119,8 +119,6 @@
 
 .persistent-utility { display: none; }
 
-.persistent-logo { display: none; }
-
 .sticky-header {
   #header {
     position: fixed;
@@ -194,13 +192,13 @@
         input[type="text"] {
           transition: none;
         }
-       
+
       }
       #search.active {
         visibility: visible;
         z-index:50;
       }
-		
+
       .logo {
         width: 100%;
         max-width: 1095px;
@@ -231,20 +229,6 @@
       margin: auto;
       box-sizing: border-box;
 
-      .persistent-logo {
-        max-width: 1095px;
-        width: 100%;
-        margin: auto;
-        display: block;
-
-        img {
-          display: inline-block;
-          float: left;
-          padding: 5px 0 0 10px;
-          max-width: 150px;
-        }
-      }
-
       & > ul {
         background: transparent;
         padding-left: 20%;
@@ -253,8 +237,6 @@
       & > ul li > a {
         padding-bottom: 10px;
       }
-
-      #header-top-banner { visibility: hidden; }
 
       .drawer, div.drawer ul.pet-list li div.pet-nav {
         box-shadow: inset 0px 4px 10px -5px rgba(0, 0, 0, 0.1), 0px 4px 10px -5px rgba(0, 0, 0, 0.1);
@@ -279,12 +261,6 @@
 
       .icon-search { background-position: -127px -38px; }
       .icon-cart { background-position: 12px -39px; }
-    }
-  }
-
-  @include breakpoint("max-width: 1130px) and (min-width: 1081px"){
-    #primary-nav .persistent-logo img {
-      padding-left: 10px;
     }
   }
 
@@ -314,11 +290,6 @@
 
   @include breakpoint("max-width: 875px) and (min-width: 769px") {
     #primary-nav {
-      .persistent-logo img {
-        max-width: 120px;
-        padding-top: 10px;
-      }
-
       & > ul {
         padding-left: 16%;
 
@@ -360,11 +331,6 @@
   }
 }
 
-#header-top-banner {
-  position: relative;
-  z-index: 902;
-}
-
 // High-contrast mode accessibility
 @media screen and (-ms-high-contrast: active) {
   .sticky-header {
@@ -395,5 +361,21 @@
 .sticky-header {
   .cart-list-item {
     width: 100%;
+  }
+}
+
+// custom new
+.navbar-petco {
+  .fas {
+    font-size: 125%;
+  }
+
+  .navbar-toggler {
+    padding: 0;
+    border: none;
+  }
+
+  .navbar-brand {
+    padding: 0;
   }
 }

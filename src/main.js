@@ -1,2 +1,2 @@
-import './js/custom1.js';
-import './js/custom2.js';
+import './js/header'
+// import './js/custom2.js';

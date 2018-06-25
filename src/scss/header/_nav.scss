@@ -8,14 +8,6 @@
   top: 0;
   left: -100%;
   z-index: 1000;
-  a.persistent-logo {
-    width: auto;
-    img {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-    }
-  }
   .persistent-utility {
     width: auto;
     left: auto;
