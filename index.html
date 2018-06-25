@@ -12,29 +12,49 @@
 <body>
 <div class="container">
   <nav class="row navbar-one-petco navbar navbar-expand-lg navbar-light">
-      <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <button class="navbar-toggler p-0 mx-auto border-0" type="button" data-toggle="head-search">
-        <i class="fas fa-search"></i>
-      </button>
-      <a class="navbar-brand mx-auto p-0" href="#">
-        <img src="/images/brand-logo.png" alt="Petco - Where the healthy pets go." />
-      </a>
-      <div class="search-container d-none d-lg-block">
-        <form>
-          <input type="text" placeholder="You search, we'll fetch..." name="search">
-          <button type="submit"><i class="fas fa-search"></i></button>
-        </form>
-      </div>
-      <button class="navbar-toggler p-0 mx-auto border-0" type="button" data-toggle="location">
-        <i class="fas fa-map-marker-alt"></i>
-      </button>
-      <button class="navbar-toggler p-0 border-0" type="button" data-toggle="location">
-        <i class="fas fa-shopping-cart"></i>
-      </button>
-    </nav>
-    <nav class="row navbar-two-petco">
+    <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <button class="navbar-toggler p-0 mx-auto border-0" type="button" data-toggle="head-search">
+      <i class="fas fa-search"></i>
+    </button>
+    <a class="navbar-brand mx-auto ml-lg-0 mr-lg-5 p-0" href="#">
+      <img src="/images/brand-logo.png" alt="Petco - Where the healthy pets go." />
+    </a>
+    <div class="search-container d-none d-lg-block">
+      <form class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="You search, we'll fetch..." name="search" />
+          <button class="input-group-append" type="submit">
+            <i class="fas fa-search"></i>
+          </button>
+      </form>
+    </div>
+    <ul class="navbar-right mx-auto my-0 mr-lg-3 p-0">
+      <li class="d-none d-lg-inline-block mr-lg-3">
+        <button class="navbar-toggler d-lg-block p-0 mx-auto border-0" type="button" data-toggle="head-search">
+          <i class="fas fa-comment-alt"></i>
+        </button>
+      </li>
+      <li>
+        <button class="navbar-toggler d-lg-block p-0 mx-auto border-0" type="button" data-toggle="location">
+          <i class="fas fa-map-marker-alt"></i>
+        </button>
+      </li>
+    </ul>
+    <ul class="navbar-right m-0 p-0">
+      <li class="d-none d-lg-inline-block mr-lg-3">
+        <button class="navbar-toggler d-lg-block p-0 mx-auto border-0" type="button" data-toggle="head-search">
+          <i class="fas fa-user"></i>
+        </button>
+      </li>
+      <li>
+        <button class="navbar-toggler d-lg-block p-0 border-0" type="button" data-toggle="location">
+          <i class="fas fa-shopping-cart"></i>
+        </button>
+      </li>
+    </ul>
+  </nav>
+  <nav class="row navbar-two-petco">
       <div class="offcanvas-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
