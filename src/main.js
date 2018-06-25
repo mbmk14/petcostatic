@@ -1,2 +1,2 @@
-import './js/header'
-// import './js/custom2.js';
+import 'bootstrap';
+import './js/bootstrap/offcanvas'
