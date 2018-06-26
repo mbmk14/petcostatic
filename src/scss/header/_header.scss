@@ -1,0 +1,45 @@
+.navbar-one-petco {
+  @include media-breakpoint-up(lg) {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+  }
+
+  @include media-breakpoint-down(md) {
+    .navbar-brand {
+      height: 26px;
+
+      img {
+        max-height: 100%;
+        vertical-align: top;
+      }
+    }
+  }
+
+  .navbar-right {
+    list-style: none;
+    white-space: nowrap;
+
+    li {
+      display: inline-block;
+      border-right: 1px solid $gray-1;
+    }
+
+    button {
+      span {
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: $black-1;
+        padding: 0.25rem 0 0;
+      }
+    }
+  }
+
+  .input-group {
+    width: 420px;
+
+    .input-group-append {
+      border: 1px solid $gray-1;
+      border-radius: 0 0.25rem 0.25rem 0;
+    }
+  }
+}

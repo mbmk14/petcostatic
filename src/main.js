@@ -1,2 +1,2 @@
 import 'bootstrap';
-import './js/bootstrap/offcanvas'
+import './js/offcanvas'
