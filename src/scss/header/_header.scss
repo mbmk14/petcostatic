@@ -1,4 +1,7 @@
 .navbar-one-petco {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
   @include media-breakpoint-up(lg) {
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
