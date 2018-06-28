@@ -13,8 +13,18 @@ $(function () {
   let windowWidth = $(document).innerWidth();
 
   if(windowWidth < 992) (
-    $('.nav-link.top-level').on('click', function () {
-      $(this).toggleClass('active').next().toggleClass('open')
+    $('.nav-link.has-subnav').on('click', function () {
+      $(this).toggleClass('active').next().collapse('toggle');
+    }),
+
+    $('#shop-by-pet-dog').on('mouseover', function () {
+      $(this).addClass('active').siblings('li').removeClass('active');
+      $('#shop-by-pet-dog-list').addClass('active').closest('.subnav-lavel-1').find('> .nav-item > .collapse').removeClass('active');
+    }),
+
+    $('#shop-by-pet-cat').on('mouseover', function () {
+      $(this).addClass('active').siblings('li').removeClass('active');
+      $('#shop-by-pet-cat-list').addClass('active').closest('.subnav-lavel-1').find('> .nav-item > .collapse').removeClass('active');
     })
   )
 
