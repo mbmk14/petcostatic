@@ -11,8 +11,7 @@
   "author": "Murali Krishna",
   "license": "MIT",
   "repository": {
-    "type": "git",
-    "url": "git://github.com/PrafullSharma/basic-webpack-scss-js.git"
+    "type": "git"
   },
   "browserslist": [
     "> 1%",
